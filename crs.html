@@ -1,0 +1,334 @@
+<!-- crs.html  ·  Express-Entry CRS Calculator  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>Express-Entry CRS Calculator | Canada Trust Immigration</title>
+
+<!-- Use hosted favicon so no local 404 -->
+<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root { --red:#d62828; --blue:#0033a0; --light:#f7f8fa }
+  *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,Segoe UI,sans-serif}
+  body{background:var(--light);color:#222;line-height:1.55}
+  header{background:var(--red);color:#fff;text-align:center;padding:1rem}
+  main{max-width:840px;margin:2rem auto;padding:0 1rem}
+  .card{background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:1.5rem;margin-bottom:1.6rem}
+  fieldset{border:none;margin-bottom:1.2rem}
+  legend{font-weight:600;margin-bottom:.6rem}
+  label{display:block;margin:.45rem 0 .2rem}
+  input,select{width:100%;padding:.55rem;border:1px solid #ccc;border-radius:5px;font-size:.95rem}
+  h4{margin:.8rem 0 .3rem}
+  .btn{display:inline-block;background:var(--blue);color:#fff;padding:.75rem 1.4rem;border:none;border-radius:8px;font-weight:600;cursor:pointer}
+  .btn:hover{background:#002171}
+  .score{margin:1rem 0;font-size:1.2rem;color:#007bff}
+  .hidden{display:none!important}
+  table{width:100%;border-collapse:collapse;margin:1rem 0}
+  th,td{border:1px solid #ddd;padding:.55rem;font-size:.9rem}
+  th{background:#f0f0f0}
+  a.help{font-size:.8rem;margin-left:.35rem;color:#007bff}
+  .warning{color:#b00;font-weight:600;margin-bottom:.8rem;display:none}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Express-Entry CRS Calculator</h1>
+  <p>🇨🇦 Powered by Canada Trust Immigration</p>
+</header>
+
+<main>
+  <!-- RESULTS -->
+  <div id="resultPanel" class="card hidden"></div>
+
+  <!-- FORM -->
+  <div id="formCard" class="card">
+    <h2 style="margin-bottom:.8rem">Fill this quick form, get your exact CRS, and we’ll show you how to boost it.</h2>
+    <p id="missingMsg" class="warning">Please complete every field before submitting.</p>
+
+    <form id="crsForm" novalidate>
+      <!-- 1 Personal -->
+      <fieldset><legend>1 · Your Info</legend>
+        <label>Full Name<input id="fullname" name="fullname" required></label>
+        <label>Phone / WhatsApp<input id="phone" name="phone" required></label>
+        <label>Email<input id="email" name="email" type="email" required></label>
+        <label>Country of Origin<input id="country" name="country" required></label>
+        <label>City of Residence<input id="city" name="city" required></label>
+        <input type="hidden" id="completedAt" name="completedAt">
+      </fieldset><hr>
+
+      <!-- 2 Human capital -->
+      <fieldset><legend>2 · Human Capital</legend>
+        <label>Age
+          <select id="age" name="age" required>
+            <option value="">– select –</option>
+            <script>
+              for(let i=17;i<=45;i++)document.write(`<option>${i}</option>`);
+              document.write('<option>46+</option>');
+            </script>
+          </select>
+        </label>
+
+        <label>Highest Education
+          <select id="education" name="education" required>
+            <option value="">– select –</option>
+            <option value="1">Less than secondary</option>
+            <option value="2">Secondary diploma</option>
+            <option value="3">1-year post-secondary</option>
+            <option value="4">2-year post-secondary</option>
+            <option value="5">Bachelor’s (3+ yrs)</option>
+            <option value="6">Two+ post-secondary (one 3+ yrs)</option>
+            <option value="7">Master’s / professional</option>
+            <option value="8">Doctoral (PhD)</option>
+          </select>
+        </label>
+
+        <label>Canadian Work Exp
+          <select id="canExp" name="canExp" required>
+            <option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          </select>
+        </label>
+
+        <label>Foreign Work Exp
+          <select id="foreignExp" name="foreignExp" required>
+            <option value="0">0</option><option value="1">1–2 yrs</option><option value="2">3+ yrs</option>
+          </select>
+        </label>
+      </fieldset><hr>
+
+      <!-- 3 Languages -->
+      <fieldset><legend>3 · CLB Levels
+        <a class="help" href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html#calculator" target="_blank">(What is CLB?)</a>
+      </legend>
+        <h4>🇫🇷 French (Primary)</h4>
+        <script>
+          const clbOpts = [...Array(11).keys()].map(i=>`<option>${i}</option>`).join('');
+          ['frSp','fLi','fRe','fWr'].forEach(id=>{
+            document.write(`<label>${id.slice(1)}<select id="${id}" name="${id}" required>${clbOpts}</select></label>`);
+          });
+        </script>
+
+        <h4 style="margin-top:1rem">🇬🇧 English (Secondary)</h4>
+        <script>
+          ['enSp','eLi','eRe','eWr'].forEach(id=>{
+            document.write(`<label>${id.slice(1)}<select id="${id}" name="${id}" required>${clbOpts}</select></label>`);
+          });
+        </script>
+      </fieldset><hr>
+
+      <!-- 4 Spouse -->
+      <fieldset><legend>4 · Spouse / Partner</legend>
+        <label>Coming with you?
+          <select id="withSpouse" name="withSpouse" onchange="toggleSpouse()">
+            <option value="no">No</option><option value="yes">Yes</option>
+          </select>
+        </label>
+        <div id="spouseFields" style="display:none;padding-left:1rem">
+          <h4>Spouse Education</h4>
+          <select id="sEducation" name="sEducation">
+            <option value="">–</option><option value="1">Less than secondary</option><option value="2">Secondary</option><option value="3">1-yr</option><option value="4">2-yr</option><option value="5">Bachelor’s</option><option value="6">Two+</option><option value="7">Master’s</option><option value="8">PhD</option>
+          </select>
+
+          <h4 style="margin-top:.8rem">Spouse Canadian Exp</h4>
+          <select id="sCanExp" name="sCanExp"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+
+          <h4 style="margin-top:.8rem">Spouse French CLB</h4>
+          <script>
+            ['sFrSp','sFrLi','sFrRe','sFrWr'].forEach(id=>{
+              document.write(`<label>${id.slice(1)}<select id="${id}" name="${id}">${clbOpts}</select></label>`);
+            });
+          </script>
+        </div>
+      </fieldset><hr>
+
+      <!-- 5 Additional -->
+      <fieldset><legend>5 · Additional Points</legend>
+        <label>Trade Certificate?
+          <select id="certificate" name="certificate" required>
+            <option value="">–</option><option>yes</option><option>no</option>
+          </select>
+        </label>
+        <label>Provincial Nomination?
+          <select id="nomination" name="nomination" required>
+            <option value="">–</option><option>yes</option><option>no</option>
+          </select>
+        </label>
+        <label>Sibling in Canada?
+          <select id="sibling" name="sibling" required>
+            <option value="">–</option><option>yes</option><option>no</option>
+          </select>
+        </label>
+        <label>Arranged Employment?
+          <select id="jobOffer" name="jobOffer" required>
+            <option value="">–</option><option>yes</option><option>no</option>
+          </select>
+        </label>
+        <label>Canadian Post-sec Credential?
+          <select id="canEduCan" name="canEduCan" required>
+            <option value="none">None</option><option value="1-2">1–2 yrs</option><option value="3+">3+ yrs</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <!-- Hidden computed fields -->
+      <script>
+        [
+          'coreAge','coreEdu','coreLang1','coreLang2','coreCanExp','spousePts',
+          'edTransfer','edCanTransfer','forLangTransfer','forCanTransfer','certTransfer',
+          'sibPts','frenchBonus','canEduPts','nomPts','jobPts','total'
+        ].forEach(n=>document.write(`<input type="hidden" id="${n}" name="${n}">`));
+      </script>
+
+      <div class="score">Your total CRS: <strong id="displayTotal">–</strong> / 1200</div>
+      <button class="btn" type="submit">Submit &amp; Show My CRS</button>
+    </form>
+  </div>
+</main>
+
+<script>
+const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwajihj18aulHjFQdxLhO0zL3xFVmwTYAdeKIp-FEmXs2SX8wMt9KRJxKWkbSEa0px0/exec'; // ← replace!
+
+/* ====== tables ====== */
+const ageNo={17:0,18:99,19:105,20:110,21:110,22:110,23:110,24:110,25:110,26:110,27:110,28:110,29:110,30:105,31:99,32:94,33:88,34:83,35:77,36:72,37:66,38:61,39:55,40:50,41:39,42:28,43:17,44:6,45:0,'46+':0};
+const ageSp={17:0,18:90,19:95,20:100,21:100,22:100,23:100,24:100,25:100,26:100,27:100,28:100,29:100,30:95,31:90,32:85,33:80,34:75,35:70,36:65,37:60,38:55,39:50,40:45,41:35,42:25,43:15,44:5,45:0,'46+':0};
+const eduNo={1:0,2:30,3:90,4:98,5:120,6:128,7:135,8:150};
+const eduSp={1:0,2:28,3:84,4:91,5:112,6:119,7:126,8:140};
+const cExpNo={0:0,1:40,2:53,3:64,4:72,5:80};
+const cExpSp={0:0,1:35,2:46,3:56,4:63,5:70};
+const sEdu={1:0,2:2,3:6,4:7,5:8,6:9,7:10,8:10};
+const sCExp={0:0,1:5,2:7,3:8,4:9,5:10};
+
+function langPrimary(clb,sp){if(clb<4)return 0;const mN={4:6,5:6,6:9,7:17,8:23,9:31,10:34},mS={4:6,5:6,6:8,7:16,8:22,9:29,10:32};return(sp?mS:mN)[clb]||0;}
+function langSecondary(c){return c<5?0:c<7?1:c<9?3:6;}
+const calcEdLangTransfer=(ed,a,b,c,d)=>{const m=Math.min(a,b,c,d),M=Math.max(a,b,c,d);if(ed<3||m<7)return 0;return ed<=5?(M>=9?25:13):(M>=9?50:25)};
+const calcEdCanTransfer=(ed,ce)=>ed<3||ce<1?0:ce===1?(ed<=5?13:25):(ed<=5?25:50);
+const calcForLangTransfer=(fe,a,b,c,d)=>{const m=Math.min(a,b,c,d),M=Math.max(a,b,c,d);if(fe<1||m<7)return 0;return fe===1?(M>=9?25:13):(M>=9?50:25)};
+const calcForCanTransfer=(fe,ce)=>fe<1||ce<1?0:fe===1?(ce>=2?25:13):(ce>=2?50:25);
+
+function toggleSpouse(){
+  const show=document.getElementById('withSpouse').value==='yes';
+  document.getElementById('spouseFields').style.display=show?'block':'none';
+  ['sEducation','sCanExp','sFrSp','sFrLi','sFrRe','sFrWr'].forEach(id=>{
+    document.getElementById(id).required=show;
+  });
+}
+
+document.getElementById('crsForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const form=e.target;
+
+  // basic required check
+  if(!form.checkValidity()){
+    document.getElementById('missingMsg').style.display='block';
+    form.reportValidity();
+    return;
+  }
+  document.getElementById('missingMsg').style.display='none';
+  document.getElementById('completedAt').value=new Date().toISOString();
+
+  const G=id=>document.getElementById(id).value||'';
+  const age=G('age'), ed=+G('education'), ce=+G('canExp'), fe=+G('foreignExp'),
+        frSp=+G('frSp'), fLi=+G('fLi'), fRe=+G('fRe'), fWr=+G('fWr'),
+        enSp=+G('enSp'), eLi=+G('eLi'), eRe=+G('eRe'), eWr=+G('eWr'),
+        ws=G('withSpouse')==='yes',
+        sEd=+G('sEducation')||0, sCe=+G('sCanExp')||0,
+        sFrSp=+G('sFrSp')||0, sFrLi=+G('sFrLi')||0, sFrRe=+G('sFrRe')||0, sFrWr=+G('sFrWr')||0,
+        cert=G('certificate')==='yes', nom=G('nomination')==='yes',
+        sib=G('sibling')==='yes', job=G('jobOffer')==='yes', canEduCan=G('canEduCan');
+
+  // core points
+  const coreAge=(ws?ageSp:ageNo)[age]||0;
+  const coreEdu=(ws?eduSp:eduNo)[ed]||0;
+  const coreLang1=langPrimary(frSp,ws)+langPrimary(fLi,ws)+langPrimary(fRe,ws)+langPrimary(fWr,ws);
+  let coreLang2=langSecondary(enSp)+langSecondary(eLi)+langSecondary(eRe)+langSecondary(eWr);
+  if(ws) coreLang2=Math.min(coreLang2,22);
+  const coreCan=(ws?cExpSp:cExpNo)[ce]||0;
+
+  // spouse
+  const spouseLang=ws?[sFrSp,sFrLi,sFrRe,sFrWr].reduce((a,c)=>a+(c<5?0:c<7?1:c<9?3:5),0):0;
+  const spousePts=ws?(sEdu[sEd]||0)+(sCExp[sCe]||0)+spouseLang:0;
+
+  // transferability
+  const edTransfer=calcEdLangTransfer(ed,frSp,fLi,fRe,fWr);
+  const edCanTransfer=calcEdCanTransfer(ed,ce);
+  const forLangTransfer=calcForLangTransfer(fe,frSp,fLi,fRe,fWr);
+  const forCanTransfer=calcForCanTransfer(fe,ce);
+  const certTransfer=cert?(Math.min(frSp,fLi,fRe,fWr)>=7?50:(Math.min(frSp,fLi,fRe,fWr)>=5?25:0)):0;
+
+  // additional
+  const sibPts=sib?15:0;
+  const frenchBonus=Math.min(frSp,fLi,fRe,fWr)>=7?50:(Math.max(frSp,fLi,fRe,fWr)<=4?25:0);
+  const canEduPts=canEduCan==='3+'?30:(canEduCan==='1-2'?15:0);
+  const nomPts=nom?600:0;
+  const jobPts=0; // keep 0 if you want to match current IRCC
+  const total=coreAge+coreEdu+coreLang1+coreLang2+coreCan+spousePts+
+              edTransfer+edCanTransfer+forLangTransfer+forCanTransfer+certTransfer+
+              sibPts+frenchBonus+canEduPts+nomPts+jobPts;
+
+  // set hidden fields safely
+  const hiddenVals = {
+    coreAge, coreEdu, coreLang1, coreLang2, coreCanExp:coreCan,
+    spousePts, edTransfer, edCanTransfer, forLangTransfer, forCanTransfer,
+    certTransfer, sibPts, frenchBonus, canEduPts, nomPts, jobPts, total
+  };
+  Object.entries(hiddenVals).forEach(([id,val])=>{
+    const el=document.getElementById(id);
+    if(el) el.value = val;
+  });
+
+  document.getElementById('displayTotal').textContent = total;
+
+  // eligibility
+  const eligibleFSW = (coreAge+coreEdu+coreLang1+coreLang2+coreCan)>=67;
+  const eligibleCEC = ce>=1 && Math.min(frSp,fLi,fRe,fWr)>=7;
+  const eligiblePNP = nom;
+  const eligibleFST = cert;
+
+  // build report
+  document.getElementById('resultPanel').innerHTML = `
+    <h2>Your total CRS: ${total}</h2>
+    <p style="font-size:.9rem;color:#555">Submitted: ${new Date().toLocaleString()} • ${G('country')}, ${G('city')}</p>
+
+    <h3>What am I eligible for?</h3>
+    <table>
+      <tr><th>Program</th><th>Result</th></tr>
+      <tr><td>Federal Skilled Worker</td><td>${eligibleFSW?'Met':'Not Met'}</td></tr>
+      <tr><td>Provincial Nominee Program</td><td>${eligiblePNP?'Met':'Not Met'}</td></tr>
+      <tr><td>Canadian Experience Class</td><td>${eligibleCEC?'Met':'Not Met'}</td></tr>
+      <tr><td>Federal Skilled Trades</td><td>${eligibleFST?'Met':'Not Met'}</td></tr>
+    </table>
+
+    <h3>Human capital</h3>
+    <table>
+      <tr><th>Criteria</th><th>Score</th></tr>
+      <tr><td>Age</td><td>${coreAge}</td></tr>
+      <tr><td>Education</td><td>${coreEdu}</td></tr>
+      <tr><td>French</td><td>${coreLang1}</td></tr>
+      <tr><td>English</td><td>${coreLang2}</td></tr>
+      <tr><td>Canadian Work</td><td>${coreCan}</td></tr>
+    </table>
+
+    <h3>Additional & Transferability</h3>
+    <p>Transferability: ${edTransfer+edCanTransfer+forLangTransfer+forCanTransfer+certTransfer} • Additional: ${sibPts+frenchBonus+canEduPts+nomPts+jobPts}</p>
+
+    <button onclick="location.reload()" class="btn" style="background:#555;margin-top:1rem">Start New Calculation</button>
+  `;
+  // toggle panels
+  document.getElementById('resultPanel').classList.remove('hidden');
+  document.getElementById('formCard').classList.add('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+
+  // send to sheet (ignore if offline)
+  try{
+    await fetch(WEB_APP_URL,{method:'POST',body:new FormData(form)});
+    console.log('Saved to Google Sheet');
+  }catch(err){
+    console.warn('POST failed:',err);
+  }
+});
+</script>
+</body>
+</html>
