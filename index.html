@@ -1,23 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- BASIC META -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Canada Immigration Help | Express Entry, Visas & French Training</title>
+  <title>Canada Trust Immigration | Express Entry CRS Calculator, Visas & French Training</title>
+  <meta name="description" content="Canada Trust Immigration helps you with Study, Work, Visit visas and Permanent Residence (Express Entry) to Canada. Calculate your CRS score, boost it with French (TCF‑Canada) training, and book a consultation." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Canada Trust Immigration" />
+  <link rel="canonical" href="https://canadatrustimmigration.netlify.app/" />
 
-  <meta name="description" content="We help you apply for Study, Work, Visit visas and Permanent Residence (Express Entry) to Canada. Calculate your CRS score and boost it with French (TCF‑Canada) training." />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Canada Trust Immigration | Express Entry & Visa Help" />
+  <meta property="og:description" content="Calculate your CRS, get PR help, and boost your score with French (TCF‑Canada) training." />
+  <meta property="og:url" content="https://canadatrustimmigration.netlify.app/" />
+  <meta property="og:image" content="https://canadatrustimmigration.netlify.app/pr-form.png" />
+  <meta property="og:locale" content="en_CA" />
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Canada Trust Immigration | Express Entry & Visa Help" />
+  <meta name="twitter:description" content="Calculate your CRS, get PR help, and boost your score with French (TCF‑Canada) training." />
+  <meta name="twitter:image" content="https://canadatrustimmigration.netlify.app/pr-form.png" />
+
+  <!-- (Optional) Google Search Console verification -->
+  <!-- <meta name="google-site-verification" content="PASTE_YOUR_VERIFICATION_CODE_HERE" /> -->
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg" />
+
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- STRUCTURED DATA (JSON-LD): Organization + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Canada Trust Immigration",
+    "url": "https://canadatrustimmigration.netlify.app/",
+    "logo": "https://canadatrustimmigration.netlify.app/canada-leaf.png",
+    "sameAs": [
+      "https://wa.me/14376694417",
+      "mailto:YOUR_EMAIL@DOMAIN.COM",
+      "https://facebook.com/YOUR_PAGE",
+      "https://instagram.com/YOUR_PAGE"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+1-437-669-4417",
+      "contactType": "customer service",
+      "areaServed": "CA",
+      "availableLanguage": ["en","fr"]
+    }]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://canadatrustimmigration.netlify.app/",
+    "name": "Canada Trust Immigration",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://canadatrustimmigration.netlify.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
   <style>
     :root{
-      --red:#d62828;
-      --blue:#0033a0;
-      --dark:#222;
-      --light:#f4f6f8;
-      --maxw:1100px;
+      --red:#d62828; --blue:#0033a0; --dark:#222; --light:#f4f6f8; --maxw:1100px;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
@@ -25,7 +82,6 @@
     a{color:var(--blue);text-decoration:none}
     img{max-width:100%;display:block}
 
-    /* Header / Nav */
     header{background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.08);position:sticky;top:0;z-index:999}
     .nav-wrap{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1rem}
     .logo{display:flex;align-items:center;font-weight:700;color:var(--red);font-size:1.1rem}
@@ -35,7 +91,6 @@
     nav li a:hover{color:var(--red)}
     .cta-btn{background:var(--red);color:#fff;padding:.55rem 1rem;border-radius:6px;font-weight:600}
     .cta-btn:hover{background:#b71f1f}
-
     #burger{display:none;font-size:1.4rem;cursor:pointer}
     @media(max-width:820px){
       nav ul{position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;padding:1rem 0;display:none;box-shadow:0 4px 12px rgba(0,0,0,.08)}
@@ -43,7 +98,6 @@
       #burger{display:block;color:var(--dark)}
     }
 
-    /* Hero */
     .hero{position:relative;height:65vh;min-height:420px;background:#000 url('pr-form.png') center/cover no-repeat;}
     .hero:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45);}
     .hero-content{
@@ -58,47 +112,33 @@
     .btn-outline{background:transparent;color:#fff;border:2px solid #fff}
     .btn-outline:hover{background:#fff;color:#000}
 
-    /* Sections */
     section{padding:3.5rem 1rem}
     .container{max-width:var(--maxw);margin:0 auto}
     h2.section-title{font-size:1.9rem;margin-bottom:1.8rem;color:var(--dark);text-align:center}
 
-    .services-grid{
-      display:grid;gap:1.5rem;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    }
-    .service-card{
-      background:#fff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.06);
-      padding:1.5rem;text-align:center
-    }
+    .services-grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+    .service-card{background:#fff;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:1.5rem;text-align:center}
     .service-card i{font-size:2rem;color:var(--red);margin-bottom:.6rem}
-    .service-card h3{margin:.4rem 0 0.6rem;font-size:1.15rem}
+    .service-card h3{margin:.4rem 0 .6rem;font-size:1.15rem}
     .service-card p{font-size:.93rem;color:#555}
 
     .steps{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
     .step-card{background:#fff;border-radius:10px;padding:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.06);position:relative}
     .step-num{position:absolute;top:-15px;left:-15px;background:var(--blue);color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700}
 
-    /* News */
     .news-box{background:#b50000;color:#fff;border-radius:8px;padding:1rem 1.2rem;display:flex;align-items:center;gap:.7rem;cursor:pointer;margin-top:1rem}
     .news-box i{font-size:1.2rem}
     .news-box span{font-weight:600;font-size:1.05rem}
     .news-box:hover{background:#8f0000}
 
-    /* Contact */
     .contact-grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));max-width:900px;margin:0 auto}
     .contact-card{background:#fff;border-radius:10px;padding:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.06);}
-    .contact-form input,.contact-form textarea{
-      width:100%;padding:.55rem .7rem;border:1px solid #ccc;border-radius:6px;font-size:.95rem;margin:.35rem 0 .9rem
-    }
+    .contact-form input,.contact-form textarea{width:100%;padding:.55rem .7rem;border:1px solid #ccc;border-radius:6px;font-size:.95rem;margin:.35rem 0 .9rem}
     .contact-form textarea{min-height:120px;resize:vertical}
-    .success-msg,.error-msg{
-      display:none;padding:.6rem .9rem;border-radius:6px;font-size:.9rem;margin-bottom:1rem
-    }
+    .success-msg,.error-msg{display:none;padding:.6rem .9rem;border-radius:6px;font-size:.9rem;margin-bottom:1rem}
     .success-msg{background:#e6ffed;color:#056b2b;border:1px solid #9fe6b7}
     .error-msg{background:#ffe5e5;color:#b30000;border:1px solid #ffb3b3}
 
-    /* Footer */
     footer{background:#0f0f0f;color:#ccc;padding:2.2rem 1rem}
     footer a{color:#ccc}
     .footer-inner{max-width:var(--maxw);margin:0 auto;display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
@@ -111,16 +151,16 @@
 <header>
   <div class="nav-wrap">
     <a class="logo" href="#top">
-      <img src="canada-leaf.png" alt="Leaf"> Get‑Our‑Help Canada
+      <img src="canada-leaf.png" alt="Canada leaf logo"> Canada Trust Immigration
     </a>
 
-    <i id="burger" class="fas fa-bars"></i>
+    <i id="burger" class="fas fa-bars" aria-label="Open navigation menu"></i>
 
     <nav>
       <ul id="navMenu">
         <li><a href="#services">Services</a></li>
         <li><a href="#process">How it works</a></li>
-        <li><a href="crs.html">CRS Calculator</a></li>
+        <li><a href="crs.html" aria-label="CRS Calculator page">CRS Calculator</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a class="cta-btn" href="#contact">Book an Appointment</a></li>
       </ul>
@@ -129,7 +169,7 @@
 </header>
 
 <!-- HERO -->
-<section class="hero" id="top">
+<section class="hero" id="top" aria-label="Hero background section">
   <div class="hero-content">
     <h1>We help you get to Canada — Study, Work, Visit + PR (Express Entry)</h1>
     <p>
@@ -138,7 +178,6 @@
     </p>
     <div style="display:flex;flex-wrap:wrap;gap:1rem;">
       <a class="btn btn-primary" href="crs.html">Calculate My IRCC CRS Score</a>
-      <!-- Button now scrolls to contact form -->
       <a class="btn btn-outline" href="#contact">Book an Appointment</a>
     </div>
   </div>
@@ -150,22 +189,22 @@
     <h2 class="section-title">What We Do</h2>
     <div class="services-grid">
       <div class="service-card">
-        <i class="fa-solid fa-passport"></i>
+        <i class="fa-solid fa-passport" aria-hidden="true"></i>
         <h3>Visa Applications</h3>
         <p>Study permits, Work permits, Visitor visas — full guidance from paperwork to submission.</p>
       </div>
       <div class="service-card">
-        <i class="fa-solid fa-chart-line"></i>
+        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
         <h3>Express Entry & PR</h3>
         <p>Exact CRS assessment, strategy to raise your score, and complete PR application support.</p>
       </div>
       <div class="service-card">
-        <i class="fa-solid fa-language"></i>
+        <i class="fa-solid fa-language" aria-hidden="true"></i>
         <h3>French (TCF‑Canada) Training</h3>
         <p>We connect you with vetted trainers to reach CLB 7+ quickly and unlock up to 50 bonus points.</p>
       </div>
       <div class="service-card">
-        <i class="fa-solid fa-file-circle-check"></i>
+        <i class="fa-solid fa-file-circle-check" aria-hidden="true"></i>
         <h3>Document Review & QA</h3>
         <p>Avoid misrepresentation and refusals — we review your forms, letters, and supporting documents.</p>
       </div>
@@ -214,8 +253,8 @@
     <p style="text-align:center;color:#555;font-size:.95rem;margin-bottom:1.2rem;">
       Stay up-to-date on IRCC announcements and Express Entry draws.
     </p>
-    <div class="news-box" onclick="window.open('https://immigrationnewscanada.ca/','_blank')">
-      <i class="fa-solid fa-plus"></i><span>Immigration News Canada</span>
+    <div class="news-box" onclick="window.open('https://immigrationnewscanada.ca/','_blank')" aria-label="Open Immigration News Canada in new tab">
+      <i class="fa-solid fa-plus" aria-hidden="true"></i><span>Immigration News Canada</span>
     </div>
   </div>
 </section>
@@ -233,22 +272,23 @@
       <div class="contact-card">
         <h3 style="margin-bottom:.9rem;font-size:1.15rem">Appointment / Inquiry Form</h3>
 
-        <div id="contactSuccess" class="success-msg">✅ Thank you! We’ll reply shortly.</div>
-        <div id="contactError" class="error-msg">❌ Sorry, something went wrong. Please try again or use Live Chat.</div>
+        <div id="contactSuccess" class="success-msg" role="alert">✅ Thank you! We’ll reply shortly.</div>
+        <div id="contactError" class="error-msg" role="alert">❌ Sorry, something went wrong. Please try again or use Live Chat.</div>
 
         <form id="contactForm" class="contact-form" novalidate>
           <input type="hidden" name="formType" value="contact">
+
           <label for="cname">Full Name *</label>
-          <input id="cname" name="name" required>
+          <input id="cname" name="c_name" required>
 
           <label for="cemail">Email *</label>
-          <input id="cemail" name="email" type="email" required>
+          <input id="cemail" name="c_email" type="email" required>
 
           <label for="cphone">Phone / WhatsApp *</label>
-          <input id="cphone" name="phone" required>
+          <input id="cphone" name="c_phone" required>
 
           <label for="cmsg">Your Message / Goals *</label>
-          <textarea id="cmsg" name="message" required></textarea>
+          <textarea id="cmsg" name="c_message" required></textarea>
 
           <button class="btn btn-primary" type="submit">Submit</button>
         </form>
@@ -261,11 +301,12 @@
           Prefer instant messaging? Start a WhatsApp chat:
         </p>
         <p style="margin-top:.6rem">
-          <a class="cta-btn" style="display:inline-block" href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Hi%2C%20I%20need%20help%20with%20Canadian%20immigration">
+          <a class="cta-btn" style="display:inline-block" href="https://wa.me/14376694417?text=Hi%2C%20I%20need%20help%20with%20Canadian%20immigration">
             <i class="fab fa-whatsapp"></i> Live Chat Us
           </a>
         </p>
         <p style="font-size:.9rem;color:#777;margin-top:1.2rem">
+          We typically respond within a few hours.
         </p>
       </div>
     </div>
@@ -275,7 +316,7 @@
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="foot-title">Get‑Our‑Help Canada</div>
+      <div class="foot-title">Canada Trust Immigration</div>
       <p>We are not a government agency. We provide guidance & application support based on public IRCC rules.</p>
     </div>
     <div>
@@ -290,7 +331,7 @@
     <div>
       <div class="foot-title">Connect</div>
       <p style="font-size:.94rem">
-        <a href="https://wa.me/YOUR_WHATSAPP_NUMBER"><i class="fab fa-whatsapp"></i> WhatsApp</a><br>
+        <a href="https://wa.me/14376694417"><i class="fab fa-whatsapp"></i> WhatsApp</a><br>
         <a href="mailto:YOUR_EMAIL@DOMAIN.COM"><i class="fa-solid fa-envelope"></i> Email</a><br>
         <a href="#"><i class="fab fa-facebook"></i> Facebook</a> |
         <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
@@ -298,20 +339,20 @@
     </div>
   </div>
   <div class="copyright">
-    &copy; <span id="year"></span> Get‑Our‑Help Express Entry. All rights reserved.
+    &copy; <span id="year"></span> Canada Trust Immigration. All rights reserved.
   </div>
 </footer>
 
 <script>
   // Mobile nav
-  const burger=document.getElementById('burger');
-  const navMenu=document.getElementById('navMenu');
-  burger.addEventListener('click',()=>navMenu.classList.toggle('show'));
+  const burger = document.getElementById('burger');
+  const navMenu = document.getElementById('navMenu');
+  burger.addEventListener('click', () => navMenu.classList.toggle('show'));
 
   // Year
-  document.getElementById('year').textContent=new Date().getFullYear();
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Contact form -> Google Apps Script (same project)
+  // Contact form -> Google Apps Script (CRS project)
   const CONTACT_URL = 'https://script.google.com/macros/s/AKfycbwajihj18aulHjFQdxLhO0zL3xFVmwTYAdeKIp-FEmXs2SX8wMt9KRJxKWkbSEa0px0/exec';
 
   document.getElementById('contactForm').addEventListener('submit', async (e)=>{
