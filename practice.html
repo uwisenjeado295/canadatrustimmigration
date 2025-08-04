@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Practice TCF-CANADA – Reading</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--green:#65d34e;--red:#ef3a3a;--grey:#eef1f5;--ink:#222;--blue:#0033a0}
+  *{box-sizing:border-box}
+  body{font-family:Inter,system-ui,Arial;margin:0;color:var(--ink)}
+  header{border-bottom:1px solid #eee;background:#fff;position:sticky;top:0;z-index:5}
+  .wrap{max-width:960px;margin:0 auto;padding:1rem}
+  h1{font-size:1.35rem;margin:.2rem 0}
+  .card{background:#fff;border:1px solid #eee;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.05);padding:1rem;margin:1rem 0}
+  .hidden{display:none}
+  .btn{padding:.6rem 1rem;border-radius:8px;border:none;font-weight:600;cursor:pointer}
+  .btn-primary{background:var(--blue);color:#fff}
+  .btn-ghost{background:#fff;border:1px solid #ddd}
+  .tab{display:inline-block;margin:.2rem .3rem;padding:.4rem .9rem;border:1px solid #ddd;border-radius:999px;cursor:pointer;font-weight:600}
+  .tab.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .q{background:#fff;border:1px solid #e8ebf0;border-radius:12px;padding:.9rem;margin:.9rem 0}
+  .q-title{font-weight:700;margin:.5rem 0 .6rem}
+  .q-head{display:flex;align-items:center;gap:.6rem;margin-bottom:.4rem}
+  .q-head strong{font-weight:700}
+  .passage{
+    background:#f8fafc;border-left:4px solid #cbd5e1;padding:.75rem;border-radius:8px;
+    white-space:pre-wrap;margin:.4rem 0 .8rem
+  }
+  .opt{display:flex;align-items:center;gap:.7rem;padding:.7rem;border:1px solid #dde2ea;border-radius:10px;margin:.4rem 0;background:#f9fafb;cursor:pointer;transition:background .15s,border .15s}
+  .opt[data-letter]::before{content:attr(data-letter);font-weight:700;border:1px solid #cfd6df;border-radius:999px;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;background:#fff}
+  .opt.correct{background:var(--green);border-color:#5bc648;color:#fff}
+  .opt.incorrect{background:var(--red);border-color:#e22f2f;color:#fff;opacity:.95}
+  .bar{display:flex;gap:.5rem;align-items:center;margin-top:.6rem}
+  .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#eff2f6;margin-left:.2rem}
+
+  /* ---- Anti-copy (best-effort) ---- */
+  html, body, #appCard { -webkit-user-select:none; user-select:none; -webkit-touch-callout:none; }
+  @media print { body * { display:none !important; } }
+  #wmCanvas{ position:fixed; inset:0; pointer-events:none; z-index:9999; opacity:.12; }
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>Practice TCF-CANADA – Reading <span id="who" class="pill"></span></h1></div></header>
+<main class="wrap">
+
+  <!-- LOGIN -->
+  <section id="loginCard" class="card">
+    <h2>🔒 Accès réservé</h2>
+    <p>Entrez <b>Nom</b>, <b>Email</b>, <b>Nom d’utilisateur</b> et le <b>Mot-clé</b> fourni par l’administrateur.</p>
+    <form id="loginForm">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem">
+        <label>Nom complet <input name="name" required></label>
+        <label>Email <input name="email" type="email" required></label>
+        <label>Nom d’utilisateur <input name="username" required></label>
+        <label>Mot-clé <input name="keyword" required></label>
+      </div>
+      <input type="hidden" name="fn" value="login">
+      <div class="bar"><button class="btn btn-primary" type="submit">Se connecter</button><span id="loginMsg" style="color:var(--red);font-weight:700;display:none"></span></div>
+    </form>
+  </section>
+
+  <!-- APP -->
+  <section id="appCard" class="card hidden">
+    <h2>📖 Compréhension écrite</h2>
+    <div>
+      <span class="tab active" data-test="1">Test 1</span>
+      <span class="tab" data-test="2">Test 2</span>
+    </div>
+    <div id="qs"></div>
+    <div class="bar">
+      <button id="btnScore" class="btn btn-ghost">Voir mon score</button>
+      <button id="btnReset" class="btn btn-ghost">Recommencer</button>
+      <span id="scoreText" style="font-weight:700;margin-left:.5rem"></span>
+    </div>
+  </section>
+
+</main>
+
+<script>
+/* ===== CONFIG ===== */
+const API = 'https://script.google.com/macros/s/AKfycbyA30BuWmRTlu1UBncKR12LfYOzSoA5ivukXArf-lEX4ZPEviaA69Eklu15vY8nrMv8nQ/exec';
+
+/* ===== SESSION ===== */
+let SESSION = { token:null, username:null, name:null, email:null };
+let HEARTBEAT = null;
+
+function saveSession(){ sessionStorage.setItem('tcf_session', JSON.stringify(SESSION)); }
+function loadSession(){ try{ const s=sessionStorage.getItem('tcf_session'); if(s) SESSION=JSON.parse(s);}catch{} }
+async function checkSession(){
+  loadSession();
+  if(!SESSION.token) return false;
+  const r = await fetch(`${API}?fn=check&token=${encodeURIComponent(SESSION.token)}`).then(r=>r.json()).catch(()=>({ok:false}));
+  return !!r.ok;
+}
+
+/* ===== LOGIN ===== */
+document.getElementById('loginForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  fd.append('userAgent', navigator.userAgent);
+  const msg = document.getElementById('loginMsg'); msg.style.display='none';
+  const res = await fetch(API, { method:'POST', body:fd }).then(r=>r.json()).catch(()=>({ok:false,error:'Network error'}));
+  if(!res.ok){ msg.textContent = res.error || 'Échec de connexion'; msg.style.display='inline'; return; }
+  SESSION = { token:res.token, username:res.username, name:res.name, email:res.email }; saveSession();
+  document.getElementById('who').textContent = res.name || res.username;
+  document.getElementById('loginCard').classList.add('hidden');
+  document.getElementById('appCard').classList.remove('hidden');
+  startHeartbeat();
+  startWatermark();
+  loadTest('1');
+});
+
+/* auto-resume */
+(async()=>{ if(await checkSession()){ document.getElementById('loginCard').classList.add('hidden'); document.getElementById('appCard').classList.remove('hidden'); document.getElementById('who').textContent = (SESSION.name||SESSION.username||''); startHeartbeat(); startWatermark(); loadTest('1'); } })();
+
+/* ===== HEARTBEAT & END ===== */
+function startHeartbeat(){
+  stopHeartbeat();
+  HEARTBEAT = setInterval(()=>{ if(SESSION.token){ const fd=new FormData(); fd.append('fn','touch'); fd.append('token',SESSION.token); fetch(API,{method:'POST',body:fd}); } }, 30000);
+}
+function stopHeartbeat(){ if(HEARTBEAT){ clearInterval(HEARTBEAT); HEARTBEAT=null; } }
+function endSession(){
+  if(!SESSION.token) return;
+  const fd=new FormData(); fd.append('fn','end'); fd.append('token',SESSION.token);
+  if(navigator.sendBeacon){
+    const blob = new Blob([new URLSearchParams([...fd]).toString()], {type:'application/x-www-form-urlencoded'});
+    navigator.sendBeacon(API, blob);
+  }else{
+    fetch(API,{method:'POST',body:fd});
+  }
+}
+window.addEventListener('beforeunload', endSession);
+document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState==='hidden') endSession(); });
+
+/* ===== TESTS ===== */
+let CURRENT = { section:'reading', test:'1', questions:[], answers:{} };
+
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active'); loadTest(t.dataset.test);
+  });
+});
+
+async function loadTest(testId){
+  CURRENT = { section:'reading', test:testId, questions:[], answers:{} };
+  document.getElementById('qs').innerHTML = 'Chargement…';
+  const data = await fetch(`${API}?fn=questions&section=reading&test=${encodeURIComponent(testId)}`).then(r=>r.json()).catch(()=>({ok:false}));
+  if(!data.ok || !data.questions.length){ document.getElementById('qs').innerHTML = '<p>❌ Aucune question pour ce test.</p>'; return; }
+  CURRENT.questions = data.questions;
+  renderQuestions();
+  document.getElementById('scoreText').textContent = '';
+}
+
+/* Render with passage + points; bold header */
+function renderQuestions(){
+  const qs = document.getElementById('qs'); qs.innerHTML = '';
+  CURRENT.questions.forEach((q, idx)=>{
+    const box = document.createElement('div'); box.className='q';
+
+    const qNum = q.qno || (idx+1);
+    const pts  = Number(q.points) || 1;
+
+    // Header: "Question N" + points (both bold)
+    const head = document.createElement('div'); head.className='q-head';
+    head.innerHTML = `<strong>Question ${qNum}</strong> <span class="pill"><strong>${pts}</strong> points</span>`;
+    box.appendChild(head);
+
+    // Passage (optional)
+    if (q.passage){
+      const pass = document.createElement('div'); pass.className='passage';
+      pass.textContent = q.passage;
+      box.appendChild(pass);
+    }
+
+    // Prompt
+    const title = document.createElement('div'); title.className='q-title';
+    title.textContent = q.text || '';
+    box.appendChild(title);
+
+    // Choices
+    ['A','B','C','D'].forEach(letter=>{
+      const opt = document.createElement('div'); opt.className='opt'; opt.dataset.letter=letter;
+      opt.innerHTML = `<div style="flex:1">${letter}. ${q.choices?.[letter] || ''}</div>`;
+      opt.addEventListener('click', ()=>{
+        if (box.dataset.locked) return;
+        const ops = box.querySelectorAll('.opt'); ops.forEach(o=>o.classList.remove('correct','incorrect'));
+        const correct = String(q.answer||'').toUpperCase().trim();
+        if(letter===correct){ opt.classList.add('correct'); }
+        else { opt.classList.add('incorrect'); ops.forEach(o=>{ if(o.dataset.letter===correct) o.classList.add('correct'); }); }
+        box.dataset.locked='1';
+        CURRENT.answers[qNum] = letter;
+      });
+      box.appendChild(opt);
+    });
+
+    qs.appendChild(box);
+  });
+}
+
+/* Weighted scoring by points */
+document.getElementById('btnScore').addEventListener('click', async ()=>{
+  const total = CURRENT.questions.reduce((t,q)=>t + (Number(q.points)||1), 0);
+  let score = 0;
+  CURRENT.questions.forEach((q,i)=>{
+    const qNum = q.qno || (i+1);
+    const pts  = Number(q.points) || 1;
+    const chosen = CURRENT.answers[qNum];
+    if (chosen && String(chosen).toUpperCase() === String(q.answer).toUpperCase()){
+      score += pts;
+    }
+  });
+  document.getElementById('scoreText').textContent = `Score: ${score}/${total}`;
+
+  try{
+    const fd=new FormData();
+    fd.append('fn','logscore');
+    fd.append('token',SESSION.token);
+    fd.append('section',CURRENT.section);
+    fd.append('test',CURRENT.test);
+    fd.append('score',score);
+    fd.append('total',total);
+    await fetch(API,{method:'POST',body:fd});
+  }catch{}
+});
+
+document.getElementById('btnReset').addEventListener('click', ()=>{
+  CURRENT.answers={};
+  renderQuestions();
+  document.getElementById('scoreText').textContent='';
+});
+
+/* ===== Anti-copy / Watermark / Logging (best-effort) ===== */
+async function logEvent(name, note){
+  try{
+    if(!SESSION?.token) return;
+    const fd = new FormData();
+    fd.append('fn','event'); fd.append('token', SESSION.token); fd.append('name', name); fd.append('note', note || '');
+    fetch(API, { method:'POST', body: fd });
+  }catch{}
+}
+['contextmenu','copy','cut','paste','dragstart','selectstart'].forEach(evt=>{
+  document.addEventListener(evt, e => { e.preventDefault(); logEvent('block_'+evt,''); }, {capture:true});
+});
+document.addEventListener('keydown', e=>{
+  const k = e.key.toLowerCase();
+  const mod = e.ctrlKey || e.metaKey;
+  if (mod && ['c','x','a','s','p','u'].includes(k)) { e.preventDefault(); logEvent('block_shortcut',k); }
+  if (k === 'printscreen') {
+    e.preventDefault();
+    if (navigator.clipboard?.writeText) navigator.clipboard.writeText('Screenshots are disabled.');
+    logEvent('block_printscreen','');
+  }
+});
+const wm = document.createElement('canvas'); wm.id='wmCanvas'; document.body.appendChild(wm);
+function drawWatermark(text){
+  const c = wm, ctx = c.getContext('2d');
+  const DPR = Math.max(1, window.devicePixelRatio || 1);
+  c.width = Math.floor(window.innerWidth * DPR);
+  c.height = Math.floor(window.innerHeight * DPR);
+  ctx.setTransform(1,0,0,1,0,0); ctx.clearRect(0,0,c.width,c.height); ctx.save();
+  ctx.translate(c.width/2, c.height/2); ctx.rotate(-Math.PI/6);
+  ctx.font = `${14*DPR}px Inter, system-ui, Arial`; ctx.fillStyle = 'rgba(0,0,0,0.25)'; ctx.textAlign = 'center';
+  const stepX = 260*DPR, stepY = 180*DPR;
+  for(let y = -c.height; y < c.height; y += stepY){
+    for(let x = -c.width; x < c.width; x += stepX){
+      ctx.fillText(text, x, y);
+    }
+  }
+  ctx.restore();
+}
+function startWatermark(){
+  const label = (SESSION?.username || 'user') + ' • ' + new Date().toLocaleString();
+  drawWatermark(label);
+  window.addEventListener('resize', ()=>drawWatermark(label));
+  setInterval(()=>drawWatermark((SESSION?.username||'user')+' • '+new Date().toLocaleString()), 60000);
+}
+const mPrint = window.matchMedia ? window.matchMedia('print') : null;
+if (mPrint) mPrint.addEventListener('change', e=>{ if (e.matches) logEvent('block_print',''); });
+window.onbeforeprint = () => logEvent('block_print','');
+let hiddenTimer = null;
+document.addEventListener('visibilitychange', ()=>{
+  if (document.visibilityState === 'hidden'){
+    hiddenTimer = setTimeout(()=>{ endSession(); logEvent('auto_end','hidden>10s'); }, 10000);
+  } else if (hiddenTimer) { clearTimeout(hiddenTimer); hiddenTimer = null; }
+});
+</script>
+</body>
+</html>
