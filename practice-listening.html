@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Practice TCF-CANADA – Listening</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--green:#31c24d;--red:#ef3a3a;--grey:#eef1f5;--ink:#222;--blue:#0033a0;--track:#e6ebf2}
+  *{box-sizing:border-box}
+  body{font-family:Inter,system-ui,Arial;margin:0;color:var(--ink);background:#fafbfc}
+  header{border-bottom:1px solid #eee;background:#fff;position:sticky;top:0;z-index:5}
+  .wrap{max-width:960px;margin:0 auto;padding:1rem}
+  h1{font-size:1.35rem;margin:.2rem 0}
+  .card{background:#fff;border:1px solid #eee;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.05);padding:1rem;margin:1rem 0}
+  .hidden{display:none}
+  .btn{padding:.6rem 1rem;border-radius:10px;border:none;font-weight:600;cursor:pointer}
+  .btn-primary{background:var(--blue);color:#fff}
+  .btn-ghost{background:#fff;border:1px solid #ddd}
+  .tab{display:inline-block;margin:.2rem .3rem;padding:.4rem .9rem;border:1px solid #ddd;border-radius:999px;cursor:pointer;font-weight:600}
+  .tab.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .q{background:#fff;border:1px solid #e8ebf0;border-radius:12px;padding:.9rem;margin:.9rem 0}
+  .q-title{font-weight:700;margin:.5rem 0 .6rem}
+  .q-head{display:flex;align-items:center;gap:.6rem;margin-bottom:.6rem}
+  .q-head strong{font-weight:700}
+  .opt{display:flex;align-items:center;gap:.7rem;padding:.7rem;border:1px solid #dde2ea;border-radius:10px;margin:.4rem 0;background:#f9fafb;cursor:pointer;transition:background .15s,border .15s}
+  .opt[data-letter]::before{content:attr(data-letter);font-weight:700;border:1px solid #cfd6df;border-radius:999px;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;background:#fff}
+  .opt.correct{background:#dcffe7;border-color:#b6f1c7}
+  .opt.incorrect{background:#ffe5e5;border-color:#ffbaba}
+  .bar{display:flex;gap:.5rem;align-items:center;margin-top:.6rem;flex-wrap:wrap}
+  .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#eff2f6;margin-left:.2rem}
+
+  /* Audio UI */
+  .audioBox{background:#f8fafc;border-left:4px solid #cbd5e1;padding:.75rem;border-radius:8px;margin:.2rem 0 .8rem}
+  .audioRow{display:grid;grid-template-columns:auto 50px 1fr 50px auto;align-items:center;gap:.5rem}
+  .playBtn{width:36px;height:36px;border-radius:999px;display:flex;align-items:center;justify-content:center}
+  .time{font-variant-numeric:tabular-nums;color:#4b5563;font-size:.9rem;width:50px;text-align:center}
+  .seek{appearance:none;width:100%;height:8px;border-radius:6px;background:var(--track);outline:none}
+  .seek::-webkit-slider-thumb{appearance:none;width:18px;height:18px;border-radius:50%;background:#fff;border:2px solid #cbd5e1;box-shadow:0 1px 2px rgba(0,0,0,.1);margin-top:-5px}
+  .seek::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#fff;border:2px solid #cbd5e1}
+  .seek:disabled{opacity:.6}
+  .mute{opacity:.55;pointer-events:none}
+
+  /* Anti-copy (best effort) */
+  html, body, #appCard{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+  @media print{body *{display:none !important}}
+  #wmCanvas{position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.12}
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>Practice TCF-CANADA – Listening <span id="who" class="pill"></span></h1></div></header>
+<main class="wrap">
+
+  <!-- LOGIN -->
+  <section id="loginCard" class="card">
+    <h2>🔒 Accès réservé</h2>
+    <p>Entrez <b>Nom</b>, <b>Email</b>, <b>Nom d’utilisateur</b> et le <b>Mot-clé</b> fourni par l’administrateur.</p>
+    <form id="loginForm">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem">
+        <label>Nom complet <input name="name" required></label>
+        <label>Email <input name="email" type="email" required></label>
+        <label>Nom d’utilisateur <input name="username" required></label>
+        <label>Mot-clé <input name="keyword" required></label>
+      </div>
+      <input type="hidden" name="fn" value="login">
+      <div class="bar"><button class="btn btn-primary" type="submit">Se connecter</button><span id="loginMsg" style="color:var(--red);font-weight:700;display:none"></span></div>
+    </form>
+  </section>
+
+  <!-- APP -->
+  <section id="appCard" class="card hidden">
+    <h2>🎧 Compréhension orale</h2>
+    <div id="tabRow" class="bar" aria-label="Tests disponibles"></div>
+    <div id="qs"></div>
+    <div class="bar">
+      <button id="btnScore" class="btn btn-ghost">Voir mon score</button>
+      <button id="btnReset" class="btn btn-ghost">Recommencer</button>
+      <span id="scoreText" style="font-weight:700;margin-left:.5rem"></span>
+    </div>
+  </section>
+
+</main>
+
+<script>
+/* ===== CONFIG ===== */
+
+// Pass ?api=... to override. Otherwise use default:
+const API = new URLSearchParams(location.search).get('api')
+  || 'https://script.google.com/macros/s/AKfycbxT33id0jIMalSgDeZVsLs3Mc8GTuK2ckmNckhINsjBlzzEd5qZpoTzkNX1eallBDIreA/exec';
+function api(q){ return API + (API.includes('?') ? '&' : '?') + q; }
+
+const MAX_TESTS   = 40;
+const SECTION     = 'listening';
+
+const LOCAL_AUDIO_BASE = 'tcf_audio';    // e.g. tcf_audio/Test-1-Q10.mp3
+const USE_LOCAL_AUDIO  = true;           // set false to use Drive index
+
+/* ===== AUDIO INDEX (Drive fallback; optional) ===== */
+let AUDIO_INDEX = {}; // key: 'test1q10mp3' -> file URL
+async function loadAudioIndex(){
+  if (USE_LOCAL_AUDIO) { AUDIO_INDEX = {}; return; }
+  try{
+    const res  = await fetch(api('fn=audiomap'));
+    const data = await res.json();
+    AUDIO_INDEX = (data && data.ok && data.index) ? data.index : {};
+  }catch{ AUDIO_INDEX = {}; }
+}
+
+/* ===== SESSION ===== */
+let SESSION = { token:null, username:null, name:null, email:null };
+let HEARTBEAT = null;
+
+function saveSession(){ sessionStorage.setItem('tcf_session', JSON.stringify(SESSION)); }
+function loadSession(){ try{ const s=sessionStorage.getItem('tcf_session'); if(s) SESSION=JSON.parse(s);}catch{} }
+async function checkSession(){
+  loadSession();
+  if(!SESSION.token) return false;
+  const r = await fetch(api(`fn=check&token=${encodeURIComponent(SESSION.token)}`)).then(r=>r.json()).catch(()=>({ok:false}));
+  return !!r.ok;
+}
+
+/* ===== LOGIN ===== */
+document.getElementById('loginForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  fd.append('userAgent', navigator.userAgent);
+  const msg = document.getElementById('loginMsg'); msg.style.display='none';
+
+  const res = await fetch(API, { method:'POST', body:fd })
+    .then(r=>r.json())
+    .catch(()=>({ok:false,error:'Network error'}));
+
+  if(!res.ok){
+    msg.textContent = res.error || 'Échec de connexion';
+    msg.style.display='inline';
+    return;
+  }
+  SESSION = { token:res.token, username:res.username, name:res.name, email:res.email };
+  saveSession();
+
+  document.getElementById('who').textContent = res.name || res.username || '';
+  document.getElementById('loginCard').classList.add('hidden');
+  document.getElementById('appCard').classList.remove('hidden');
+
+  startHeartbeat();
+  startWatermark();
+  await loadAudioIndex();
+  discoverTests();
+});
+
+/* auto-resume */
+(async()=>{
+  if(await checkSession()){
+    document.getElementById('loginCard').classList.add('hidden');
+    document.getElementById('appCard').classList.remove('hidden');
+    document.getElementById('who').textContent = (SESSION.name||SESSION.username||'');
+    startHeartbeat();
+    startWatermark();
+    await loadAudioIndex();
+    discoverTests();
+  }
+})();
+
+/* ===== HEARTBEAT / END ===== */
+function startHeartbeat(){
+  stopHeartbeat();
+  HEARTBEAT = setInterval(()=>{ 
+    if(SESSION.token){ 
+      const fd=new FormData(); 
+      fd.append('fn','touch'); 
+      fd.append('token',SESSION.token); 
+      fetch(API,{method:'POST',body:fd}); 
+    } 
+  }, 30000);
+}
+function stopHeartbeat(){ if(HEARTBEAT){ clearInterval(HEARTBEAT); HEARTBEAT=null; } }
+function endSession(){
+  if(!SESSION.token) return;
+  const fd=new FormData(); fd.append('fn','end'); fd.append('token',SESSION.token);
+  if(navigator.sendBeacon){
+    const blob = new Blob([new URLSearchParams([...fd]).toString()], {type:'application/x-www-form-urlencoded'});
+    navigator.sendBeacon(API, blob);
+  }else{
+    fetch(API,{method:'POST',body:fd});
+  }
+}
+window.addEventListener('beforeunload', endSession);
+document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState==='hidden') endSession(); });
+
+/* ===== TESTS ===== */
+let CURRENT = { section:SECTION, test:'1', questions:[], answers:{} };
+
+async function discoverTests(){
+  const tabs = document.getElementById('tabRow');
+  tabs.innerHTML = 'Chargement des tests…';
+
+  let list = [];
+  try {
+    const meta = await fetch(api(`fn=tests&section=${encodeURIComponent(SECTION)}`)).then(r=>r.json());
+    if (meta?.ok && Array.isArray(meta.tests) && meta.tests.length) {
+      list = meta.tests.map(t => String(t).trim());
+    }
+  } catch {}
+
+  if (!list.length) {
+    const probes = [];
+    for (let i = 1; i <= MAX_TESTS; i++) {
+      probes.push(
+        fetch(api(`fn=questions&section=${encodeURIComponent(SECTION)}&test=${i}`))
+          .then(r => r.json())
+          .then(d => (d?.ok && d.questions?.length ? String(i) : null))
+          .catch(() => null)
+      );
+    }
+    const results = await Promise.all(probes);
+    list = results.filter(Boolean);
+  }
+
+  if (!list.length) { tabs.innerHTML = '<span style="color:#b00">Aucun test trouvé.</span>'; return; }
+
+  tabs.innerHTML = '';
+  list.forEach((t, idx) => {
+    const s = document.createElement('span');
+    s.className = 'tab' + (idx === 0 ? ' active' : '');
+    s.dataset.test = t;
+    s.textContent = `Test ${t}`;
+    s.addEventListener('click', () => {
+      tabs.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+      s.classList.add('active');
+      loadTest(t);
+    });
+    tabs.appendChild(s);
+  });
+
+  loadTest(list[0]);
+}
+
+async function loadTest(testId){
+  // stop any currently playing audio when switching tests
+  pauseActiveAudio(true);
+
+  CURRENT = { section:SECTION, test:String(testId), questions:[], answers:{} };
+  document.getElementById('qs').innerHTML = 'Chargement…';
+  const data = await fetch(api(`fn=questions&section=${encodeURIComponent(SECTION)}&test=${encodeURIComponent(testId)}`))
+    .then(r=>r.json()).catch(()=>({ok:false}));
+  if(!data.ok || !data.questions.length){ 
+    document.getElementById('qs').innerHTML = '<p>❌ Aucune question pour ce test.</p>'; 
+    return; 
+  }
+  CURRENT.questions = data.questions;
+  renderQuestions();
+  document.getElementById('scoreText').textContent = '';
+}
+
+/* ===== AUDIO HELPERS ===== */
+function normalizeKeyFrom(test, qno){
+  const t = String(test).replace(/\D/g,'');
+  const q = String(qno).replace(/\D/g,'');
+  return `test${t}q${q}mp3`;
+}
+function localAudioPath(test, qno){
+  const t = String(test).replace(/\D/g,'');
+  const q = String(qno).replace(/\D/g,'');
+  return `${LOCAL_AUDIO_BASE}/Test-${t}-Q${q}.mp3`;
+}
+function audioUrlFrom(q){
+  if (q.audio && /^https?:\/\//i.test(q.audio)) return q.audio;
+  if (USE_LOCAL_AUDIO) return localAudioPath(CURRENT.test, q.qno);
+  const key = normalizeKeyFrom(CURRENT.test, q.qno);
+  if (AUDIO_INDEX && AUDIO_INDEX[key]) return AUDIO_INDEX[key];
+  return '';
+}
+function fmt(t){
+  if(!isFinite(t)) return '--:--';
+  t = Math.max(0, Math.floor(t));
+  const m = Math.floor(t/60), s = t%60;
+  return `${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+}
+function paintRange(el, pct){
+  // whatsapp-like green progress in the track
+  const p = Math.min(100, Math.max(0, pct));
+  el.style.background = `linear-gradient(to right, var(--green) 0% ${p}%, var(--track) ${p}% 100%)`;
+}
+
+/* Keep only one audio playing at a time */
+let ACTIVE_AUDIO = null;
+function pauseActiveAudio(resetUI){
+  if (!ACTIVE_AUDIO) return;
+  ACTIVE_AUDIO.pause();
+  if (ACTIVE_AUDIO._ui){
+    const {btn, range} = ACTIVE_AUDIO._ui;
+    btn.textContent = '▶️';
+    btn.setAttribute('aria-label','Lire');
+    if (resetUI){
+      range.value = 0;
+      paintRange(range,0);
+    }
+  }
+  ACTIVE_AUDIO = null;
+}
+
+/* ===== RENDER (with custom player) ===== */
+function renderQuestions(){
+  const qs = document.getElementById('qs'); qs.innerHTML = '';
+  CURRENT.questions.forEach((q, idx)=>{
+    const box = document.createElement('div'); box.className='q';
+
+    const qNum = q.qno || (idx+1);
+    const pts  = Number(q.points) || 1;
+
+    // Header
+    const head = document.createElement('div'); head.className='q-head';
+    head.innerHTML = `<strong>Question ${qNum}</strong> <span class="pill"><strong>${pts}</strong> points</span>`;
+    box.appendChild(head);
+
+    // Audio UI
+    const aURL = audioUrlFrom(q);
+    const aWrap = document.createElement('div'); aWrap.className='audioBox';
+    if (!aURL){
+      aWrap.textContent = '❌ Audio introuvable';
+    } else {
+      aWrap.innerHTML = `
+        <div class="audioRow">
+          <button class="btn playBtn btn-primary" type="button" aria-label="Lire">▶️</button>
+          <span class="time cur">00:00</span>
+          <input type="range" min="0" max="1000" value="0" class="seek" aria-label="Barre de progression">
+          <span class="time dur">--:--</span>
+          <span class="pill" data-left style="white-space:nowrap"></span>
+        </div>
+      `;
+      const btn   = aWrap.querySelector('.playBtn');
+      const curEl = aWrap.querySelector('.cur');
+      const durEl = aWrap.querySelector('.dur');
+      const seek  = aWrap.querySelector('.seek');
+      const leftBadge = aWrap.querySelector('[data-left]');
+
+      const audio = new Audio(aURL);
+      audio.preload = 'metadata';
+      audio.controls = false;
+      audio.setAttribute('controlsList','nodownload noplaybackrate noremoteplayback');
+
+      // attach UI to audio for global pause handling
+      audio._ui = {btn, range:seek};
+
+      // duration
+      audio.addEventListener('loadedmetadata', ()=>{
+        durEl.textContent = fmt(audio.duration);
+      });
+
+      // update progress
+      audio.addEventListener('timeupdate', ()=>{
+        curEl.textContent = fmt(audio.currentTime);
+        const pct = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+        seek.value = Math.round(pct * 10); // since max=1000
+        paintRange(seek, pct);
+      });
+
+      // ended
+      audio.addEventListener('ended', ()=>{
+        btn.textContent = '▶️';
+        btn.setAttribute('aria-label','Lire');
+      });
+
+      // play/pause
+      btn.addEventListener('click', async ()=>{
+        if (audio.paused){
+          pauseActiveAudio(false);            // auto-pause others
+          try{ await audio.play(); }catch{ return; }
+          ACTIVE_AUDIO = audio;
+          btn.textContent = '⏸️';
+          btn.setAttribute('aria-label','Pause');
+        }else{
+          audio.pause();
+          btn.textContent = '▶️';
+          btn.setAttribute('aria-label','Lire');
+        }
+      });
+
+      // scrubbing
+      paintRange(seek, 0);
+      seek.addEventListener('input', ()=>{
+        // live scrub while dragging
+        const pct = seek.value / 10; // 0..100
+        paintRange(seek, pct);
+        if (isFinite(audio.duration) && audio.duration>0){
+          audio.currentTime = (pct/100) * audio.duration;
+        }
+      });
+
+      // optional: show "Lecture illimitée"
+      leftBadge.textContent = 'Lecture illimitée';
+
+      aWrap.appendChild(audio);
+    }
+    box.appendChild(aWrap);
+
+    // Prompt
+    const title = document.createElement('div'); title.className='q-title';
+    title.textContent = q.text || '';
+    box.appendChild(title);
+
+    // Choices
+    ['A','B','C','D'].forEach(letter=>{
+      const opt = document.createElement('div'); opt.className='opt'; opt.dataset.letter=letter;
+      opt.innerHTML = `<div style="flex:1">${letter}. ${q.choices?.[letter] || ''}</div>`;
+      opt.addEventListener('click', ()=>{
+        if (box.dataset.locked) return;
+        const ops = box.querySelectorAll('.opt'); ops.forEach(o=>o.classList.remove('correct','incorrect'));
+        const correct = String(q.answer||'').toUpperCase().trim();
+        if(letter===correct){ opt.classList.add('correct'); }
+        else { opt.classList.add('incorrect'); ops.forEach(o=>{ if(o.dataset.letter===correct) o.classList.add('correct'); }); }
+        box.dataset.locked='1';
+        CURRENT.answers[qNum] = letter;
+      });
+      box.appendChild(opt);
+    });
+
+    qs.appendChild(box);
+  });
+}
+
+/* ===== Scoring ===== */
+document.getElementById('btnScore').addEventListener('click', async ()=>{
+  const total = CURRENT.questions.reduce((t,q)=>t + (Number(q.points)||1), 0);
+  let score = 0;
+  CURRENT.questions.forEach((q,i)=>{
+    const qNum = q.qno || (i+1);
+    const pts  = Number(q.points) || 1;
+    const chosen = CURRENT.answers[qNum];
+    if (chosen && String(chosen).toUpperCase() === String(q.answer).toUpperCase()){
+      score += pts;
+    }
+  });
+  document.getElementById('scoreText').textContent = `Score: ${score}/${total}`;
+
+  try{
+    const fd=new FormData();
+    fd.append('fn','logscore');
+    fd.append('token',SESSION.token);
+    fd.append('section',CURRENT.section);
+    fd.append('test',CURRENT.test);
+    fd.append('score',score);
+    fd.append('total',total);
+    await fetch(API,{method:'POST',body:fd});
+  }catch{}
+});
+
+document.getElementById('btnReset').addEventListener('click', ()=>{
+  CURRENT.answers={};
+  renderQuestions();
+  document.getElementById('scoreText').textContent='';
+});
+
+/* ===== Anti-copy / Watermark / Logging ===== */
+async function logEvent(name, note){
+  try{
+    if(!SESSION?.token) return;
+    const fd = new FormData();
+    fd.append('fn','event'); fd.append('token', SESSION.token); fd.append('name', name); fd.append('note', note || '');
+    fetch(API, { method:'POST', body: fd });
+  }catch{}
+}
+['contextmenu','copy','cut','paste','dragstart','selectstart'].forEach(evt=>{
+  document.addEventListener(evt, e => { e.preventDefault(); logEvent('block_'+evt,''); }, {capture:true});
+});
+document.addEventListener('keydown', (e) => {
+  const k = (typeof e?.key === 'string' ? e.key : '').toLowerCase();
+  if (!k) return;
+  const mod = !!(e?.ctrlKey || e?.metaKey);
+  if (mod && ['c','x','a','s','p','u'].includes(k)) {
+    e.preventDefault();
+    logEvent('block_shortcut', k);
+    return;
+  }
+  if (k === 'printscreen') {
+    e.preventDefault();
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText('Screenshots are disabled.');
+    }
+    logEvent('block_printscreen', '');
+  }
+});
+
+const wm = document.createElement('canvas'); wm.id='wmCanvas'; document.body.appendChild(wm);
+function drawWatermark(text){
+  const c = wm, ctx = c.getContext('2d');
+  const DPR = Math.max(1, window.devicePixelRatio || 1);
+  c.width = Math.floor(window.innerWidth * DPR);
+  c.height = Math.floor(window.innerHeight * DPR);
+  ctx.setTransform(1,0,0,1,0,0); ctx.clearRect(0,0,c.width,c.height); ctx.save();
+  ctx.translate(c.width/2, c.height/2); ctx.rotate(-Math.PI/6);
+  ctx.font = `${14*DPR}px Inter, system-ui, Arial`;
+  ctx.fillStyle = 'rgba(0,0,0,0.25)';
+  ctx.textAlign = 'center';
+  const stepX = 260*DPR, stepY = 180*DPR;
+  for(let y = -c.height; y < c.height; y += stepY){
+    for(let x = -c.width; x < c.width; x += stepX){
+      ctx.fillText(text, x, y);
+    }
+  }
+  ctx.restore();
+}
+function startWatermark(){
+  const label = (SESSION?.username || 'user') + ' • ' + new Date().toLocaleString();
+  drawWatermark(label);
+  window.addEventListener('resize', ()=>drawWatermark(label));
+  setInterval(()=>drawWatermark((SESSION?.username||'user')+' • '+new Date().toLocaleString()), 60000);
+}
+</script>
+</body>
+</html>

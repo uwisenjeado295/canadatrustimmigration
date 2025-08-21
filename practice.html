@@ -31,7 +31,7 @@
   .opt[data-letter]::before{content:attr(data-letter);font-weight:700;border:1px solid #cfd6df;border-radius:999px;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;background:#fff}
   .opt.correct{background:var(--green);border-color:#5bc648;color:#fff}
   .opt.incorrect{background:var(--red);border-color:#e22f2f;color:#fff;opacity:.95}
-  .bar{display:flex;gap:.5rem;align-items:center;margin-top:.6rem}
+  .bar{display:flex;gap:.5rem;align-items:center;margin-top:.6rem;flex-wrap:wrap}
   .pill{display:inline-block;padding:.15rem .5rem;border-radius:999px;background:#eff2f6;margin-left:.2rem}
 
   /* ---- Anti-copy (best-effort) ---- */
@@ -63,10 +63,10 @@
   <!-- APP -->
   <section id="appCard" class="card hidden">
     <h2>📖 Compréhension écrite</h2>
-    <div>
-      <span class="tab active" data-test="1">Test 1</span>
-      <span class="tab" data-test="2">Test 2</span>
-    </div>
+
+    <!-- Dynamic tabs will be inserted here -->
+    <div id="tabRow" class="bar" aria-label="Tests disponibles"></div>
+
     <div id="qs"></div>
     <div class="bar">
       <button id="btnScore" class="btn btn-ghost">Voir mon score</button>
@@ -79,7 +79,8 @@
 
 <script>
 /* ===== CONFIG ===== */
-const API = 'https://script.google.com/macros/s/AKfycbyA30BuWmRTlu1UBncKR12LfYOzSoA5ivukXArf-lEX4ZPEviaA69Eklu15vY8nrMv8nQ/exec';
+const API = 'https://script.google.com/macros/s/AKfycbxT33id0jIMalSgDeZVsLs3Mc8GTuK2ckmNckhINsjBlzzEd5qZpoTzkNX1eallBDIreA/exec';
+const MAX_TESTS = 40; // probe up to N tests if backend doesn't provide a list
 
 /* ===== SESSION ===== */
 let SESSION = { token:null, username:null, name:null, email:null };
@@ -103,16 +104,25 @@ document.getElementById('loginForm').addEventListener('submit', async (e)=>{
   const res = await fetch(API, { method:'POST', body:fd }).then(r=>r.json()).catch(()=>({ok:false,error:'Network error'}));
   if(!res.ok){ msg.textContent = res.error || 'Échec de connexion'; msg.style.display='inline'; return; }
   SESSION = { token:res.token, username:res.username, name:res.name, email:res.email }; saveSession();
-  document.getElementById('who').textContent = res.name || res.username;
+  document.getElementById('who').textContent = res.name || res.username || '';
   document.getElementById('loginCard').classList.add('hidden');
   document.getElementById('appCard').classList.remove('hidden');
   startHeartbeat();
   startWatermark();
-  loadTest('1');
+  discoverTests(); // dynamic tabs
 });
 
 /* auto-resume */
-(async()=>{ if(await checkSession()){ document.getElementById('loginCard').classList.add('hidden'); document.getElementById('appCard').classList.remove('hidden'); document.getElementById('who').textContent = (SESSION.name||SESSION.username||''); startHeartbeat(); startWatermark(); loadTest('1'); } })();
+(async()=>{
+  if(await checkSession()){
+    document.getElementById('loginCard').classList.add('hidden');
+    document.getElementById('appCard').classList.remove('hidden');
+    document.getElementById('who').textContent = (SESSION.name||SESSION.username||'');
+    startHeartbeat();
+    startWatermark();
+    discoverTests(); // dynamic tabs
+  }
+})();
 
 /* ===== HEARTBEAT & END ===== */
 function startHeartbeat(){
@@ -136,17 +146,56 @@ document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState=
 /* ===== TESTS ===== */
 let CURRENT = { section:'reading', test:'1', questions:[], answers:{} };
 
-document.querySelectorAll('.tab').forEach(t=>{
-  t.addEventListener('click', ()=>{
-    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
-    t.classList.add('active'); loadTest(t.dataset.test);
+/* Build tabs dynamically: try fn=tests first, else probe 1..MAX_TESTS */
+async function discoverTests(){
+  const tabs = document.getElementById('tabRow');
+  tabs.innerHTML = 'Chargement des tests…';
+
+  let list = [];
+  try {
+    const meta = await fetch(`${API}?fn=tests&section=${encodeURIComponent(CURRENT.section)}`).then(r=>r.json());
+    if (meta?.ok && Array.isArray(meta.tests) && meta.tests.length) {
+      list = meta.tests.map(t => String(t).trim());
+    }
+  } catch {}
+
+  if (!list.length) {
+    const probes = [];
+    for (let i = 1; i <= MAX_TESTS; i++) {
+      probes.push(
+        fetch(`${API}?fn=questions&section=${encodeURIComponent(CURRENT.section)}&test=${i}`)
+          .then(r => r.json())
+          .then(d => (d?.ok && d.questions?.length ? String(i) : null))
+          .catch(() => null)
+      );
+    }
+    const results = await Promise.all(probes);
+    list = results.filter(Boolean);
+  }
+
+  if (!list.length) { tabs.innerHTML = '<span style="color:#b00">Aucun test trouvé.</span>'; return; }
+
+  tabs.innerHTML = '';
+  list.forEach((t, idx) => {
+    const s = document.createElement('span');
+    s.className = 'tab' + (idx === 0 ? ' active' : '');
+    s.dataset.test = t;
+    s.textContent = `Test ${t}`;
+    s.addEventListener('click', () => {
+      tabs.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+      s.classList.add('active');
+      loadTest(t);
+    });
+    tabs.appendChild(s);
   });
-});
+
+  loadTest(list[0]);
+}
 
 async function loadTest(testId){
-  CURRENT = { section:'reading', test:testId, questions:[], answers:{} };
+  CURRENT = { section:'reading', test:String(testId), questions:[], answers:{} };
   document.getElementById('qs').innerHTML = 'Chargement…';
-  const data = await fetch(`${API}?fn=questions&section=reading&test=${encodeURIComponent(testId)}`).then(r=>r.json()).catch(()=>({ok:false}));
+  const data = await fetch(`${API}?fn=questions&section=${encodeURIComponent(CURRENT.section)}&test=${encodeURIComponent(testId)}`).then(r=>r.json()).catch(()=>({ok:false}));
   if(!data.ok || !data.questions.length){ document.getElementById('qs').innerHTML = '<p>❌ Aucune question pour ce test.</p>'; return; }
   CURRENT.questions = data.questions;
   renderQuestions();
