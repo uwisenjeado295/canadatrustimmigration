@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Practice TCF-CANADA – Speaking (Expression orale)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Préparez l'expression orale du TCF Canada : structure, barème, conseils, et banques complètes de sujets avec réponses modèles (Tâches 1, 2, 3)." />
+<style>
+  :root{--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;--bg:#f8fafc;--card:#ffffff;--blue:#0033a0;--pill:#eef2ff}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Arial;color:var(--ink);background:var(--bg)}
+  header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+  .wrap{max-width:980px;margin:0 auto;padding:1rem}
+  h1{font-size:1.45rem;margin:.2rem 0}
+  .lead{color:var(--muted);margin-top:.2rem}
+  .pill{display:inline-block;padding:.18rem .55rem;border-radius:999px;background:var(--pill);font-weight:600;font-size:.85rem}
+
+  .grid{display:grid;gap:1rem}
+  @media(min-width:840px){.grid.cols-3{grid-template-columns:1.1fr 1fr 1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.04);padding:1rem}
+  h2{font-size:1.15rem;margin:.2rem 0 .6rem}
+  h3{font-size:1rem;margin:.7rem 0 .4rem}
+  .meta{color:var(--muted);font-size:.92rem}
+  .tip{background:#f0fdf4;border:1px solid #dcfce7;padding:.6rem .75rem;border-radius:10px}
+
+  .tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:.25rem 0 .75rem}
+  .tab{padding:.45rem .85rem;border:1px solid var(--line);border-radius:999px;background:#fff;font-weight:700;cursor:pointer}
+  .tab.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+  .item{border:1px solid var(--line);border-radius:12px;margin:.7rem 0;overflow:hidden;background:#fff}
+  .item header{display:flex;justify-content:space-between;align-items:center;padding:.8rem 1rem;border-bottom:1px solid var(--line)}
+  .item h4{margin:0;font-size:1rem;font-weight:700}
+  .item .q{padding:1rem;padding-bottom:.25rem}
+  .item .a{padding:0 1rem 1rem 1rem;color:#111}
+  .muted{color:var(--muted)}
+  .badge{display:inline-block;padding:.12rem .45rem;border-radius:6px;background:#eff6ff;border:1px solid #dbeafe;font-weight:700;font-size:.8rem;margin-left:.4rem}
+  .controls{display:flex;gap:.5rem;align-items:center}
+  .btn{padding:.52rem .9rem;border-radius:8px;border:1px solid var(--line);background:#fff;font-weight:700;cursor:pointer}
+
+  .search{display:flex;gap:.5rem;align-items:center;border:1px solid var(--line);padding:.45rem .6rem;border-radius:10px;background:#fff}
+  .search input{border:none;outline:none;width:100%}
+  footer{color:var(--muted);text-align:center;padding:2rem 1rem}
+  details summary{cursor:pointer;list-style:none}
+  details[open] summary .arrow{transform:rotate(90deg)}
+  .arrow{display:inline-block;transition:.15s}
+  .list{display:grid;gap:.75rem}
+  .hl{font-weight:700}
+
+  /* Paragraph & list formatting inside answers */
+  .item .a p{margin:.5rem 0 0 0}
+  .item .a ul{margin:.5rem 0 0 1.2rem}
+  .item .a li{margin:.25rem 0}
+  .label{font-weight:700}
+
+  /* Auth helpers */
+  .hidden{display:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Practice TCF-CANADA – Speaking <span class="pill">Expression orale</span></h1>
+    <div class="lead">Structure, barème, conseils pratiques et banques de sujets avec réponses modèles (Tâches 1, 2, 3).</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <!-- LOGIN (same credentials as Listening/Reading) -->
+  <section id="loginCard" class="card">
+    <h2>🔒 Accès réservé</h2>
+    <p>Entrez <b>Nom</b>, <b>Email</b>, <b>Nom d’utilisateur</b> et le <b>Mot-clé</b> fournis par l’administrateur.</p>
+    <form id="loginForm">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem">
+        <label>Nom complet <input name="name" required></label>
+        <label>Email <input name="email" type="email" required></label>
+        <label>Nom d’utilisateur <input name="username" required></label>
+        <label>Mot-clé <input name="keyword" required></label>
+      </div>
+      <input type="hidden" name="fn" value="login">
+      <div class="controls" style="margin-top:.75rem">
+        <button class="btn" type="submit">Se connecter</button>
+        <span id="loginMsg" style="color:#b00020;font-weight:700;display:none;margin-left:.5rem"></span>
+      </div>
+    </form>
+  </section>
+</div>
+
+<!-- APP (hidden until auth OK) -->
+<main id="app" class="wrap hidden">
+
+  <!-- OVERVIEW -->
+  <section class="grid cols-3">
+    <article class="card">
+      <h2>Structure de l’examen</h2>
+      <ul class="list meta">
+        <li><span class="hl">Tâche 1 – Donner une opinion / présentation</span> (~2 min)</li>
+        <li><span class="hl">Tâche 2 – Interaction simulée</span> (~2 min)</li>
+        <li><span class="hl">Tâche 3 – Demander / donner des informations</span> (~2 min)</li>
+      </ul>
+      <p class="meta" style="margin-top:.5rem">Réponses enregistrées; pas de temps de préparation; les tâches s’enchaînent.</p>
+    </article>
+
+    <article class="card">
+      <h2>Barème & attentes</h2>
+      <p class="meta">Évaluation A1 → C2 : lexique, grammaire, cohérence, fluidité, prononciation et pertinence. Les réponses C1/C2 utilisent des connecteurs variés et une argumentation claire.</p>
+    </article>
+
+    <article class="card">
+      <h2>Conseils</h2>
+      <div class="tip meta">
+        • Structurez: Intro → 2–3 idées + exemples → nuance → conclusion. • Variez les connecteurs (cependant, en revanche, par ailleurs…). • Donnez des exemples concrets. • Parlez sans traduire mentalement.
+      </div>
+    </article>
+  </section>
+
+  <!-- FILTERS / TABS -->
+  <section class="card">
+    <div class="controls" style="justify-content:space-between;flex-wrap:wrap;gap:.75rem">
+      <div class="tabs" id="tabs">
+        <button class="tab active" data-task="1">Tâche 1</button>
+        <button class="tab" data-task="2">Tâche 2</button>
+        <button class="tab" data-task="3">Tâche 3</button>
+      </div>
+      <label class="search">
+        <span class="muted">🔎</span>
+        <input id="q" type="search" placeholder="Rechercher un sujet… (ex : réseaux sociaux, télétravail)">
+      </label>
+    </div>
+    <div id="list"></div>
+  </section>
+
+  <!-- HOW TO ANSWER -->
+  <section class="card">
+    <h2>Gabarits rapides</h2>
+    <details open>
+      <summary><span class="arrow">▶</span> Tâche 1 – Opinion / Présentation</summary>
+      <ul class="list meta">
+        <li><b>Intro</b> : reformulez le sujet / présentez-vous + position.</li>
+        <li><b>2–3 arguments</b> + exemple concret chacun.</li>
+        <li><b>Nuance</b> / contre-argument bref.</li>
+        <li><b>Conclusion</b> : réponse claire + ouverture.</li>
+      </ul>
+    </details>
+    <details>
+      <summary><span class="arrow">▶</span> Tâche 2 – Interaction</summary>
+      <ul class="list meta">
+        <li><b>Contexte</b> (bonjour + motif) → <b>demande claire</b>.</li>
+        <li><b>Infos</b> : références, dates, pièces.</li>
+        <li><b>Politesse</b> : formule / solution proposée.</li>
+      </ul>
+    </details>
+    <details>
+      <summary><span class="arrow">▶</span> Tâche 3 – Infos</summary>
+      <ul class="list meta">
+        <li><b>But</b> → <b>questions précises</b> (prix, délais, documents…).</li>
+        <li><b>Relance</b> : options / alternatives.</li>
+        <li><b>Clôture</b> polie.</li>
+      </ul>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <div>© <span id="year"></span> Canada Trust Immigration — Page d’entraînement non officielle (usage pédagogique).</div>
+</footer>
+
+<script>
+/* ===================== AUTH (reuse your Listening API) ===================== */
+// Use the same Apps Script endpoint as your Listening page.
+// You can override by adding ?api=... in the URL.
+const API = new URLSearchParams(location.search).get('api')
+  || 'https://script.google.com/macros/s/AKfycbxT33id0jIMalSgDeZVsLs3Mc8GTuK2ckmNckhINsjBlzzEd5qZpoTzkNX1eallBDIreA/exec';
+
+function api(q){ return API + (API.includes('?') ? '&' : '?') + q; }
+
+let SESSION = { token:null, username:null, name:null, email:null };
+function saveSession(){ sessionStorage.setItem('tcf_session', JSON.stringify(SESSION)); }
+function loadSession(){ try{ const s=sessionStorage.getItem('tcf_session'); if(s) SESSION=JSON.parse(s);}catch{} }
+
+async function checkSession(){
+  loadSession();
+  if(!SESSION.token) return false;
+  try{
+    const r = await fetch(api(`fn=check&token=${encodeURIComponent(SESSION.token)}`));
+    const j = await r.json();
+    return !!j.ok;
+  }catch{ return false; }
+}
+function showApp(){ document.getElementById('loginCard')?.classList.add('hidden'); document.getElementById('app')?.classList.remove('hidden'); }
+function showLogin(msg){
+  if(msg){ const el = document.getElementById('loginMsg'); el.textContent = msg; el.style.display='inline'; }
+  document.getElementById('app')?.classList.add('hidden');
+  document.getElementById('loginCard')?.classList.remove('hidden');
+}
+
+// Auto-resume
+(async ()=>{ if(await checkSession()) showApp(); else showLogin(''); })();
+
+// Handle login submit
+document.getElementById('loginForm')?.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  fd.append('userAgent', navigator.userAgent);
+  const msg = document.getElementById('loginMsg'); msg.style.display='none';
+  try{
+    const res = await fetch(API, { method:'POST', body: fd }).then(r=>r.json());
+    if(!res.ok){ msg.textContent = res.error || 'Échec de connexion'; msg.style.display='inline'; return; }
+    SESSION = { token:res.token, username:res.username, name:res.name, email:res.email };
+    saveSession(); showApp();
+  }catch{ msg.textContent='Erreur réseau'; msg.style.display='inline'; }
+});
+</script>
+
+<script>
+/* ===================== RENDER HELPERS ===================== */
+function formatAnswer(raw){
+  if(!raw) return "";
+  let txt = String(raw).trim().replace(/\r/g,"");
+
+  // Bold common section labels at line starts
+  const labels = ["Introduction","Arguments","Argument","Développement","Contre-argument","Contre argument","Objection","Conclusion","Ouverture"];
+  labels.forEach(l=>{
+    const re = new RegExp(`(^|\\n)\\s*${l}\\s*:?\\s*`,"gi");
+    txt = txt.replace(re,(m,g1)=> `${g1}<span class="label">${l} :</span> `);
+  });
+
+  // Split to paragraphs; bullet lines beginning with - / • into <ul>
+  const lines = txt.split(/\n/);
+  const blocks = [];
+  let bullets = [];
+  const flushBullets=()=>{ if(bullets.length){ blocks.push("<ul>"+bullets.map(b=>`<li>${b}</li>`).join("")+"</ul>"); bullets=[]; } };
+
+  for(const line of lines){
+    const s = line.trim();
+    if(!s){ flushBullets(); blocks.push(""); continue; }
+    if(/^[-•]\s+/.test(s)){ bullets.push(s.replace(/^[-•]\s+/,"")); continue; }
+    flushBullets();
+    blocks.push(`<p>${s}</p>`);
+  }
+  flushBullets();
+  return blocks.filter(Boolean).join("");
+}
+</script>
+
+<script>
+/* ===================== DATA (Task 1 + Task 2) ===================== */
+const DATA = [
+  /* ==== TÂCHE 1 — Présentation personnelle ==== */
+  { task:"1",
+    q:"Présentez-vous brièvement.",
+    a:`Bonjour. Je m’appelle Jean Ndahiro. J’ai 34 ans et je viens du Rwanda. 
+Le Rwanda est un pays d’Afrique de l’Est, frontalier de l’Ouganda, du Burundi, de la Tanzanie et de la République démocratique du Congo. 
+Le Rwanda est un pays d’Afrique de l’Est, connu pour ses paysages verdoyants et ses collines.
+
+Je vis actuellement au Canada, à Toronto. 
+Je suis chercheur académique à l’Université York, dans le domaine des neurosciences visuelles. 
+Je suis marié et j’ai un enfant de 7 ans.
+
+Pendant mon temps libre, j’aime écouter la radio, apprendre de nouvelles choses et passer du temps avec ma famille. 
+Je parle français, anglais et kinyarwanda, et je continue à améliorer mon français tous les jours.`},
+
+  /* ==== TÂCHE 2 — Scénarios & nombreuses questions ==== */
+
+  // 1) Films
+  { task:"2",
+    q:"Vous êtes ami(e) avec un francophone et devez écrire un article sur un film pour la revue de votre association. Demandez-lui des informations.",
+    a:`- Quel est le dernier film que vous avez regardé et aimé ?
+- Quel genre de films préférez-vous ? Pourquoi ?
+- Y a-t-il un réalisateur que vous appréciez particulièrement ?
+- Pouvez-vous me parler d’un film qui vous a marqué récemment ?
+- Où et quand avez-vous vu ce film ?
+- Ce film a-t-il reçu des prix ou des distinctions ?
+- Quels sont, selon vous, les points forts de ce film ?
+- Y a-t-il une scène qui vous a particulièrement ému(e) ?
+- Recommanderiez-vous ce film à quelqu’un qui apprend le français ? Pourquoi ?
+- Ce film est-il basé sur une histoire vraie ou une œuvre littéraire ?
+- Comment décririez-vous la bande-son ? Est-elle marquante ?
+- Ce film convient-il à tous les âges ou vise-t-il un public spécifique ?`},
+
+  // 2) Agence de voyages
+  { task:"2",
+    q:"Vous entrez dans une agence de voyages pour organiser des vacances. Demandez des informations.",
+    a:`- Quelles sont les destinations les plus populaires en ce moment ?
+- Quels circuits touristiques proposez-vous ?
+- Quels sont les tarifs moyens pour un séjour d’une semaine ?
+- Quelles activités sont incluses dans vos offres ?
+- Y a-t-il des réductions pour les familles ou les groupes ?
+- Quelle destination conseilleriez-vous pour un voyage en solo ?
+- Quelle est la meilleure période pour s’y rendre ?
+- Quels documents sont nécessaires (visa, assurance, etc.) ?
+- Proposez-vous des formules tout compris ?
+- Quel est le temps de vol moyen pour cette destination ?
+- Avez-vous des conseils avant le départ ?
+- Offrez-vous une assistance en cas de problème pendant le voyage ?`},
+
+  // 3) Fête entre voisins
+  { task:"2",
+    q:"Vous souhaitez organiser une fête entre voisins. Demandez des conseils à votre voisin(e).",
+    a:`- Quel est le meilleur jour pour l’organiser ?
+- Combien de personnes devrions-nous inviter ?
+- Où vaut-il mieux la faire ?
+- Quel type de repas conviendrait (buffet, barbecue, repas assis…) ?
+- Y a-t-il des restrictions de bruit dans le quartier ?
+- Faut-il prévoir des activités ou des jeux ?
+- Comment inviter les voisins (affiche, papier, WhatsApp) ?
+- Proposer un thème, est-ce une bonne idée ?
+- Certains voisins viennent rarement : comment les encourager ?
+- Prévoit-on un budget commun ?
+- Chacun apporte un plat, qu’en pensez-vous ?
+- On termine tôt ou on prolonge tard dans la nuit ?`},
+
+  // 4) Nouvel arrivant
+  { task:"2",
+    q:"Vous venez d’arriver en ville et souhaitez rencontrer des personnes. Posez des questions à votre voisin(e).",
+    a:`- Y a-t-il des événements locaux où rencontrer du monde ?
+- Quels lieux du quartier sont les plus fréquentés ?
+- Existe-t-il des associations ou clubs pour nouveaux arrivants ?
+- Y a-t-il des groupes WhatsApp ou Facebook du quartier ?
+- Des cafés conviviaux à recommander pour socialiser ?
+- Est-il courant d’échanger avec ses voisins ici ?
+- Quelles activités sportives ou culturelles sont accessibles à tous ?
+- Comment trouver des personnes qui partagent mes centres d’intérêt ?
+- Connaissez-vous des initiatives locales pour les nouveaux ?
+- Des conseils pour engager la conversation ?
+- Quelles périodes de l’année facilitent les rencontres ?
+- Y a-t-il des fêtes/événements où les habitants se retrouvent ?`},
+
+  // 5) Rythme de travail — Canada
+  { task:"2",
+    q:"Vous vous renseignez sur les horaires et congés au Canada pour comparer avec votre pays.",
+    a:`- Quelles sont les heures de travail habituelles ?
+- Les horaires sont-ils flexibles ou fixes ?
+- Combien de jours de congé en moyenne ?
+- Quels jours fériés sont chômés ?
+- Comment fonctionne le congé parental ?
+- Différences public/privé pour les congés ?
+- Les heures supplémentaires sont-elles rémunérées ?
+- Travaille-t-on souvent le week-end ou en soirée ?
+- Durée légale de la pause déjeuner ?
+- Congés maladie payés : droits ?
+- Le télétravail est-il répandu ?
+- Quels avantages sociaux (assurances, retraite) ?`},
+
+  // 6) Colocation
+  { task:"2",
+    q:"Un ami vous propose une chambre en colocation. Posez vos questions.",
+    a:`- La chambre est-elle meublée ?
+- Quels espaces communs partagerons-nous ?
+- Y a-t-il des règles à respecter ?
+- Quel est le loyer et quelles charges ?
+- La chambre est-elle lumineuse et bien insonorisée ?
+- Combien de colocataires vivent déjà ici ?
+- Commerces et transports à proximité ?
+- Peut-on inviter des amis facilement ?
+- Le quartier est-il calme et sécurisé ?
+- Est-il possible d’avoir un contrat de location formel ?`},
+
+  // 7) Nouvel emploi — ami(e)
+  { task:"2",
+    q:"Votre ami(e) a commencé un nouveau travail. Informez-vous sur son expérience.",
+    a:`- Quelles sont tes premières impressions ?
+- Quelles sont les principales responsabilités ?
+- Tu t’entends bien avec l’équipe ?
+- Quels sont les horaires de travail ?
+- Le poste est-il proche de chez toi ?
+- Quels défis rencontres-tu ?
+- Qu’est-ce qui te plaît le plus ?
+- Le salaire est-il satisfaisant ?
+- Des possibilités d’évolution ?
+- Reçois-tu des formations ou du soutien ?`},
+
+  // 8) Médecin remplaçant
+  { task:"2",
+    q:"L’assistante de votre médecin vous informe qu’il est en vacances et remplacé. Posez vos questions.",
+    a:`- Quel est le nom du médecin remplaçant ?
+- A-t-il les mêmes spécialités que mon médecin ?
+- Est-il possible d’avoir un rendez-vous cette semaine ?
+- Peut-il accéder à mon dossier médical ?
+- Quels sont ses horaires de consultation ?
+- Comment prendre rendez-vous avec lui ?
+- Est-il recommandé pour mon cas ?
+- Y a-t-il des frais supplémentaires ?
+- Combien de temps assurera-t-il le remplacement ?
+- Puis-je le contacter en cas d’urgence ?`},
+
+  // 9) Blog de voyage
+  { task:"2",
+    q:"Vous souhaitez créer un blog de voyage. Demandez conseil à votre ami(e) blogueur(euse).",
+    a:`- Quel hébergeur recommandes-tu pour démarrer ?
+- Quels thèmes sont populaires actuellement ?
+- Faut-il investir dans un design personnalisé ?
+- Comment attirer des lecteurs ?
+- Combien de temps hebdomadaire y consacrer ?
+- Quels sujets ou rubriques aborder ?
+- Faut-il publier régulièrement pour fidéliser ?
+- Quels réseaux sociaux sont les plus efficaces ?
+- Des conseils pour écrire des articles intéressants ?
+- Comment choisis-tu les images et visuels ?`},
+
+  // 10) Anniversaire
+  { task:"2",
+    q:"Vous préparez l’anniversaire de votre conjoint(e) au Canada. Demandez des idées à votre voisin(e).",
+    a:`- Meilleurs restaurants pour un anniversaire ?
+- Lieux romantiques pour une soirée spéciale ?
+- Idées d’activités à faire en couple ?
+- Y a-t-il des salles ou espaces pour un petit événement privé ?
+- Où acheter un bon gâteau ?
+- Magasins pour les décorations ?
+- Types de restaurants les plus appréciés ici ?
+- Peut-on réserver un espace extérieur ?
+- Contacts de photographes ?
+- Connais-tu des musiciens ou DJ pour animer ?`},
+
+  // 11) Nouveau voisin
+  { task:"2",
+    q:"Vous êtes nouveau/nouvelle dans l’immeuble et faites connaissance dans l’ascenseur.",
+    a:`- Depuis combien de temps habitez-vous ici ?
+- Comment est l’ambiance générale ?
+- Les voisins se connaissent-ils bien ?
+- Des activités organisées entre voisins ?
+- Des recommandations sur les personnes à connaître ?
+- Règles spécifiques (bruit, déchets, etc.) ?
+- Les parties communes sont-elles bien entretenues ?
+- Avez-vous déjà eu des problèmes de voisinage ?
+- L’immeuble est-il calme la nuit ?
+- Y a-t-il beaucoup d’enfants dans l’immeuble ?`}
+];
+</script>
+
+<script>
+/* ===================== UI / RENDER ===================== */
+const listEl = document.getElementById('list');
+const tabsEl = document.getElementById('tabs');
+const qInput = document.getElementById('q');
+document.getElementById('year').textContent = new Date().getFullYear();
+
+let CURRENT_TASK = "1";
+let QUERY = "";
+
+function itemTemplate(x){
+  return `
+  <article class="item">
+    <header>
+      <h4><strong>${x.q}</strong> <span class="badge">Tâche ${x.task}</span></h4>
+      <div class="controls">
+        <button class="btn js-toggle">Voir la réponse</button>
+      </div>
+    </header>
+    <div class="q muted">${
+      x.task==="3"
+        ? "📝 Conseil : annoncez le but → enchaînez des questions précises (prix, délais, docs…) → relance → clôture polie."
+        : x.task==="2"
+        ? "📝 Conseil : bonjour + motif, demande claire, détails (dates, références), formule de politesse."
+        : "📝 Conseil : intro, 2–3 idées avec exemples, nuance, conclusion."
+    }</div>
+    <div class="a" style="display:none">${formatAnswer(x.a)}</div>
+  </article>`;
+}
+
+function render(){
+  const items = DATA
+    .filter(x => x.task === CURRENT_TASK)
+    .filter(x => !QUERY || (x.q.toLowerCase().includes(QUERY) || x.a.toLowerCase().includes(QUERY)));
+
+  if (!items.length){
+    listEl.innerHTML = `<p class="meta">Aucun résultat. Essayez un autre mot-clé.</p>`;
+    return;
+  }
+  listEl.innerHTML = items.map(itemTemplate).join('');
+  document.querySelectorAll('.js-toggle').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const ans = btn.closest('.item').querySelector('.a');
+      ans.style.display = (ans.style.display !== 'none') ? 'none' : 'block';
+    });
+  });
+}
+
+// Expose for JSON loader
+window.render = render;
+
+// Tabs
+tabsEl.querySelectorAll('.tab').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    tabsEl.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    CURRENT_TASK = b.dataset.task;
+    render();
+  });
+});
+
+// Search
+qInput.addEventListener('input', e=>{
+  QUERY = (e.target.value||'').trim().toLowerCase();
+  render();
+});
+
+// Initial render
+render();
+
+/* ===================== Load full Task 3 from JSON ===================== */
+fetch('tcf_task3_full.json')
+  .then(r => r.json())
+  .then(items => {
+    if (Array.isArray(items)) {
+      DATA.push(...items.map(x => ({ task:"3", q:String(x.q||"").trim(), a:String(x.a||"").trim() })));
+      if (CURRENT_TASK === "3") render();
+    }
+  })
+  .catch(()=>{/* If JSON missing locally (file://), it will work once deployed */});
+</script>
+</body>
+</html>
