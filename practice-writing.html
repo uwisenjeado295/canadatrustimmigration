@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Practice TCF-CANADA – Writing (Expression écrite)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--blue:#0033a0;--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;--bg:#f8fafc;--card:#fff;--danger:#b00020}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,Arial;background:var(--bg);color:var(--ink)}
+  header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+  .wrap{max-width:1000px;margin:0 auto;padding:1rem}
+  h1{font-size:1.35rem;margin:.3rem 0}
+  .pill{background:#eef2ff;border-radius:999px;padding:.15rem .55rem;font-weight:700}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.05);padding:1rem;margin:1rem 0}
+  .tabs{display:flex;gap:.5rem;flex-wrap:wrap}
+  .tab{border:1px solid var(--line);border-radius:999px;padding:.45rem .9rem;background:#fff;cursor:pointer;font-weight:700}
+  .tab.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .input{width:100%;border:1px solid var(--line);border-radius:10px;padding:.55rem .7rem}
+  .item{border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff}
+  .meta{margin:.35rem 0 .25rem}
+  .meta .chip{display:inline-block;background:#eef2f7;border:1px solid #e2e8f0;border-radius:999px;padding:.1rem .5rem;font-size:.8rem;margin-right:.35rem}
+  .sample p{margin:.5rem 0;line-height:1.55}
+  .muted{color:var(--muted)}
+  .btn{border:1px solid var(--line);background:#fff;border-radius:10px;padding:.6rem .9rem;font-weight:700;cursor:pointer}
+  .btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .btn.danger{border-color:#f3c7cc;background:#fff;color:var(--danger)}
+  .hidden{display:none}
+  .qblock p{margin:.3rem 0;line-height:1.55}
+  .qblock b{font-weight:700}
+  .alert{border:1px dashed #f3c7cc;background:#fff7f8;color:var(--danger);padding:.75rem;border-radius:10px;margin:.6rem 0}
+  .row{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Practice TCF-CANADA – Writing <span class="pill">Expression écrite</span> <span id="who" class="pill"></span></h1>
+    <div class="muted">Structure officielle (60 min) • Conseils • Banque de sujets avec réponses modèles.</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <!-- LOGIN -->
+  <section id="loginCard" class="card">
+    <h2>🔒 Accès réservé</h2>
+    <p>Entrez <b>Nom</b>, <b>Email</b>, <b>Nom d’utilisateur</b> et le <b>Mot-clé</b> (identiques aux autres pages).</p>
+    <form id="loginForm">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.8rem">
+        <label>Nom complet <input class="input" name="name" required></label>
+        <label>Email <input class="input" name="email" type="email" required></label>
+        <label>Nom d’utilisateur <input class="input" name="username" required></label>
+        <label>Mot-clé <input class="input" name="keyword" required></label>
+      </div>
+      <input type="hidden" name="fn" value="login">
+      <div class="row" style="margin-top:.6rem">
+        <button class="btn primary" type="submit">Se connecter</button>
+        <span id="loginMsg" class="muted" style="color:#b00020;font-weight:700;display:none"></span>
+      </div>
+    </form>
+  </section>
+</div>
+
+<main id="app" class="wrap hidden">
+  <section class="card" style="margin-top:0">
+    <h2 style="margin:.2rem 0 .6rem"><b>Structure & barème</b></h2>
+    <div class="muted">
+      <p><b>Tâche 1</b> — message informel (60–120 mots) • ~10 min</p>
+      <p><b>Tâche 2</b> — message semi-/formel (120–150 mots) • ~15–20 min</p>
+      <p><b>Tâche 3</b> — essai argumentatif avec documents (180–210 mots) • ~30–35 min</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-task="1">Tâche 1</button>
+      <button class="tab" data-task="2">Tâche 2</button>
+      <button class="tab" data-task="3">Tâche 3</button>
+      <div style="margin-left:auto;display:flex;gap:.5rem;align-items:center">
+        <input id="q" class="input" placeholder="🔎 Rechercher un mot-clé…">
+        <button id="btnClear" class="btn">Effacer</button>
+      </div>
+    </div>
+
+    <!-- JSON status + importer -->
+    <div id="jsonStatus" class="alert hidden"></div>
+    <div class="row" id="jsonControls" style="margin:.5rem 0 .2rem">
+      <input type="file" id="filePicker" accept="application/json" class="hidden">
+      <button id="btnPick" class="btn">Importer un JSON…</button>
+      <button id="btnReload" class="btn">Recharger</button>
+      <small class="muted">Astuce : servez la page via un petit serveur web pour éviter les erreurs <code>CORS</code> (ex. <code>python -m http.server</code>).</small>
+    </div>
+
+    <div id="taskHelp" class="muted" style="margin:.6rem 0 .2rem"></div>
+    <div id="list"></div>
+  </section>
+</main>
+
+<!-- Inline JSON fallback (laissez vide si vous utilisez le fichier) -->
+<script id="writing-json" type="application/json"></script>
+
+<script>
+/* ===================== AUTH ===================== */
+const API = new URLSearchParams(location.search).get('api')
+  || 'https://script.google.com/macros/s/AKfycbxT33id0jIMalSgDeZVsLs3Mc8GTuK2ckmNckhINsjBlzzEd5qZpoTzkNX1eallBDIreA/exec';
+function api(q){ return API + (API.includes('?') ? '&' : '?') + q; }
+let SESSION = { token:null, username:null, name:null, email:null };
+
+function saveSession(){ sessionStorage.setItem('tcf_session', JSON.stringify(SESSION)); }
+function loadSession(){ try{ const s=sessionStorage.getItem('tcf_session'); if(s) SESSION=JSON.parse(s);}catch{} }
+async function checkSession(){
+  loadSession(); if(!SESSION.token) return false;
+  try{ const r = await fetch(api('fn=check&token='+encodeURIComponent(SESSION.token))).then(r=>r.json()); return !!r.ok; }catch{ return false; }
+}
+function showApp(){
+  document.getElementById('loginCard').classList.add('hidden');
+  document.getElementById('app').classList.remove('hidden');
+  document.getElementById('who').textContent = (SESSION.name||SESSION.username||'');
+}
+function showLogin(msg){
+  if(msg){
+    const el=document.getElementById('loginMsg');
+    el.textContent=msg; el.style.display='inline';
+  }
+  document.getElementById('app').classList.add('hidden');
+  document.getElementById('loginCard').classList.remove('hidden');
+}
+
+(async()=>{ if(await checkSession()) { showApp(); boot(); } else showLogin(''); })();
+
+document.getElementById('loginForm')?.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const fd=new FormData(e.target); fd.append('userAgent', navigator.userAgent);
+  const msg = document.getElementById('loginMsg'); msg.style.display='none';
+  try{
+    const res = await fetch(API,{method:'POST',body:fd}).then(r=>r.json());
+    if(!res.ok){ msg.textContent = res.error || 'Échec de connexion'; msg.style.display='inline'; return; }
+    SESSION = { token:res.token, username:res.username, name:res.name, email:res.email }; saveSession(); showApp(); boot();
+  }catch{ msg.textContent='Erreur réseau'; msg.style.display='inline'; }
+});
+
+/* ===================== DATA & RENDERING ===================== */
+const HELP = {
+  1: "<b>Consigne</b> : message personnel/informel (60–120 mots). <b>Structure</b> : salutation → motif → 2–3 infos → clôture. <b>Style</b> : simple, naturel.",
+  2: "<b>Consigne</b> : message semi-/formel (120–150 mots). <b>Structure</b> : objet/appel → motif → 2–3 points précis → demande → formule. <b>Style</b> : poli, clair.",
+  3: "<b>Consigne</b> : essai argumentatif (180–210 mots). <b>Structure</b> : introduction → 2–3 arguments + exemples → contre-argument → conclusion."
+};
+
+let BANK_DATA = {"1":[],"2":[],"3":[]};
+
+function escapeHTML(s){
+  return (s||"").replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+}
+function metaChipsFor(task){
+  if(task===1) return '<span class="chip">60–120 mots</span><span class="chip">~10 min</span><span class="chip">Ton personnel</span>';
+  if(task===2) return '<span class="chip">120–150 mots</span><span class="chip">~15–20 min</span><span class="chip">Formel</span>';
+  return '<span class="chip">180–210 mots</span><span class="chip">~30–35 min</span><span class="chip">Argumentation</span>';
+}
+
+const tabs = document.getElementById('tabs');
+const list = document.getElementById('list');
+const taskHelp = document.getElementById('taskHelp');
+const qInput = document.getElementById('q');
+const jsonStatus = document.getElementById('jsonStatus');
+const filePicker = document.getElementById('filePicker');
+const btnPick = document.getElementById('btnPick');
+const btnReload = document.getElementById('btnReload');
+
+let CURRENT_TASK = 1;
+
+function setStatus(msg, show=true){
+  jsonStatus.textContent = msg || "";
+  jsonStatus.classList.toggle('hidden', !show);
+}
+
+function render(){
+  taskHelp.innerHTML = HELP[CURRENT_TASK] || "";
+  const kw = (qInput.value||'').toLowerCase().trim();
+  const items = (BANK_DATA[String(CURRENT_TASK)]||[]).filter(it=>{
+    if(!kw) return true;
+    const hay = ((it.q||'') + ' ' + (it.sample||[]).join(' ') + ' ' + (it.tags||[]).join(' ')).toLowerCase();
+    return hay.includes(kw);
+  });
+
+  list.innerHTML = '';
+  if(!items.length){ list.innerHTML = '<p class="muted">Aucun résultat. Essayez un autre mot-clé.</p>'; return; }
+
+  items.forEach(it=>{
+    const box = document.createElement('div'); box.className='item';
+
+    // Question + lead until "Correction..." (bold)
+    const qblock = document.createElement('div'); qblock.className='qblock';
+    const qline = document.createElement('p'); qline.innerHTML = '<b>'+escapeHTML(it.q||'')+'</b>'; qblock.appendChild(qline);
+
+    const arr = Array.isArray(it.sample) ? it.sample.slice() : [];
+    const lead = [];
+    while(arr.length && !/^\s*Correction\b/i.test(arr[0])) { lead.push(arr.shift()); }
+    lead.forEach(p=>{ const el=document.createElement('p'); el.innerHTML = '<b>'+escapeHTML(p)+'</b>'; qblock.appendChild(el); });
+
+    box.appendChild(qblock);
+
+    // Meta
+    const meta = document.createElement('div'); meta.className='meta';
+    meta.innerHTML = metaChipsFor(CURRENT_TASK);
+    box.appendChild(meta);
+
+    // Correction with bolded subtitles
+    const btn = document.createElement('button'); btn.className='btn'; btn.textContent='Voir la réponse';
+    const sample = document.createElement('div'); sample.className='sample hidden';
+
+    arr.forEach(p=>{
+      const el = document.createElement('p');
+      const m = /^(Correction(?:\s*T[âa]che\s*\d+)?|Introduction|Développement|Argument(?:s)?|Contre-argument|Conclusion|Objet|Formule|Salutation)\s*[:\-]\s*/i.exec(p);
+      if(m){
+        el.innerHTML = '<b>'+escapeHTML(m[1].replace(/:$/,''))+':</b> '+escapeHTML(p.replace(m[0],''));
+      }else{
+        el.textContent = p;
+      }
+      sample.appendChild(el);
+    });
+
+    btn.addEventListener('click', ()=>{
+      sample.classList.toggle('hidden');
+      btn.textContent = sample.classList.contains('hidden') ? 'Voir la réponse' : 'Masquer';
+    });
+
+    box.appendChild(btn);
+    box.appendChild(sample);
+    list.appendChild(box);
+  });
+}
+
+tabs.addEventListener('click', e=>{
+  const b = e.target.closest('.tab'); if(!b) return;
+  tabs.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  CURRENT_TASK = Number(b.dataset.task);
+  render();
+});
+qInput.addEventListener('input', render);
+document.getElementById('btnClear').addEventListener('click', ()=>{ qInput.value=''; render(); });
+
+/* --------- JSON loading (URL param, inline, file, default path) --------- */
+function getParam(name){ return new URLSearchParams(location.search).get(name); }
+
+async function tryLoadFromUrlParam(){
+  const u = getParam('json'); if(!u) return false;
+  try{
+    const r = await fetch(u, {cache:'no-store'});
+    if(!r.ok) throw new Error(r.status+' '+r.statusText);
+    BANK_DATA = await r.json();
+    setStatus('✅ Banque chargée depuis l’URL fournie.', true);
+    return true;
+  }catch(e){
+    setStatus('❌ Échec du chargement via ?json= : '+e.message, true);
+    return false;
+  }
+}
+
+function tryLoadInline(){
+  const inline = (document.getElementById('writing-json')?.textContent||'').trim();
+  if(!inline || inline==='{}' || inline==='""') return false;
+  try{
+    BANK_DATA = JSON.parse(inline);
+    setStatus('✅ Banque chargée depuis le JSON intégré à la page.', true);
+    return true;
+  }catch(e){
+    setStatus('❌ JSON intégré invalide : '+e.message, true);
+    return false;
+  }
+}
+
+async function tryLoadDefaultFile(){
+  try{
+    const r = await fetch('tcf_writing_bank.json', {cache:'no-store'});
+    if(!r.ok) throw new Error(r.status+' '+r.statusText);
+    BANK_DATA = await r.json();
+    setStatus('✅ Banque chargée depuis tcf_writing_bank.json (même dossier).', true);
+    return true;
+  }catch(e){
+    setStatus('❌ Impossible de lire tcf_writing_bank.json : '+e.message+
+      '. Si vous ouvrez le fichier en file://, servez la page via un petit serveur web (ex. python -m http.server).', true);
+    return false;
+  }
+}
+
+btnPick.addEventListener('click', ()=> filePicker.click());
+filePicker.addEventListener('change', ()=>{
+  const f = filePicker.files?.[0]; if(!f) return;
+  const rd = new FileReader();
+  rd.onload = ()=>{
+    try{
+      BANK_DATA = JSON.parse(rd.result);
+      setStatus('✅ Banque chargée depuis le fichier importé : '+f.name, true);
+      render();
+    }catch(e){
+      setStatus('❌ Fichier JSON invalide : '+e.message, true);
+    }
+  };
+  rd.readAsText(f, 'utf-8');
+});
+btnReload.addEventListener('click', ()=> boot(true));
+
+async function boot(forceReload=false){
+  // on reload, clear previous status
+  if(forceReload) setStatus('', false);
+
+  // Try order: ?json= → inline → default file
+  if(await tryLoadFromUrlParam()){ render(); return; }
+  if(tryLoadInline()){ render(); return; }
+  if(await tryLoadDefaultFile()){ render(); return; }
+
+  // If nothing worked, keep UI visible with importer
+  render();
+}
+</script>
+
+<!-- OPTIONAL: collez votre JSON ici pour éviter tout fetch/CORS -->
+<script id="optional-inline-json">
+/*
+Exemple :
+document.getElementById('writing-json').textContent = JSON.stringify({
+  "1":[{"q":"Exemple T1","sample":["…","Correction Tâche 1","…"]}],
+  "2":[{"q":"Exemple T2","sample":["…","Correction Tâche 2","…"]}],
+  "3":[{"q":"Exemple T3","sample":["…","Correction Tâche 3","…"]}]
+});
+*/
+</script>
+</body>
+</html>

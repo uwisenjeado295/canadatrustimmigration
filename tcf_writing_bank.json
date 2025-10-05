@@ -1,0 +1,1985 @@
+{
+  "1": [
+    {
+      "q": "“Salut, j’ai appris que tu vas à une salle de sport et qu’elle est magnifique. Peux-tu m’en dire plus “. Écrivez un message pour",
+      "sample": [
+        "répondre à votre ami concernant ce sujet.",
+        "Correction Tâche 1",
+        "Salut ! Oui, effectivement, je vais à une salle de sport super sympa, elle est vraiment top ! C’est un endroit spacieux avec",
+        "beaucoup d’équipements modernes pour tous les types d’entraînements : cardio, muscu, yoga, etc. Les machines sont de dernière",
+        "génération et il y a même un espace dédié à la détente avec des saunas. Les coachs sont très pro et toujours disponibles pour des",
+        "conseils ou des entraînements personnalisés. Il y a aussi des cours collectifs qui sont très motivants, comme du spinning et du",
+        "Pilates. L’ambiance est géniale, tout le monde est super sympa et motivé. C’est vraiment un endroit où j’aime me rendre pour me",
+        "défouler et prendre soin de moi."
+      ],
+      "tags": []
+    },
+    {
+      "q": "France Télévision prépare un reportage sur le sport amateur. Et vous, quel sportif êtes-vous",
+      "sample": [
+        "? Envoyez-nous vos témoignages sur francetélévision.fr.",
+        "Correction Tâche 1",
+        "Je pratique le sport amateur depuis plusieurs années, et cela occupe une place essentielle dans ma vie. Que ce soit le football, la",
+        "course à pied ou encore le tennis, chaque activité me permet de me défier, de repousser mes limites, et de prendre soin de mon",
+        "bien-être. J’apprécie particulièrement l’esprit d’équipe et les moments de convivialité, même en dehors des compétitions. Le",
+        "sport amateur offre une véritable liberté, loin des pressions des performances professionnelles, et permet de rencontrer des",
+        "personnes de tous horizons. À travers ces moments, je me sens plus épanoui et en meilleure forme. Le sport est pour moi une",
+        "passion qui me motive au quotidien."
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous avez commandé un objet sur Internet et après réception du colis, vous constatez que l’objet est cassé. Rédigez un e-mail",
+      "sample": [
+        "vitre est brisée, le produit est fissuré, etc.].",
+        "Je vous prie de bien vouloir prendre les mesures nécessaires pour résoudre ce problème. Je souhaiterais obtenir un remboursement",
+        "ou un échange du produit défectueux dans les plus brefs délais.",
+        "Je vous remercie par avance pour votre réactivité et votre aide. Cordialement,",
+        "Ayoub"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous avez passé un week-end à la campagne. Écrivez un message à votre ami(e) pour lui décrire ce qui s’est passé.",
+      "sample": [
+        "Correction Tâche 1",
+        "Salut mon ami,",
+        "J’espère que tu vas bien ! Ce week-end, je suis allé à la campagne, et c’était absolument génial. L’air frais, la nature, tout était si",
+        "apaisant. Je me suis promené dans les champs, et les paysages étaient magnifiques. Il y avait des animaux partout : des vaches, des",
+        "chevaux, et même quelques lapins. Le soir, on a fait un barbecue avec des amis, et on a parlé de tout et de rien autour d’un bon feu.",
+        "C’était un vrai moment de détente. Cela m’a fait beaucoup de bien de m’éloigner de la ville.",
+        "On devrait y aller ensemble un jour ! À bientôt,",
+        "Ayoub"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Je te remercie pour ton message ! Nous avons récemment déménagé dans de nouveaux locaux situés au 12, rue des",
+      "sample": [
+        "Entrepreneurs, dans un quartier dynamique et bien desservi. L’espace est moderne et fonctionnel, avec des bureaux ouverts, des",
+        "salles de réunion équipées de technologies dernier cri, et une grande salle de détente. Nous avons également un coin cuisine",
+        "avec des machines à café, un espace pour les déjeuners et même une terrasse pour les pauses. La disposition permet une bonne",
+        "fluidité entre les différents départements, et l’open space favorise la collaboration. Tout est vraiment adapté à nos besoins et on",
+        "est super contents du nouvel environnement !",
+        "À bientôt,",
+        "Ayoub Tâche 2",
+        "Vous avez assisté à un événement intitulé “Une semaine sans voiture”. Racontez votre expérience et donnez votre impression sur",
+        "cette initiative. Décrivez le déroulement de l’événement (dates, lieu, activités proposées).",
+        "Correction Tâche 2",
+        "J’ai participé à l’événement « Une semaine sans voiture », qui s’est déroulé du 12 au 18 février dans le centre-ville. L’objectif",
+        "était de promouvoir des alternatives à la voiture, en réduisant la pollution et le bruit. Dès le premier jour, une grande partie du",
+        "centre a été fermée à la circulation automobile, laissant place aux piétons et cyclistes. Des activités variées étaient proposées : des",
+        "ateliers sur la mobilité durable, des balades à vélo, ainsi que des conférences sur les enjeux environnementaux. Le dernier jour,",
+        "une grande fête a eu lieu avec des animations musicales et des stands de nourriture locale. J’ai trouvé cette initiative géniale, car",
+        "elle sensibilise efficacement à l’importance de réduire notre dépendance à la voiture tout en offrant des solutions pratiques et",
+        "ludiques pour se déplacer autrement."
+      ],
+      "tags": []
+    },
+    {
+      "q": "Écrivez un message à votre ami pour le convaincre à pratiquer une activité physique.",
+      "sample": [
+        "Correction Tâche 1",
+        "Salut mon ami,",
+        "Je voulais te parler de l’importance de faire un peu d’activité physique. C’est vraiment bénéfique pour la santé, ça aide à se",
+        "sentir mieux dans son corps et dans sa tête ! Même une simple promenade ou quelques exercices à la maison peuvent avoir un",
+        "grand impact sur ton énergie, ton humeur, et même ta concentration. En plus, c’est un super moyen de réduire le stress et de",
+        "prévenir des problèmes de santé à long terme. Ça peut être sympa de le faire ensemble, histoire de se motiver. On pourrait",
+        "essayer une activité que tu apprécies, comme du vélo ou de la muscu.",
+        "Qu’en dis-tu ? Ça te tente ?",
+        "À bientôt !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous souhaitez fêter votre anniversaire dans un restaurant. Vous invitez vos amis. Vous leur écrivez un courriel pour leur donner",
+      "sample": [
+        "toutes les informations nécessaires (lieu, date, menu, prix…) et vous leur demandez une réponse.",
+        "Correction Tâche 1",
+        "Objet : Invitation à ma fête d’anniversaire !",
+        "Salut les amis,",
+        "Je vous invite à fêter mon anniversaire au restaurant Le Jardin Secret le samedi 15 mars à 19h30. Le restaurant est situé au 45",
+        "rue des Fleurs, à côté du parc. Le menu que j’ai choisi inclut une entrée au choix, un plat principal (poulet rôti ou poisson grillé),",
+        "et un dessert gourmand. Le prix est de 30€ par personne, boissons non incluses.",
+        "J’espère que vous pourrez venir ! Merci de me confirmer votre présence avant le 10 mars afin de réserver les places.",
+        "Hâte de célébrer ce moment avec vous ! À bientôt,",
+        "Ayoub"
+      ],
+      "tags": []
+    },
+    {
+      "q": "futures professions, vous leur écrivez un mail pour leur donner les avantages de votre profession.",
+      "sample": [
+        "Correction Tâche 1",
+        "Objet : Avantages de ma profession",
+        "Bonjour,",
+        "Je tenais à partager avec vous les avantages de ma profession pour aider les élèves à se faire une idée plus claire. En tant que",
+        "[votre profession], j’apprécie particulièrement la diversité de mes missions. Chaque jour est différent, ce qui rend le travail",
+        "stimulant et motivant. De plus, j’ai la chance de contribuer à [expliquez un impact positif de votre métier, par exemple aider les",
+        "autres, résoudre des problèmes complexes, créer des projets intéressants]. Ce métier offre également de nombreuses opportunités",
+        "de développement personnel et de progression de carrière. Il est gratifiant de voir l’impact direct de notre travail."
+      ],
+      "tags": []
+    },
+    {
+      "q": "Votre ami Cédric a accepté de garder votre maison et jardin pendant vos vacances. Écrivez un message pour lui dire ce qu’il doit",
+      "sample": [
+        "faire.",
+        "Correction Tâche 1",
+        "Salut Cédric,",
+        "Merci encore de t’occuper de la maison pendant mes vacances ! Voici quelques petites instructions :"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Si tu as besoin de quoi que ce soit, n’hésite pas à m’envoyer un message. Merci encore pour ton",
+      "sample": [
+        "aide ! Profite bien du calme ici.",
+        "A bientôt !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous êtes locataire d’un appartement trop grand pour vous. Écrivez une annonce dan un journal pour chercher un colocataire. Il",
+      "sample": [
+        "faut mentionner ; la superficie, caractère du colocataire, prix, etc). Correction Tâche 1",
+        "Recherche colocataire pour appartement spacieux",
+        "Je cherche un colocataire pour partager mon appartement de 90 m², lumineux et bien situé, à proximité des transports et",
+        "commerces. L’appartement comprend 2 chambres, un grand salon, une cuisine équipée, et une salle de bain. Le loyer est de 600€",
+        "par mois, charges comprises. Je recherche une personne calme, respectueuse, non-fumeuse, et sociable, idéalement étudiant(e)",
+        "ou jeune actif(ve). L’ambiance doit être conviviale et respectueuse. L’appartement est disponible immédiatement. Si vous êtes",
+        "intéressé(e) et souhaitez plus d’informations, n’hésitez pas à me contacter. Une caution de 600€ est demandée.",
+        "Merci de me contacter par téléphone ou par e-mail pour organiser une visite."
+      ],
+      "tags": []
+    },
+    {
+      "q": "Ecrivez un message à votre ami(e) pour lui faire part de votre programme de déménagement vers votre nouveau logement, en",
+      "sample": [
+        "demandant son aide ( date, lieu, programme)",
+        "Correction Tâche 1",
+        "Salut Pierre !",
+        "J’espère que tu vas bien. Je voulais te faire part de mon déménagement vers mon nouveau logement ! C’est prévu pour le 25",
+        "février. Je vais déménager à 15 rue des Acacias, c’est un appartement assez spacieux, avec une belle vue. J’ai besoin d’aide",
+        "pour transporter mes meubles et cartons. Le programme serait de commencer vers 9h, et si tu es dispo, ce serait super si tu",
+        "pouvais venir m’aider. Je pourrais te faire un petit déjeuner et une pause-café pour te remercier ! Dis-moi si tu es disponible, ça",
+        "me ferait vraiment plaisir d’avoir ton aide.",
+        "Merci beaucoup et à bientôt !",
+        "Alex"
+      ],
+      "tags": []
+    },
+    {
+      "q": "La bibliothèque de votre ville organise une rencontre avec un écrivain. Écrivez un message à votre ami(e) pour l’inviter à cet",
+      "sample": [
+        "évènement.",
+        "Correction Tâche 1",
+        "Salut Pierre !",
+        "J’espère que tu vas bien ! Je voulais te faire savoir que la bibliothèque de notre ville organise une rencontre avec un écrivain le",
+        "20 février, et je pense que ce serait super si tu pouvais venir avec moi. L’écrivain va parler de son dernier livre, et il y aura aussi",
+        "une séance de dédicaces à la fin. J’ai réservé des places, donc si ça te tente, fais-moi savoir rapidement. Ce serait une occasion",
+        "géniale de passer du temps ensemble tout en découvrant un auteur intéressant. J’espère vraiment que tu seras dispo !",
+        "À bientôt, Alex"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous avez publié une annonce pour la location de votre appartement à Montréal. Écrivez un courriel pour répondre à une",
+      "sample": [
+        "personne intéressée en lui fournissant des informations sur l’appartement (caractéristiques, loyer, quartier, etc.).",
+        "Correction Tâche 1",
+        "Objet : Informations sur l’appartement à louer à Montréal",
+        "Bonjour,",
+        "Merci de votre intérêt pour l’appartement que je propose à la location à Montréal. Il s’agit d’un appartement de 2 chambres, avec",
+        "une cuisine ouverte et un salon spacieux. Il est situé au 3e étage d’un immeuble calme, offrant une belle luminosité naturelle.",
+        "L’appartement est entièrement meublé et dispose de la climatisation ainsi que d’un balcon privé.",
+        "Le loyer est de 1 250 $ par mois, incluant l’eau chaude. L’immeuble est bien situé, à proximité des transports en commun,",
+        "commerces, parcs, et restaurants. Le quartier est agréable et sûr, idéal pour une vie urbaine dynamique.",
+        "N’hésitez pas à me contacter pour plus de détails ou pour organiser une visite. Cordialement,",
+        "AYOUB"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Écrivez un message à votre ami(e) pour lui décrire le programme de vos prochaines vacances (lieu, date,",
+      "sample": [
+        "activités, etc).",
+        "Correction Tâche 1",
+        "Salut mon ami,",
+        "Je voulais te parler de mes prochaines vacances ! Je pars du 15 au 22 juillet en Bretagne. Je vais passer une semaine à",
+        "Ploumanac’h, un joli village au bord de la mer. Au programme : balades sur la plage, visites des fameux rochers de granit, et",
+        "quelques randonnées dans les sentiers côtiers. Je vais aussi goûter des spécialités locales comme les crêpes et le cidre. Il y aura",
+        "aussi une excursion à l’île de Bréhat, un endroit magnifique, et peut-être une sortie en bateau. Ce sera l’occasion de me détendre",
+        "et de profiter de la nature. Et toi, tu as des projets pour l’été ? J’ai hâte d’avoir de tes nouvelles !",
+        "À bientôt, Ayoub"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Ecrivez un message à votre ami(e) pour lui raconter votre entretien d’embauche (entreprise, salaire, type d’emploi, etc).",
+      "sample": [
+        "Correction Tâche 1",
+        "Salut Marie,",
+        "Je voulais te raconter mon entretien d’embauche d’hier ! J’ai passé l’entretien avec TechNova, une start-up dans le secteur de la",
+        "technologie et des logiciels. Ils m’ont posé des questions assez techniques, mais aussi sur ma façon de travailler en équipe. Le",
+        "poste est développeur web, et je serais responsable de la création et de la maintenance de sites web. Le salaire proposé est",
+        "de 3000€ brut par mois, avec quelques avantages comme des tickets restaurant et une mutuelle. L’ambiance était super détendue,",
+        "et ils semblent vraiment intéressés par mon profil. J’attends leur réponse la semaine prochaine. J’espère que ça va marcher !",
+        "Je te tiendrai au courant. À bientôt,",
+        "LucHaut du formulaire"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Parc de loisirs: « j’ai hâte de passer la journée avec toi demain. dis-moi, quelles activités nous pourrons faire ? Écrivez un message",
+      "sample": [
+        "pour répondre à votre ami(e).",
+        "Correction Tâche 1",
+        "Salut ! Je suis aussi super excité pour demain, ça va être génial. On pourra commencer par faire un tour du parc pour repérer les",
+        "activités. Il y a des manèges à sensations fortes, comme des montagnes russes et des attractions aquatiques, si tu es partant pour",
+        "ça. Ensuite, on pourra tester des jeux d’arcade ou faire une course de karting. Il y a aussi des stands pour gagner des peluches, ce",
+        "serait fun ! Si tu préfères quelque chose de plus tranquille, on peut aller faire un tour en bateau ou profiter de la nature. Bref, on a",
+        "plein de choses à faire, je suis sûr qu’on va passer une super journée !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Je vais bientôt vivre dans ton quartier. Je cherche un endroit sympathique pour faire mes courses. Est-ce que tu connais un",
+      "sample": [
+        "marché intéressant ?",
+        "Merci d’avance et à bientôt ! Bernard",
+        "Vous répondez à votre ami Bernard. Dans votre message, vous décrivez un marché de votre quartier que vous aimez bien (lieu,",
+        "horaires, produits, etc.).",
+        "Correction Tâche 1",
+        "Salut Bernard,",
+        "Bonne nouvelle que tu viennes t’installer dans le quartier ! Pour tes courses, je te recommande vivement le marché de la Place",
+        "Saint-Pierre. Il a lieu tous les mercredis et samedis matin, de 7h à 13h. C’est un marché convivial où tu trouveras des fruits et",
+        "légumes frais, des fromages locaux, de la charcuterie artisanale et même du miel de producteurs de la région. Il y a aussi un",
+        "poissonnier avec du poisson ultra-frais. L’ambiance y est chaleureuse, et les commerçants sont sympathiques. C’est l’endroit",
+        "idéal pour faire le plein de bons produits tout en profitant d’une promenade agréable. Hâte de te voir par ici !",
+        "À bientôt,",
+        "Ayoub Tâche 2",
+        "Vous faites partie d’une association de quartier qui propose des activités aux enfants (aide aux devoirs, sorties, jeux, etc.). Sur",
+        "votre site internet, vous racontez votre expérience et vous expliquez pourquoi ce type d’association est utile.",
+        "Correction Tâche 2",
+        "Faire partie de notre association de quartier est une expérience enrichissante. Nous organisons diverses activités pour les enfants :",
+        "aide aux devoirs, sorties culturelles, jeux et ateliers créatifs. Chaque semaine, nous les accompagnons avec bienveillance pour",
+        "favoriser leur apprentissage et leur épanouissement.",
+        "Ces associations sont essentielles, car elles offrent un soutien aux familles et permettent aux enfants de grandir dans un cadre",
+        "stimulant. Beaucoup ont besoin d’un coup de pouce scolaire ou d’un espace où ils peuvent s’exprimer librement. Grâce à nos",
+        "bénévoles, nous leur apportons cette aide précieuse tout en créant du lien social.",
+        "En plus de favoriser la réussite scolaire, nous développons chez eux la confiance, l’autonomie et",
+        "le goût de la découverte. Voir leur joie et leurs progrès est une véritable satisfaction. Nous croyons en l’importance de l’entraide et",
+        "accueillons avec plaisir toute personne souhaitant s’engager à nos côtés !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Je cherche un endroit pour déjeuner en plein air ce week-end. Qu’est-ce que tu me proposes ? À bientôt,",
+      "sample": [
+        "Barbara",
+        "Vous répondez à votre amie Barbara en décrivant le lieu (parc, jardin, terrasse, etc.).",
+        "Correction Tâche 1",
+        "Salut Barbara !",
+        "Si tu cherches un endroit pour déjeuner en plein air, je te recommande le parc des Buttes- Chaumont. C’est un lieu vraiment",
+        "charmant avec des collines, un lac et de nombreuses zones ombragées pour un pique-nique tranquille. Il y a aussi des terrasses où",
+        "tu peux t’installer pour un repas en extérieur.",
+        "Si tu préfères un endroit plus central, tu peux essayer le jardin des Tuileries, un espace agréable entre le Louvre et la place de la",
+        "Concorde. Les chaises sont parfaites pour s’installer et profiter du soleil tout en ayant une belle vue.",
+        "Deux options idéales pour un moment de détente en plein air ! À bientôt,",
+        "ayoub"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Écrivez un message dans le journal de votre université pour rechercher un partenaire avec qui faire du sport.",
+      "sample": [
+        "Correction Tâche 1",
+        "Recherche partenaire pour activités sportives",
+        "Bonjour à tous !",
+        "Je suis à la recherche d’un partenaire pour pratiquer des activités sportives régulièrement sur le campus. Que vous soyez",
+        "passionné de course à pied, de fitness, de badminton, de football ou même de yoga, n’hésitez pas à me contacter ! L’idée serait",
+        "de s’entraîner ensemble, d’échanger des conseils et de rester motivés dans une ambiance conviviale et détendue.",
+        "Je suis disponible en fin de journée, après les cours, et le week-end, mais je peux m’adapter à vos horaires. Peu importe votre",
+        "niveau, l’essentiel est de progresser ensemble tout en prenant plaisir à bouger et à se dépasser.",
+        "Si vous êtes intéressé ou si vous avez des suggestions de sports à essayer, envoyez-moi un message ! Ensemble, nous pourrons",
+        "pratiquer du sport un moment agréable et bénéfique pour notre santé.",
+        "À très bientôt !",
+        "AYOUB"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Votre ami(e) veut découvrir la région dans laquelle vous habitez. Écrivez lui un message pour lui proposer des sites à visiter.",
+      "sample": [
+        "Correction Tâche 1",
+        "Salut ! Si tu veux découvrir ma région, voici quelques incontournables. D’abord, tu dois visiter le vieux centre-ville, avec ses",
+        "rues pavées et ses bâtiments historiques. Le musée local est aussi très intéressant, il raconte l’histoire de notre région. Si tu aimes",
+        "la nature, je te conseille de faire une randonnée dans les montagnes alentours, la vue est incroyable ! Il y a aussi un magnifique",
+        "lac où tu peux te détendre ou faire du bateau. Pour une sortie plus originale, il y a un marché typique tous les week-ends, parfait",
+        "pour goûter des spécialités locales. Tu vas adorer, c’est vraiment une belle région à découvrir !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous avez invité votre ami Cédric à votre mariage au Château de Chombony et il vous a répondu qu’il ne connait pas ce château.",
+      "sample": [
+        "Décrivez à votre ami (lieu, localisation, transports, etc.).",
+        "Correction Tâche 1",
+        "Salut Cédric,",
+        "Le Château de Chombony est situé à environ 30 kilomètres de Lyon, dans un cadre magnifique, entouré de jardins et de",
+        "forêts. C’est un lieu historique avec une architecture impressionnante, parfait pour un mariage. Pour y accéder, tu peux",
+        "prendre la route en voiture, il y a un parking à disposition. Si tu viens en transport en commun, tu peux prendre le train",
+        "jusqu’à la gare de Villefranche-sur-Saône, puis un taxi ou une navette qui te conduira directement au château. Le cadre est",
+        "vraiment idyllique, et l’intérieur est tout aussi charmant, avec de grandes salles et des vues imprenables. Je suis sûr que tu vas",
+        "adorer l’endroit !",
+        "À très vite,",
+        "AYOUB"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Votre ami Mehdi vient de d’emménager dans votre ville et cherche des renseignements sur les moyens de transports. Écrivez un",
+      "sample": [
+        "message en lui donnant les informations nécessaires (types de transport, abonnement, tarif, etc.)",
+        "Correction Tâche 1",
+        "Salut Mehdi,",
+        "Bienvenue dans la ville ! Pour te déplacer, tu as plusieurs options. Le réseau de bus et de tramway est très pratique, avec des",
+        "lignes qui couvrent toute la ville. Tu peux acheter un ticket simple (1,50€) ou prendre un abonnement mensuel si tu prévois de te",
+        "déplacer régulièrement (environ 30€ par mois). Si tu préfères le vélo, il y a aussi des stations de vélo en libre-service, parfait",
+        "pour les petites distances. En plus, certains abonnements de transport incluent l’accès à ces vélos. Tu peux acheter des tickets",
+        "directement dans les stations ou via une application mobile. N’hésite pas si tu as d’autres questions !",
+        "À bientôt, AYOUB"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous voulez partir en week-end avec vos amis le mois prochain. Vous leur écrivez un message pour décrire votre projet (lieu,",
+      "sample": [
+        "transport, activités, etc.).",
+        "Correction Tâche 1",
+        "Salut les amis,",
+        "Le mois prochain, j’ai une super idée pour un week-end ensemble ! Je propose qu’on parte",
+        "à Annecy. C’est une petite ville magnifique, entourée de montagnes et d’un lac, idéale pour se détendre et profiter de la nature.",
+        "Pour le transport, on pourrait prendre le train, ce qui serait pratique et confortable. Sur place, on pourrait faire une balade autour",
+        "du lac, louer des vélos pour explorer les alentours et, pourquoi pas, faire une randonnée. Le soir, on pourrait tester des",
+        "restaurants locaux. Ce serait vraiment génial de passer ces moments ensemble, loin de la routine. Qu’en dites-vous ? Ça vous",
+        "tente ?",
+        "À bientôt, AYOUB"
+      ],
+      "tags": []
+    },
+    {
+      "q": "“Bonjour, ça y est, j’ai obtenu mon visa pour le Canada. Je vais arriver le 3 mars. Est-ce que tu pourras m’aider à trouver un hôtel",
+      "sample": [
+        "pour la première semaine ? Merci d’avance pour ton aide.” Matthias.",
+        "Vous avez trouvé un hôtel pour Matthias. Vous lui écrivez un courriel. Dans ce message vous décrivez l’hôtel et vous lui donnez",
+        "toutes les informations utiles (situation, tarif…).",
+        "Correction Tâche 1",
+        "Objet : Hôtel pour ta première semaine au Canada",
+        "Bonjour Matthias,",
+        "Félicitations pour ton visa et ton arrivée au Canada ! J’ai trouvé un hôtel qui pourrait te convenir pour ta première semaine :",
+        "l’Hôtel Le Saint-James, situé en plein centre-ville de Montréal. Il est à quelques minutes à pied du Vieux-Montréal et d’une",
+        "station de métro.",
+        "L’hôtel propose des chambres modernes avec Wi-Fi gratuit, télévision et climatisation. Il y a aussi un restaurant et une salle de",
+        "sport. Le tarif est de 120 CAD par nuit, mais il y a des réductions pour un séjour d’une semaine.",
+        "L’emplacement est idéal pour les transports et les attractions. Si tu as besoin de plus d’infos, n’hésite pas à me contacter.",
+        "À bientôt,",
+        "AYOUB"
+      ],
+      "tags": []
+    },
+    {
+      "q": "L’été est arrivé ! Je vous propose de faire un pique-nique samedi prochain. Connaissez-vous un endroit sympa pour les enfants",
+      "sample": [
+        "et les adultes où nous pouvons tous nous retrouver ? Bisous, à bientôt.",
+        "– Léa",
+        "Vous acceptez l’invitation de Léa et lui proposez un endroit pour organiser le pique-nique. Décrivez le lieu et expliquez les",
+        "activités possibles.",
+        "Correction Tâche 1",
+        "Salut Léa !",
+        "Merci pour l’invitation, c’est une super idée ! Je te propose le parc de la Tête d’Or, un endroit parfait pour un pique-nique. Il y a",
+        "de grandes pelouses pour s’installer, un lac pour faire une balade en barque, et un zoo que les enfants adoreront. Les adultes",
+        "pourront se détendre dans les jardins ou lire, tandis que les plus jeunes s’amuseront dans l’aire de jeux. On pourra aussi faire des",
+        "jeux en groupe, comme un frisbee ou une pétanque. Ce parc offre vraiment un cadre agréable pour passer du temps ensemble, au",
+        "calme ou autour d’activités. J’ai hâte de vous retrouver !",
+        "À bientôt, bisous !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Je vais bientôt vivre dans ton quartier et je cherche un endroit sympa pour faire mes courses. Connais-tu un marché",
+      "sample": [
+        "intéressant ?",
+        "– Bernard",
+        "Répondez à Bernard en décrivant un marché de votre quartier (lieu, horaires, produits disponibles, ambiance, etc.).",
+        "Correction Tâche 1",
+        "Salut Bernard !",
+        "Bienvenue dans le quartier ! Tu devrais absolument visiter le marché de la place des Fêtes, c’est un endroit super pour faire tes",
+        "courses. Il est ouvert tous les mercredis et dimanches matin. Tu y trouves une grande variété de produits frais : fruits et légumes",
+        "locaux, fromages, charcuterie, pain, et même des produits bio. L’ambiance est vraiment conviviale, les marchands sont toujours",
+        "souriants et prêts à te conseiller. En plus, il y a souvent des petits stands avec des spécialités artisanales, ce qui rend l’expérience",
+        "encore plus agréable. C’est un endroit parfait pour découvrir des produits du terroir et passer un bon moment.",
+        "À bientôt !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Salut ! Je cherche un endroit agréable pour déjeuner en plein air ce week-end. Qu’est-ce que tu me proposes ?",
+      "sample": [
+        "– Barbara",
+        "Répondez à Barbara en lui recommandant un lieu (parc, terrasse, bord de mer, etc.) et en décrivant l’ambiance et les options",
+        "disponibles.",
+        "Correction Tâche 1",
+        "Salut Barbara !",
+        "Je te recommande le parc de la Tête d’Or si tu es à Lyon ! C’est un endroit idéal pour déjeuner en plein air, avec de vastes espaces",
+        "verts, un lac et des jardins magnifiques. Tu peux pique-niquer sur l’herbe ou profiter de l’une des terrasses de cafés à proximité.",
+        "L’ambiance est calme et détendue, parfaite pour passer un bon moment. Si tu préfères un cadre un peu plus animé, le bord de mer",
+        "à Marseille offre aussi de belles terrasses avec vue sur la mer, parfait pour un déjeuner ensoleillé.",
+        "C’est vraiment un endroit agréable pour se détendre et profiter de la nature tout en mangeant !",
+        "Bon week-end !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Salut, tu as commencé ton nouveau travail ! C’est comment ? Tu es content(e) ? – Ali",
+      "sample": [
+        "Répondez à Ali en décrivant votre nouveau travail (lieu, collègues, missions) et partagez vos impressions.",
+        "Correction Tâche 1",
+        "Salut Ali !",
+        "Oui, j’ai commencé mon nouveau travail et tout se passe bien jusqu’à présent ! Je travaille dans une entreprise de marketing",
+        "digital, un environnement très dynamique. Le bureau est moderne et agréable, avec une vue superbe. Mes collègues sont",
+        "vraiment sympas, tout le monde est très accueillant et prêt à m’aider. Les missions sont variées : je m’occupe de la gestion des",
+        "réseaux sociaux, de la création de contenu et parfois de la stratégie de communication. C’est stimulant et j’apprends beaucoup de",
+        "choses. En somme, je suis assez content(e) de cette nouvelle expérience et j’ai hâte de voir comment ça va évoluer !",
+        "À bientôt !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous souhaitez assister à un festival de cinéma dans votre ville. Vous écrivez un message à votre ami(e) pour lui proposer de",
+      "sample": [
+        "venir avec vous. Vous lui donnez toutes les informations nécessaires sur l’événement (films, dates et horaires, tarifs, etc.).",
+        "Correction Tâche 1",
+        "Salut Clara,",
+        "J’espère que tu vas bien ! Il y a un festival de cinéma qui commence dans notre ville la semaine prochaine, et je pensais que ce",
+        "serait génial d’y aller ensemble. Il aura lieu du 10 au 13 février, au cinéma Le Majestic, et ils projettent plusieurs films",
+        "intéressants. Il y a des classiques du cinéma européen, des films d’animation et des documentaires. Le programme varie selon",
+        "les jours, mais les projections principales commencent à 19h et 21h.",
+        "Les tarifs sont de 8 € par séance, mais il y a aussi un pass à 25 € qui donne accès à cinq films. Je t’invite à choisir les films qui",
+        "t’intéressent le plus, et on s’organise ensemble pour les horaires.",
+        "Qu’en dis-tu ? Ça te tente de m’accompagner ? On pourrait se retrouver avant pour boire un café. À bientôt,",
+        "Lucas"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Votre ami(e) va fêter son anniversaire. Écrivez un message à vos amis pour lui acheter un cadeau commun.",
+      "sample": [
+        "Correction Tâche 1",
+        "Salut tout le monde !",
+        "L’anniversaire de [prénom de l’ami(e)] approche à grands pas, et je pense que ce serait sympa de lui offrir un cadeau commun.",
+        "Ça pourrait être une belle surprise et ça montrerait à quel point on tient à lui/elle.",
+        "Je propose qu’on mette tous un peu d’argent de côté pour acheter quelque chose de sympa. Si vous avez des idées de cadeaux,",
+        "n’hésitez pas à les partager ! Je pensais à quelque chose qu’il/elle aimerait vraiment, en fonction de ses goûts, bien sûr.",
+        "Ce serait bien de s’organiser rapidement, alors si vous êtes d’accord, merci de me dire combien vous seriez prêts à mettre pour que",
+        "je puisse gérer l’achat. On pourrait aussi se regrouper pour lui écrire un message sympa ou peut-être une carte.",
+        "Faites-moi savoir ce que vous en pensez et si vous avez des suggestions pour le cadeau ! À bientôt,",
+        "AYOUB"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous êtes locataire d’un appartement trop grand pour vous. Écrivez une annonce dans un journal pour chercher un colocataire",
+      "sample": [
+        "(superficie de l’appartement, caractère du colocataire, prix, etc…). Correction Tâche 1",
+        "Recherche colocataire pour appartement spacieux à louer",
+        "Appartement de 90 m² à Paris, situé dans un quartier calme et agréable, proche des transports en commun et des commerces.",
+        "L’appartement est lumineux, avec un grand salon, deux chambres, une cuisine équipée et une salle de bain. Je suis à la recherche",
+        "d’un colocataire calme, respectueux et sociable, non-fumeur et sans animaux. Loyer mensuel : 750 € charges comprises. La",
+        "colocation se fait dans une ambiance conviviale, idéale pour quelqu’un étudiant ou jeune actif. Disponible dès le 1er mars. Si",
+        "vous êtes intéressé(e), contactez-moi par courriel ou téléphone pour plus d’infos et une visite."
+      ],
+      "tags": []
+    },
+    {
+      "q": "Je vais bientôt vivre dans ton quartier. Je cherche un endroit sympathique pour faire mes courses. Est-ce que tu connais un",
+      "sample": [
+        "marché intéressant ?",
+        "Merci d’avance et à bientôt ! Bernard",
+        "Vous répondez à votre ami Bernard. Dans votre message, vous décrivez un marché de votre quartier que vous aimez bien (lieu,",
+        "horaires, produits, etc.).",
+        "Correction Tâche 1",
+        "Salut Bernard !",
+        "Bienvenue dans le quartier ! Si tu cherches un marché sympa, je te conseille le marché de la Place des Fêtes. Il a lieu tous les",
+        "mercredis et dimanches matin. Il y a une super ambiance et tu trouveras tout ce qu’il te faut : des fruits et légumes frais, du",
+        "fromage, des produits locaux et même des",
+        "fleurs pour décorer ton appartement ! Il y a aussi des stands de pain artisanal et quelques petits producteurs bio. L’atmosphère",
+        "est vraiment agréable, et les prix sont raisonnables. N’hésite pas à y faire un tour, tu ne seras pas déçu !",
+        "À très vite,",
+        "AYOUB"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tu as commencé ton nouveau travail ! C’est comment ? Tu es content(e) ? Ali",
+      "sample": [
+        "Vous répondez à votre ami Ali. Dans votre message, vous décrivez votre nouveau travail (lieu, collègues, etc.) et vous donnez vos",
+        "impressions.",
+        "Correction Tâche 1",
+        "Salut Ali !",
+        "Oui, j’ai commencé mon nouveau travail et c’est plutôt sympa jusqu’à maintenant. Je travaille dans une petite entreprise de",
+        "marketing digital en plein centre-ville. L’équipe est super accueillante, il y a une bonne ambiance et tout le monde est vraiment",
+        "disponible pour m’aider. Mes collègues sont très sympas, et il y a une belle diversité dans l’équipe, ce qui est agréable. C’est un",
+        "environnement un peu plus décontracté que ce à quoi j’étais habitué, mais j’aime bien. Le travail est intéressant, et les projets sur",
+        "lesquels je bosse sont assez variés. En gros, c’est un bon début !",
+        "Et toi, comment ça va de ton côté ? À bientôt,",
+        "AYOUB"
+      ],
+      "tags": []
+    }
+  ],
+  "2": [
+    {
+      "q": "Vous avez lu sur un forum un débat concernant les formations en ligne. Écrivez un message en décrivant votre expérience (cours",
+      "sample": [
+        "de langue, formation professionnelle, etc.). Donnez votre avis sur ce que vous avez aimé et ce que vous n’en avez pas",
+        "Correction Tâche 2",
+        "J’ai suivi plusieurs formations en ligne, principalement des cours de langue et des formations professionnelles, et mon",
+        "expérience a été globalement positive. Pour les cours de langue, j’ai apprécié la flexibilité d’apprendre à mon rythme, avec des",
+        "ressources variées (vidéos, exercices interactifs, podcasts). Cela m’a permis de progresser rapidement sans pression. Cependant,",
+        "parfois, l’absence d’interaction directe avec un professeur m’a donné l’impression d’une certaine distance, ce qui a rendu",
+        "l’apprentissage moins engageant.",
+        "Pour les formations professionnelles, j’ai adoré la possibilité d’acquérir de nouvelles compétences à moindre coût, mais parfois,",
+        "les plateformes manquent de suivi personnalisé, ce qui est dommage pour des domaines plus complexes. En somme, les",
+        "formations en ligne sont idéales pour l’autonomie, mais manquent parfois d’un aspect humain et interactif essentiel pour la",
+        "motivation. Tâche 3",
+        "Les Produits Faits Maison : Pour Ou Contre ? Document 1",
+        ":",
+        "Fabriquer vos propres produits biologiques à la maison offre un contrôle total sur les ingrédients, garantissant des options plus",
+        "saines et personnalisées. Cela contribue également à réduire les déchets plastiques grâce à des emballages réutilisables. De plus,",
+        "vous économiserez de l’argent à long terme et développerez des compétences créatives, favorisant ainsi un mode de vie plus",
+        "durable.",
+        "Document 2 :",
+        "Cependant, la fabrication de produits biologiques à domicile comporte des risques. Les erreurs de formulation peuvent entraîner",
+        "des produits inefficaces ou irritants. De plus, le temps et les efforts nécessaires pour trouver et préparer les ingrédients peuvent être",
+        "contraignants. Il y a également un manque de garantie de sécurité et de stabilité des produits faits maison, avec un risque accru de",
+        "contamination bactérienne si les produits ne sont pas correctement conservés. Enfin, le coût initial élevé pour l’achat d’ingrédients",
+        "de qualité peut être dissuasif pour certains.",
+        "Correction Tâche 3",
+        "Les Produits Faits Maison : Pour Ou Contre ?",
+        "Les produits faits maison suscitent de nombreux avis partagés. D’un côté, fabriquer ses propres produits biologiques permet un",
+        "contrôle total sur les ingrédients, réduit les déchets plastiques et permet des économies à long terme. Cependant, il existe des",
+        "risques tels que des erreurs de formulation, un manque de sécurité et des coûts initiaux élevés.",
+        "À mon avis, fabriquer ses propres produits maison présente de nombreux avantages, notamment le contrôle des ingrédients et",
+        "l’aspect écologique. Par exemple, en préparant mon propre savon, je sais exactement ce que j’utilise et je réduis les emballages",
+        "plastiques. Cependant, cela nécessite du temps et un investissement initial, comme l’achat d’ingrédients de qualité, ce qui peut",
+        "rebuter certaines personnes. De plus, même si l’aspect créatif est intéressant, il existe des risques si les produits ne sont pas bien",
+        "conservés ou mal formulés, ce qui peut provoquer des irritations. En somme, je trouve que les produits faits maison sont une",
+        "excellente option pour ceux qui sont prêts à investir du temps et à apprendre, mais ils ne conviennent pas à tout le monde.",
+        "Combinaison 32"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous avez passé des vacances dans une belle région de votre pays. Vous écrivez un message à vos amis dans lequel vous décrivez",
+      "sample": [
+        "votre expérience, vous expliquer pourquoi vous avez beaucoup aimé ce séjour.",
+        "Correction Tâche 2",
+        "Salut les amis !",
+        "Je voulais vous raconter mes dernières vacances dans la magnifique région de la Provence. J’ai passé un séjour incroyable entouré",
+        "de champs de lavande à perte de vue et de petits villages pittoresques. Les paysages étaient à couper le souffle, surtout lors des",
+        "couchers de soleil sur les montagnes. J’ai aussi eu l’occasion de visiter des marchés locaux où j’ai dégusté des produits typiques,",
+        "comme des fromages, de l’huile d’olive et des tapenades. La région est aussi riche en histoire, avec des vestiges romains et des",
+        "châteaux médiévaux à explorer. Ce que j’ai particulièrement aimé, c’est la douceur de vivre, l’authenticité des lieux et l’accueil",
+        "chaleureux des habitants. C’était vraiment un moment de détente total, loin du stress quotidien. Si vous avez l’occasion d’y aller un",
+        "jour, foncez !",
+        "A très vite,"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous avez visité une exposition de votre artiste préféré. Rédigez un article exprimant votre expérience lors de la visite. Décrivez ce",
+      "sample": [
+        "que vous avez vu et vos impressions.",
+        "Correction Tâche 2",
+        "Récemment, j’ai eu la chance de visiter une exposition dédiée à mon artiste préféré, Pablo Picasso, et l’expérience a été",
+        "inoubliable. L’exposition, qui se tenait au [nom du musée ou de la galerie], a réuni une magnifique collection de ses œuvres les",
+        "plus célèbres, mais aussi des pièces moins connues, révélant une profondeur nouvelle à son travail.",
+        "Dès l’entrée, j’ai été frappé par la puissance émotionnelle de ses tableaux. Chaque œuvre semblait raconter une histoire différente,",
+        "allant de scènes poignantes à des compositions plus abstraites et poétiques. Les couleurs, toujours vibrantes et audacieuses,",
+        "dominaient l’espace, attirant l’attention de manière presque hypnotique.",
+        "Les détails et textures des œuvres m’ont permis de ressentir la passion et la technique qui se cachent derrière chaque coup de",
+        "pinceau. En déambulant parmi les œuvres, j’ai pu redécouvrir la complexité de son style unique, renforçant encore mon",
+        "admiration pour cet artiste. Ce fut une immersion totale dans son univers créatif."
+      ],
+      "tags": []
+    },
+    {
+      "q": "Votre direction est à la recherche d’une salle pour la fête de fin d’année, capable d’accueillir 100 invités. Rédigez un message à la",
+      "sample": [
+        "direction pour leur dire que vous avez trouvé un local idéal. (lieu, tarifs, services, etc.).",
+        "Correction Tâche 2",
+        "Bonjour,",
+        "Je vous écris pour vous informer que j’ai trouvé un local idéal pour la fête de fin d’année. Il s’agit de la salle « Le Domaine de la",
+        "Lune », située à 15 minutes du centre-ville, dans un cadre calme et agréable. La salle peut accueillir jusqu’à 120 personnes, ce",
+        "qui est parfait pour nos 100 invités.",
+        "Les tarifs sont de 1500 € pour la soirée, avec une option pour un buffet à 20 € par personne. Le prix inclut la location de la salle,",
+        "la décoration, ainsi que la musique (un DJ est prévu). De plus, le personnel est très professionnel et s’assurera de répondre à",
+        "toutes nos demandes.",
+        "Je pense que c’est une excellente option qui répond à nos besoins et notre budget. N’hésitez pas à me dire ce que vous en pensez.",
+        "Cordialement,",
+        "Ayoub"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Écrivez un article de blog sur votre expérience d’études à l’étranger (séjour, activités,…)",
+      "sample": [
+        "Correction Tâche 2",
+        "Mon Expérience d’Études à l’Étranger",
+        "Chers lecteurs,",
+        "Étudier à l’étranger a été une expérience inoubliable ! J’ai eu l’opportunité de passer un semestre en Allemagne, à Heidelberg, et",
+        "cela a vraiment enrichi ma vie. Les cours étaient intéressants et offraient une perspective internationale que je n’aurais jamais",
+        "eue en restant dans mon pays. En dehors des études, j’ai exploré la ville historique, visité des musées, et participé à des activités",
+        "organisées par l’université, comme des soirées culturelles et des sorties en groupe.",
+        "Ce séjour m’a permis de rencontrer des gens du monde entier, de découvrir une nouvelle culture, et d’améliorer mes",
+        "compétences linguistiques. J’ai également appris à m’adapter à un mode de vie différent et à sortir de ma zone de confort. En",
+        "résumé, cette expérience a été une belle aventure, tant sur le plan académique que personnel, et je la recommande vivement à",
+        "tous ceux qui souhaitent grandir et découvrir le monde."
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous avez quitté la ville afin de vous installer à la campagne. Sur votre blog, vous expliquez pourquoi vous avez fait ce choix et",
+      "sample": [
+        "vous présentez les avantages de votre nouvelle vie.",
+        "Correction Tâche 2",
+        "Pourquoi J’ai Choisi de Vivre à la Campagne",
+        "Chers lecteurs,",
+        "Après plusieurs années à vivre en ville, j’ai décidé de m’installer à la campagne pour une vie plus sereine. Ce choix n’a pas été",
+        "facile, mais il m’a permis de trouver un véritable équilibre. La campagne offre un calme incomparable, loin du bruit incessant des",
+        "voitures et du stress quotidien. Ici, je profite d’un environnement naturel avec des paysages verdoyants et une qualité de vie bien",
+        "meilleure.",
+        "Les avantages sont nombreux : plus d’espace, un air pur, et un rythme de vie plus lent. J’ai également découvert les joies du",
+        "jardinage et de la vie en plein air. Les relations avec les voisins sont aussi plus humaines et proches. Enfin, cette nouvelle vie me",
+        "permet de me recentrer sur l’essentiel et de profiter pleinement de chaque instant. Vivre à la campagne, c’est revenir à des valeurs",
+        "simples et apaisantes."
+      ],
+      "tags": []
+    },
+    {
+      "q": "Écrivez un courriel à votre ami pour l’inviter à vous accompagner au concert de votre musicien préféré en lui précisant tous les",
+      "sample": [
+        "détails (heure, tarif, lieu…)",
+        "Correction Tâche 2",
+        "Objet : Invitation au concert de [Nom du musicien] !",
+        "Salut Max,",
+        "J’espère que tu vas bien ! J’ai une super nouvelle : Ben Howard donne un concert le 12 mars à 20h00 au Zénith de Paris, et j’ai",
+        "pensé que ça te plairait de m’accompagner. C’est un événement que j’attends avec impatience, et ce serait génial de partager",
+        "cette expérience avec toi.",
+        "Les billets coûtent 45€, et il reste quelques places disponibles, donc si ça t’intéresse, il faudrait que l’on les prenne assez vite. Le",
+        "concert va durer environ 2 heures et il y aura quelques premières parties intéressantes aussi. En plus, l’ambiance du Zénith est",
+        "incroyable !",
+        "On pourra se retrouver à 19h00 pour y aller ensemble. J’espère vraiment que tu pourras venir, ça serait top de passer cette soirée",
+        "entre amis. Fais-moi savoir si tu es dispo !",
+        "À très vite,",
+        "Léo"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous faites une réclamation par rapport aux mauvaises prestations d’une agence de voyage suite à un voyage mal organisé.",
+      "sample": [
+        "Exprimez votre mécontentement.",
+        "Correction Tâche 2",
+        "Objet : Réclamation suite à une organisation déplorable de voyage",
+        "Madame, Monsieur,",
+        "Je me permets de vous adresser cette réclamation suite à l’expérience désastreuse vécue lors de mon dernier voyage organisé par",
+        "votre agence. En effet, l’organisation de ce voyage a été un véritable échec, ce qui a grandement affecté la qualité de mon séjour.",
+        "Tout d’abord, l’itinéraire ne correspondait en rien à ce qui avait été convenu. Des visites et activités importantes ont été annulées",
+        "sans préavis. De plus, l’hébergement était de qualité médiocre, loin des standards promis dans le dossier de réservation.",
+        "L’accueil sur place a été décevant, et le personnel n’a pas su répondre à nos attentes.",
+        "Face à cette situation, je sollicite un remboursement partiel pour compenser la déception et les désagréments rencontrés.",
+        "J’attends une réponse rapide de votre part et la prise en charge de ma demande.",
+        "Cordialement,",
+        "AYOUB"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous venez de commencé une nouvelle activité de loisir (Sport, dance, etc.). Écrivez un article sur votre blog pour parler de cette",
+      "sample": [
+        "expérience.",
+        "Correction Tâche 2",
+        "Ma nouvelle aventure dans le yoga",
+        "Chers lecteurs,",
+        "Je voulais partager avec vous ma toute nouvelle expérience : j’ai commencé le yoga il y a quelques semaines ! C’était une",
+        "activité que j’avais toujours envie d’essayer, mais je n’avais jamais trouvé le temps. Aujourd’hui, je suis ravi d’avoir franchi le",
+        "pas. Au début, c’était un peu difficile de trouver l’équilibre et de maîtriser les différentes postures, mais au fil des séances, j’ai",
+        "commencé à me sentir plus détendu et plus énergique. Le yoga m’aide non seulement à améliorer ma souplesse, mais aussi à",
+        "réduire mon stress. L’atmosphère calme et sereine pendant les cours est idéale pour me recentrer après une journée bien",
+        "remplie. Si vous hésitez encore à essayer, je vous recommande vivement de vous lancer, c’est une expérience qui en vaut",
+        "vraiment la peine ! À bientôt pour d’autres nouvelles !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous avez participé à un concours pour gagner un séjour de deux semaines dans votre ville préféré. Le thème de ce concours est",
+      "sample": [
+        "“Mon artiste préféré“. Écrivez un article de blog pour parler de votre artiste préféré.",
+        "Correction Tâche 2",
+        "Mon Artiste Préféré : Un Voyage Musical Inoubliable",
+        "Chers lecteurs,",
+        "Aujourd’hui, je veux vous parler de mon artiste préféré : Ed Sheeran. Depuis ses débuts, il m’a captivé par ses mélodies et ses",
+        "paroles profondes. Son mélange unique de pop, folk et soul m’a toujours touché. Ses chansons comme Shape of You et Perfect",
+        "sont devenues des hymnes de ma vie, car elles parlent de l’amour, de la perte, et des moments précieux. Ce qui me fascine chez",
+        "Ed, c’est sa capacité à raconter des histoires avec des mots simples mais puissants. Sa voix chaleureuse et son jeu de guitare font",
+        "de chaque concert une expérience magique. Grâce à sa musique, j’ai découvert l’importance de vivre pleinement l’instant",
+        "présent. Si je pouvais le voir en concert, ce serait un rêve devenu réalité.",
+        "À bientôt pour de nouvelles aventures musicales !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous avez participé à un évènement nommé ” La semaine du gout“. Écrivez un article de blog pour raconter cette expérience.",
+      "sample": [
+        "Correction Tâche 2",
+        "Ma Participation à La Semaine du Goût : Une Expérience Culinaire Inoubliable",
+        "Chers lecteurs,",
+        "Cette semaine, j’ai eu la chance de participer à l’événement « La Semaine du Goût », une célébration des saveurs, des produits",
+        "locaux et de la cuisine créative. J’ai pu découvrir une multitude de plats préparés par des chefs talentueux, chacun mettant en",
+        "valeur des produits de saison. C’était incroyable de goûter des mets auxquels je n’aurais jamais pensé, comme des associations de",
+        "fruits et légumes inattendues. J’ai également assisté à des ateliers interactifs où j’ai appris à cuisiner avec des produits bio et à",
+        "préparer des recettes simples mais délicieuses.",
+        "L’ambiance était conviviale, et j’ai rencontré des passionnés de gastronomie, échangé des astuces et découvert des secrets de",
+        "cuisine. Cette expérience a enrichi ma culture culinaire et m’a donné envie d’explorer davantage le monde des saveurs.",
+        "À l’année prochaine pour de nouvelles découvertes !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous venez de commencer les cours à l’université de Montréal. Écrivez un message à votre ami pour lui raconter votre première",
+      "sample": [
+        "semaine à l’université. Vous donnez votre opinion sur l’université et sur les cours.",
+        "Correction Tâche 2",
+        "Salut mon ami,",
+        "Ma première semaine à l’Université de Montréal s’est bien passée ! Le campus est immense et très beau, j’ai découvert plein de",
+        "nouveaux endroits. Les bâtiments sont modernes et les installations vraiment bien équipées. Les professeurs sont sympas et",
+        "accueillants, mais les cours sont un peu intenses. En particulier, celui de biologie est déjà un défi ! Les horaires sont assez chargés,",
+        "mais j’aime bien l’atmosphère qui y règne, tout le monde est motivé.",
+        "J’ai aussi fait de nouvelles rencontres, et c’est génial de discuter avec des gens d’horizons différents. L’ambiance est dynamique,",
+        "et les activités étudiantes sont intéressantes. J’ai hâte de voir comment se passent les prochaines semaines, mais pour l’instant, ça",
+        "va. L’université me plaît, même si je sens que ça va être un vrai défi de jongler entre les cours et ma vie sociale !",
+        "A bientôt, AYOUB"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Écrivez un article de blog sur un évènement auquel vous avez assisté récemment (festival, cérémonie, fête, etc.).",
+      "sample": [
+        "Correction Tâche 2",
+        "Mon expérience au Festival de Musique Éclectique",
+        "Le week-end dernier, j’ai eu la chance d’assister au Festival de Musique Éclectique, un événement qui a eu lieu dans un parc en",
+        "plein cœur de la ville. Dès mon arrivée, l’atmosphère était incroyable",
+        ": des dizaines de stands, des musiciens de tous horizons et une énergie palpable. J’ai particulièrement apprécié les concerts en",
+        "plein air, allant du rock à la musique électro, créant une ambiance festive et diversifiée. J’ai aussi découvert des artistes locaux,",
+        "ce qui m’a permis d’enrichir mes goûts musicaux. L’événement était parfaitement organisé, avec une foule enthousiaste et",
+        "respectueuse. C’était une expérience mémorable et je recommande vivement ce festival à tout amateur de musique. Vivement",
+        "l’année prochaine !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Écrivez un message sur le forum de la compagnie Air Tropiques. Vous racontez votre plus beau voyage (date, destination,",
+      "sample": [
+        "activités, etc) et vous expliquez pourquoi ce voyage a été spécial pour vous.",
+        "Correction Tâche 2",
+        "Bonjour,",
+        "Mon plus beau voyage a eu lieu en août 2023, lorsque je suis parti(e) en Malaisie avec mes amis. Nous avons exploré Kuala",
+        "Lumpur, visité les îles Perhentian et fait une randonnée dans la jungle de Taman Negara. Ce qui m’a marqué, c’est la diversité",
+        "culturelle du pays, l’architecture moderne de la capitale et la beauté des plages paradisiaques. Nous avons plongé dans les eaux",
+        "cristallines, fait du snorkeling parmi les poissons tropicaux et dégusté des plats locaux incroyables, comme le satay et le nasi",
+        "lemak.",
+        "Ce voyage a été spécial pour moi car c’était un véritable dépaysement, loin de ma routine quotidienne. C’était aussi l’occasion",
+        "de me retrouver avec mes amis dans un cadre magnifique et de créer des souvenirs inoubliables. Chaque moment, du coucher du",
+        "soleil sur la plage aux éclats de rire lors des repas, a rendu ce voyage unique.",
+        "Merci pour cette chance de partager mon expérience ! Cordialement,",
+        "AYOUB"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous avez mis une annonce en ligne pour la location de votre appartement. Ecrivez un courriel pour donner les informations sur",
+      "sample": [
+        "l’appartement et le quartier.",
+        "Correction Tâche 2",
+        "Objet : Informations sur l’appartement à louer",
+        "Bonjour,",
+        "Merci pour votre intérêt concernant la location de mon appartement. Il s’agit d’un T3 lumineux de 75 m², situé au 2ème étage d’un",
+        "immeuble calme avec ascenseur. L’appartement dispose de deux chambres spacieuses, d’un salon confortable, d’une cuisine",
+        "entièrement équipée et d’une salle de bains moderne. Il y a également un balcon avec vue dégagée.",
+        "Le quartier est très agréable et bien desservi par les transports en commun. Vous trouverez à proximité des commerces, des",
+        "restaurants, ainsi que plusieurs parcs pour les promenades.",
+        "L’emplacement est idéal pour ceux qui recherchent un cadre tranquille tout en étant proche du centre-ville.",
+        "N’hésitez pas à me contacter si vous souhaitez plus de détails ou pour organiser une visite. Cordialement,",
+        "AYOUB"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous avez visité un nouveau pays pendant vos vacances. Sur un site internet, racontez votre expérience et donnez votre opinion sur",
+      "sample": [
+        "ce pays.",
+        "Correction Tâche 2",
+        "Mon expérience au Japon : un voyage exceptionnel",
+        "Lors de mes dernières vacances, j’ai eu la chance de visiter le Japon, un pays où la tradition se mêle harmonieusement à la",
+        "modernité. J’ai commencé mon séjour à Tokyo, une ville vibrante et pleine d’énergie, avec ses rues animées, ses magasins hightechs et ses temples paisibles, comme le Senso-ji. La diversité de cette métropole m’a vraiment impressionnée. Ensuite, je me",
+        "suis dirigée vers Kyoto, l’ancienne capitale impériale, qui m’a enchantée avec ses temples majestueux, ses jardins zen et ses",
+        "paysages magnifiques, notamment la forêt de bambous d’Arashiyama.",
+        "Ce qui m’a le plus marqué, c’est l’hospitalité des Japonais, leur respect des traditions et leur gentillesse. Le Japon est un pays qui",
+        "offre une expérience unique, entre modernité et culture profonde. C’est une destination que je recommande vivement pour ceux",
+        "qui souhaitent vivre une aventure enrichissante et apaisante."
+      ],
+      "tags": []
+    },
+    {
+      "q": "Écrivez dans un article de blog pour raconter votre arrivée dans un pays étranger en donnant vos impressions.",
+      "sample": [
+        "Correction Tâche 2",
+        "Mon arrivée dans un pays étranger : une aventure pleine de découvertes",
+        "Chers lecteurs,",
+        "L’arrivée dans un pays étranger est toujours un moment chargé d’émotions. Quand j’ai posé le pied ici, j’ai été frappé par",
+        "l’effervescence de la ville. Les rues, vibrantes de vie, étaient très différentes de celles que je connaissais, mais étrangement",
+        "accueillantes. Les gens, bien que parfois réservés, ont toujours été prêts à aider quand j’avais besoin de renseignements.",
+        "L’une des premières choses qui m’a frappé, c’est la différence culturelle. Les habitudes, la nourriture, les gestes quotidiens… tout",
+        "est un petit défi, mais aussi une grande opportunité d’apprentissage. Les paysages aussi sont à couper le souffle, et chaque coin de",
+        "rue semble offrir quelque chose de nouveau.",
+        "Certes, il y a des moments de doute et de nostalgie, mais chaque jour est une nouvelle chance de grandir et de m’imprégner de",
+        "cette culture fascinante.",
+        "Je suis impatient de partager avec vous mes prochaines découvertes ! À bientôt,",
+        "AYOUB"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous avez participé à un cours de sport dans une salle. Écrivez un article de blog parlant de cette expérience et en exprimant",
+      "sample": [
+        "également votre avis par rapport à cette salle.",
+        "Correction Tâche 2",
+        "Mon Expérience dans une Salle de Sport : Un Véritable Boost pour Mon Corps et Mon Esprit",
+        "Chers lecteurs,",
+        "Récemment, j’ai décidé de m’inscrire à un cours de sport dans une salle près de chez moi, et je dois dire que l’expérience a été",
+        "plus qu’enrichissante. Dès mon arrivée, l’ambiance était dynamique et accueillante. Les équipements étaient modernes et bien",
+        "entretenus, et l’instructeur, passionné et motivant, m’a fait me sentir à l’aise dès le début.",
+        "Le cours lui-même était intense, mais gratifiant. J’ai particulièrement apprécié la variété des exercices proposés, qui ont",
+        "fait travailler tout le corps. J’ai pu repousser mes limites tout en prenant soin de ma forme physique.",
+        "En revanche, j’aurais aimé plus d’espaces pour les étirements après le cours, mais dans l’ensemble, la salle est bien équipée et",
+        "offre une atmosphère agréable. Je recommande vivement cette salle à ceux qui cherchent à se dépasser tout en restant motivés.",
+        "À bientôt !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Dans votre blog, Racontez votre expérience de l’apprentissage d’une langue étrangère (vous écrivez sur un forum internet en",
+      "sample": [
+        "racontant votre expérience en apprenant une langue étrangère). Correction Tâche 2",
+        "Titre : Mon aventure dans l’apprentissage d’une langue étrangère",
+        "Chers lecteurs,",
+        "L’apprentissage d’une langue étrangère a été pour moi une expérience à la fois excitante et difficile. J’ai décidé d’apprendre",
+        "l’espagnol il y a quelques années, motivé par l’envie de pouvoir communiquer lors de mes voyages en Espagne. Au début,",
+        "c’était frustrant : la grammaire et la conjugaison me semblaient si complexes ! Cependant, petit à petit, j’ai découvert que la clé",
+        "résidait dans la pratique quotidienne. J’ai commencé à regarder des séries en version originale, à lire des livres, et à échanger",
+        "avec des natifs. Aujourd’hui, même si je n’ai pas encore une maîtrise parfaite, je me sens bien plus à l’aise. Ce voyage",
+        "linguistique m’a permis de me découvrir sous un nouveau jour. Si vous hésitez à commencer, lancez-vous !",
+        "À bientôt,",
+        "AYOUB"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Exprimez votre admiration pour une personnalité, célèbre ou non, en vous appuyant sur ses actions spécifiques. Rédigez un",
+      "sample": [
+        "article de blog en détaillant les actions remarquables de cette personne et expliquez pourquoi vous l’aimez.",
+        "Correction Tâche 2",
+        "Titre : L’admiration pour Emma Watson : Un modèle de féminisme et d’engagement",
+        "Chers lecteurs,",
+        "Aujourd’hui, je voudrais vous parler d’une personne que j’admire énormément : Emma Watson. En plus d’être une actrice",
+        "talentueuse, elle est une militante engagée pour les droits des femmes. À travers son rôle d’ambassadrice de l’ONU Femmes, elle",
+        "a lancé la campagne HeForShe, encourageant les hommes à se joindre à la lutte pour l’égalité des genres. Mais ce qui me touche",
+        "particulièrement, c’est son authenticité et son discours inspirant sur l’importance de l’éducation et de l’autonomisation des",
+        "femmes. Elle incarne la combativité, tout en restant humble et accessible. Emma ne se contente pas de parler, elle agit",
+        "concrètement, en soutenant des projets et en utilisant sa notoriété pour défendre des causes justes. Pour toutes ces raisons, je la",
+        "considère comme un véritable modèle.",
+        "À bientôt, AYOUB"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Répondez sur notre site Internet : “voyage.internaute.fr”. Vous écrivez un message sur ce site internet, vous répondez à la",
+      "sample": [
+        "question posée en prenant des exemples de votre vie personnelle. Correction Tâche 2",
+        "« Tout quitter pour partir en voyage pendant un an : bonne ou mauvaise idée ? »",
+        "Pour moi, partir en voyage pendant un an est une excellente idée, mais cela dépend des priorités de chacun. Dans ma propre",
+        "expérience, j’ai pris une année sabbatique après mes études pour voyager à travers l’Asie. Cela m’a permis de me découvrir,",
+        "d’apprendre de nouvelles cultures et de me recentrer sur ce qui compte vraiment. Cependant, il faut bien réfléchir aux",
+        "conséquences avant de tout quitter : la gestion des finances, la rupture des liens sociaux et les opportunités professionnelles qui",
+        "pourraient être mises en pause. Mais pour ceux qui ont la possibilité, c’est une occasion unique de grandir et de s’enrichir. Il",
+        "faut simplement être prêt à faire face aux défis et à l’incertitude. Pour moi, cela reste une expérience inoubliable et formatrice."
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous êtes allés voir un spectacle (film, pièce de théâtre, concert, etc.) avec des amis. Vous l’avez aimé. Sur votre blog, vous",
+      "sample": [
+        "racontez votre soirée et vous expliquez pourquoi vous avez aimé le spectacle.",
+        "Correction Tâche 2",
+        "Une Soirée Inoubliable au Théâtre",
+        "Chers lecteurs,",
+        "Samedi soir, j’ai eu la chance d’assister à une pièce de théâtre avec mes amis, et quelle soirée ! La performance des acteurs était",
+        "époustouflante, leur énergie et leur talent m’ont transporté dans un autre monde. L’histoire, à la fois émouvante et captivante, m’a",
+        "tenue en haleine du début à la fin. La mise en scène était incroyable, chaque détail avait été minutieusement pensé pour créer une",
+        "atmosphère magique.",
+        "Mais ce qui a vraiment rendu cette soirée spéciale, c’était le partage avec mes amis. Nous avons ri, échangé nos impressions",
+        "pendant l’entracte, et tout ça a ajouté une dimension unique à cette expérience. C’est un spectacle qui m’a non seulement",
+        "impressionné par la qualité de sa réalisation, mais qui m’a aussi permis de passer un moment de complicité avec ceux qui me sont",
+        "chers.",
+        "Je recommande vivement à ceux qui en ont l’occasion de découvrir ce spectacle ! À bientôt pour de nouvelles",
+        "aventures !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Salut, tu vas bien ? Nous avons deux semaines de vacances en janvier et nous allons visiter ton pays. Nous cherchons des sites",
+      "sample": [
+        "historiques et à découvrir des plats locaux. Qu’est-ce que tu nous conseilles ?",
+        "– Aaron & Perla",
+        "Répondez à Aaron et Perla en leur faisant des suggestions et en justifiant votre choix avec votre propre expérience.",
+        "Correction Tâche 2",
+        "Salut Aaron et Perla !",
+        "C’est super que vous veniez visiter mon pays ! Si vous aimez les sites historiques, je vous conseille de visiter les châteaux de la",
+        "Loire, comme le Château de Chambord, un chef-d’œuvre de la Renaissance. Pour une immersion dans l’histoire, le Mont-SaintMichel est aussi incontournable avec son abbaye médiévale et sa vue spectaculaire. Côté gastronomie, vous devez absolument",
+        "goûter à la baguette, les croissants, et pour un plat plus traditionnel, essayez le coq au vin ou une bonne raclette si vous êtes en",
+        "montagne. J’ai adoré découvrir ces spécialités, elles font vraiment partie de la culture locale. Si vous avez le temps, une balade",
+        "dans les marchés locaux est un vrai régal pour les papilles !",
+        "Bon voyage et profitez bien !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous faites partie d’une association de quartier qui propose des activités aux enfants (aide aux devoirs, sorties, jeux, etc.).",
+      "sample": [
+        "Vous partagez votre expérience sur le site de l’association et expliquez pourquoi ce type d’initiative est bénéfique.",
+        "Correction Tâche 2",
+        "Faire partie de cette association de quartier est une expérience très enrichissante. Nous proposons une variété d’activités aux",
+        "enfants, telles que l’aide aux devoirs, des sorties culturelles et des jeux collectifs. Ce type d’initiative est bénéfique car il permet",
+        "non seulement de soutenir les enfants dans leurs études, mais aussi de renforcer les liens sociaux dans le quartier. Les enfants",
+        "apprennent à travailler ensemble, à respecter les autres et à développer des compétences sociales. De plus, ces activités leur",
+        "offrent une alternative saine et éducative à l’oisiveté. En tant qu’adultes bénévoles, nous avons aussi l’opportunité de contribuer",
+        "à la croissance et à l’épanouissement des jeunes générations. C’est un véritable moyen de renforcer le tissu social et d’encourager",
+        "l’entraide au sein de notre communauté."
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous avez voyagé dans un nouveau pays récemment. Sur un site Internet, vous racontez votre expérience et partagez votre",
+      "sample": [
+        "ressenti.",
+        "Correction Tâche 2",
+        "Récemment, j’ai eu la chance de visiter le Japon, un pays fascinant et riche en culture. Dès mon arrivée, j’ai été émerveillé par la",
+        "propreté, l’efficacité des transports en commun et la gentillesse des habitants. Tokyo, avec ses contrastes entre modernité et",
+        "traditions, m’a particulièrement impressionné : d’un côté, des gratte-ciel futuristes, de l’autre, des temples paisibles. J’ai aussi",
+        "adoré Kyoto, ses magnifiques jardins et ses temples historiques. La cuisine japonaise, à base de produits frais et raffinés, m’a",
+        "régalé, que ce soit avec des sushis, du ramen ou des tempuras.",
+        "Cependant, la barrière de la langue a été un petit défi, bien que tout le monde fournisse des efforts pour aider. En somme, ce",
+        "voyage a été une expérience inoubliable, et j’ai hâte d’y retourner !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "défis et bénéfices de cette situation.",
+      "sample": [
+        "Correction Tâche 2",
+        "Vivre avec une personne âgée a été une expérience enrichissante mais aussi pleine de défis. D’un côté, c’est un vrai bonheur de",
+        "partager des moments précieux avec quelqu’un de plus sage, qui a vécu tant d’histoires et d’expériences. Les discussions sont",
+        "souvent intéressantes, et cela m’a permis de mieux comprendre le parcours de vie des générations précédentes.",
+        "Cependant, la cohabitation a aussi son lot de difficultés. Les besoins particuliers liés à l’âge, comme l’aide pour les tâches",
+        "quotidiennes ou la gestion de la santé, demandent une attention constante. Parfois, le rythme de vie est différent et peut créer des",
+        "tensions, notamment avec l’organisation de l’espace ou les habitudes à adapter. Mais, malgré les défis, l’expérience m’a appris",
+        "la patience, l’empathie et a renforcé les liens familiaux. C’est un vrai équilibre entre aide, respect et partage."
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous avez accueilli un(e) étudiant(e) étranger(e) pendant une semaine chez vous. Sur votre blog, vous écrivez un article pour",
+      "sample": [
+        "raconter cette semaine. Vous expliquez pourquoi vous avez aimé cette expérience.",
+        "Correction Tâche 2",
+        "Une semaine inoubliable avec un étudiant étranger Chers lecteurs,",
+        "Cette semaine passée avec un étudiant) étranger(e) chez moi a été une expérience enrichissante à plusieurs niveaux. Accueillir",
+        "quelqu’un d’une culture différente m’a permis de découvrir de nouvelles perspectives et de tordre mon regard sur le quotidien.",
+        "Tout d’abord, la découverte des habitudes culturelles de mon invité m’a ouvert les yeux sur des coutumes que je n’avais jamais",
+        "imaginées. Chaque repas était l’occasion d’échanger des recettes, et chaque conversation, un moment de partage autour de nos",
+        "vies respectives.",
+        "Ce que j’ai particulièrement apprécié, c’est l’opportunité d’améliorer mes compétences linguistiques en pratiquant une autre",
+        "langue et d’élargir mes horizons. Le fait d’aider l’autre à s’intégrer, tout en apprenant, m’a apporté une immense satisfaction.",
+        "Au-delà des différences, j’ai surtout ressenti un vrai lien humain, celui de l’hospitalité et de l’ouverture. Une expérience que je",
+        "recommande vivement !",
+        "À bientôt",
+        "AYOUB"
+      ],
+      "tags": []
+    },
+    {
+      "q": "La direction d’une école de musique cherche un endroit où organiser une fête pour 100 personnes. Écrivez un courriel pour les",
+      "sample": [
+        "informer que vous avez trouvé un local (lieu, tarifs, service, etc…).",
+        "Correction Tâche 2",
+        "Objet : Proposition de lieu pour la fête de l’école de musique Madame, Monsieur,",
+        "Je vous écris pour vous informer que j’ai trouvé un lieu adapté pour organiser la fête de l’école de musique. Il s’agit de la salle «",
+        "Le Grand Hall », située au 15 rue des Arts, à 10 minutes de l’école. Cette salle peut accueillir jusqu’à 120 personnes, ce qui",
+        "convient parfaitement à notre événement. Le tarif de location est de 500 € pour la soirée, incluant la sonorisation, les chaises et",
+        "les tables. Ils offrent également un service de traiteur avec des options à partir de 20 € par personne.",
+        "Je reste à votre disposition pour plus de détails ou pour organiser une visite du lieu. Cordialement,",
+        "AYOUB"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous venez de commencer une nouvelle activité de loisir (sport, danse, etc.). Écrivez un article sur votre blog pour parler de",
+      "sample": [
+        "cette expérience.",
+        "Correction Tâche 2",
+        "Ma nouvelle passion : le yoga !",
+        "Chers lecteurs,",
+        "Il y a quelques semaines, j’ai décidé de me lancer dans une nouvelle activité : le yoga. J’avais entendu beaucoup de bien de ses",
+        "bienfaits pour le corps et l’esprit, mais je n’avais jamais pris le temps de m’y intéresser sérieusement. Aujourd’hui, je peux dire",
+        "que je suis totalement conquise ! Les premières séances étaient un peu difficiles, notamment pour la souplesse, mais très",
+        "rapidement, j’ai ressenti une réelle détente après chaque pratique. Le yoga m’aide à évacuer le stress, à mieux me concentrer et à",
+        "me reconnecter avec moi-même. Je trouve aussi que cela améliore ma posture et mon équilibre.",
+        "Ce qui m’a surprise, c’est la dimension mentale de la pratique. Le yoga est bien plus qu’une simple activité physique, c’est un",
+        "véritable moment de calme et de méditation.",
+        "Si vous n’avez pas encore testé, je vous encourage vivement à essayer. Les bienfaits sont indéniables !",
+        "À très bientôt pour de nouvelles aventures !"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous faites partie d’une association de quartier qui propose des activités aux enfants (aide aux devoirs, sorties, jeux, etc.). Sur",
+      "sample": [
+        "votre site internet, vous racontez votre expérience et vous expliquez pourquoi ce type d’association est utile.",
+        "Correction Tâche 2",
+        "Faire partie de cette association de quartier a été une expérience enrichissante. Nous proposons des activités variées pour les",
+        "enfants : aide aux devoirs, sorties culturelles, jeux collectifs et ateliers créatifs. Ces moments permettent aux enfants d’apprendre",
+        "tout en s’amusant, mais aussi de développer des liens sociaux dans un cadre bienveillant. Pour les parents, c’est un réel soutien,",
+        "notamment pour concilier travail et vie familiale. L’association favorise aussi l’insertion sociale en donnant à chaque enfant",
+        "l’opportunité d’épanouir ses talents, quelle que soit sa situation. Cet engagement crée un véritable esprit de solidarité et renforce",
+        "les liens entre les habitants du quartier."
+      ],
+      "tags": []
+    },
+    {
+      "q": "Vous avez vécu avec une personne agée. Vous racontez votre expérience.",
+      "sample": [
+        "Correction Tâche 2",
+        "J’ai eu l’expérience de vivre avec ma grand-mère pendant quelques années, et cela a été à la fois enrichissant et parfois un peu",
+        "difficile. Elle avait besoin d’aide pour certaines tâches quotidiennes, comme se déplacer, préparer les repas ou prendre ses",
+        "médicaments. Cela m’a appris à être patient(e) et à mieux organiser mes journées pour l’accompagner tout en gardant un équilibre",
+        "avec mes propres besoins.",
+        "Il y a aussi des moments de complicité, comme discuter de ses souvenirs ou lui faire écouter de la musique qu’elle aime. Bien sûr,",
+        "ce n’est pas toujours facile, surtout quand elle devient un peu plus dépendante ou fragile, mais c’est aussi une grande opportunité",
+        "de renforcer les liens familiaux. Le plus important, je pense, c’est d’être à l’écoute, de bien communiquer et de s’adapter à ses",
+        "besoins tout en préservant son autonomie. C’est une expérience qui demande beaucoup d’empathie."
+      ],
+      "tags": []
+    }
+  ],
+  "3": [
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "Les Écoles Privées Ou Publiques ?",
+        "Document 1 :",
+        "À la rentrée, le nombre d’élèves inscrits dans des écoles privées a augmenté en France. Le succès des établissements privés n’est",
+        "pas directement lié aux bons résultats scolaires de leurs élèves.",
+        "C’est la réputation de ces lieux qui explique un tel enthousiasme. Aux yeux de nombreux parents, les élèves y sont mieux",
+        "encadrés, mieux surveillés et les professeurs sont plus présents. Les parents sont aussi rassurés parce que les classes sont",
+        "homogènes : elles accueillent généralement des élèves de milieux sociaux favorisés. En effet, les études dans ces établissements",
+        "sont payantes, ce qui n’est pas le cas dans les écoles publiques.",
+        "Document 2 :",
+        "Dans les collèges privés, il y a peu d’élèves de milieux sociaux défavorisés. Comme les études dans ces établissements sont",
+        "payantes, certaines catégories de population en sont exclues. Ce système qui oppose écoles publiques et écoles privées ne facilite",
+        "pas la mixité sociale. Ainsi, les élèves du privé ont rarement l’occasion de rencontrer d’autres jeunes issus de milieux sociaux",
+        "moins favorisés qu’eux et inversement. Ce modèle scolaire reproduit les inégalités sociales et renforce le sentiment d’exclusion",
+        "de certains jeunes.",
+        "Correction Tâche 3",
+        "Les Écoles Privées Ou Publiques ?",
+        "Le choix entre écoles privées et publiques suscite des débats. D’un côté, les écoles privées sont prisées pour leur encadrement, leur",
+        "réputation et l’homogénéité des classes. Toutefois, ce système crée des inégalités sociales, car les écoles privées excluent souvent",
+        "les élèves de milieux moins favorisés, contrairement aux écoles publiques, plus accessibles et diversifiées.",
+        "À mon avis, les écoles publiques offrent un meilleur modèle d’éducation. Elles permettent une plus grande mixité sociale et",
+        "favorisent l’inclusion, en accueillant des élèves de tous horizons. Cela offre aux jeunes la chance de grandir dans un",
+        "environnement diversifié et d’apprendre la tolérance. En revanche, les écoles privées, bien qu’elles offrent une meilleure",
+        "réputation et un encadrement plus rigoureux, créent des divisions sociales, en excluant les familles moins favorisées. Par",
+        "exemple, dans une école publique, des élèves issus de milieux différents peuvent échanger et enrichir leur vision du monde, ce",
+        "qui est essentiel pour construire une société plus équitable. Les écoles privées, à cause de leur coût, risquent de renforcer les",
+        "inégalités.",
+        "Combinaison 31"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "Les Devoirs À La Maison. Document 1 :",
+        "Selon des associations des parents d’élèves, les devoirs à la maison sont utiles, car ils permettent aux élèves d’apprendre à",
+        "organiser leur temps de manière autonome. Pour les parents, les devoirs sont lien quotidien avec l’école. Même s’il est parfois",
+        "difficile de suivre les devoirs après une journée de travail fatigant, ils apprécient ce moment partagé avec leurs enfants parce que",
+        "ceux-ci sont contents que leurs parents s’intéressent à eux. C’est valorisant !",
+        "Document 2 :",
+        "Nous protestons depuis longtemps contre les devoirs à la maison pour plusieurs raisons. Personne ne jamais prouve leur utilité",
+        "pour améliorer les résultats des élèves. Beaucoup de parents ont peu de temps pour encadrer les devoirs de leurs enfants et",
+        "certains parents ne savent pas le faire. Quant aux élèves, ceux qui ont réussi les exercices en classe perdent leurs temps à faire à la",
+        "maison.",
+        "Ceux qui ne sont pas aidés à la maison ne réussissent toujours pas, ils sont défavorisés. C’est pourquoi nous pensons qu’il faut",
+        "supprimer les devoirs à la maison.",
+        "Correction Tâche 3",
+        "Les Devoirs à la Maison : Un Sujet Controversé",
+        "Les devoirs à la maison font l’objet de débats. Certains, comme les associations de parents, les trouvent utiles pour développer",
+        "l’autonomie des élèves et renforcer le lien familial. En revanche, d’autres protestent, soulignant leur manque d’efficacité et leur",
+        "impact négatif, notamment pour les élèves défavorisés ou ceux ayant peu de soutien à la maison.",
+        "À mon avis, les devoirs à la maison peuvent être utiles, mais uniquement s’ils sont bien encadrés. Ils permettent aux élèves de",
+        "renforcer leurs connaissances et d’apprendre à gérer leur temps.",
+        "Cependant, ils doivent être adaptés aux capacités de chaque enfant. Par exemple, un élève qui comprend rapidement le cours n’a",
+        "pas besoin de passer des heures à répéter des exercices inutiles. De plus, il est essentiel que les parents puissent accompagner",
+        "leurs enfants sans se sentir submergés. Dans le cas contraire, les devoirs peuvent créer des inégalités et nuire à l’estime de soi des",
+        "élèves qui n’ont pas de soutien à la maison. Une meilleure gestion des devoirs serait donc bénéfique.",
+        "Combinaison 30"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "Utilisation Des Nouvelles Technologies Dans Les Écoles : Pour Ou Contre ? Document 1 :",
+        "Jean : Je suis fermement convaincu que l’intégration des nouvelles technologies dans les écoles est cruciale pour préparer les",
+        "élèves à un avenir numérique. Je pense que l’usage des tablettes et des ordinateurs stimule non seulement l’engagement des",
+        "élèves mais enrichit également leur expérience éducative en leur offrant un accès facile à une variété de ressources, encourageant",
+        "ainsi leur créativité et autonomie.",
+        "Document 2 :",
+        "Sara : Je suis sceptique quant à l’usage intensif des technologies dans l’enseignement. Je crois que cela peut réduire les",
+        "interactions humaines essentielles et favoriser une dépendance préoccupante aux écrans. À mon avis, les méthodes",
+        "d’enseignement traditionnelles et le contact direct entre enseignants et élèves restent indispensables pour un développement",
+        "équilibré et complet des compétences des jeunes.",
+        "Correction Tâche 3",
+        "Utilisation des Nouvelles Technologies dans les Écoles : Pour ou Contre?",
+        "L’utilisation des nouvelles technologies dans les écoles suscite des opinions divergentes. Jean défend leur intégration, estimant",
+        "qu’elles stimulent l’engagement et l’autonomie des élèves grâce à un accès facilité aux ressources. En revanche, Sara s’y",
+        "oppose, craignant qu’elles réduisent les interactions humaines et créent une dépendance aux écrans, au détriment des méthodes",
+        "traditionnelles",
+        "À mon avis, l’intégration des nouvelles technologies dans les écoles est une avancée bénéfique, mais elle doit être encadrée. Les",
+        "outils numériques, comme les tablettes, peuvent rendre l’apprentissage plus interactif et adapté aux besoins individuels des",
+        "élèves. Par exemple, les plateformes éducatives permettent un suivi personnalisé. Cependant, il est essentiel de trouver un",
+        "équilibre. L’interaction humaine, essentielle à la socialisation et au développement des compétences émotionnelles, ne doit pas",
+        "être négligée. De plus, il est important de limiter le temps passé devant les écrans pour éviter la dépendance. Ainsi, un usage",
+        "réfléchi et mesuré des technologies peut améliorer l’éducation tout en préservant l’aspect humain de l’enseignement.",
+        "Combinaison 29"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "Les Vêtements de Grandes Marques Document 1",
+        ":",
+        "Les vêtements de marques sont très importants pour les enfants et les adolescents. C’est un moyen de s’exprimer et de se",
+        "rattacher à un groupe social. Cette attirance pour les marques est très présente chez les adolescents qui se cherchent et montrent",
+        "leur personnalité. Les enfants aiment également porter des vêtements de marques avec des images des dessins animés qu’ils",
+        "regardent ou des logos qu’ils apprécient.",
+        "Document 2 :",
+        "Les enfants grandissent très vite et les vêtements sont portés pendant une courte période. Ainsi, les vêtements deviennent",
+        "rapidement trop petits. Mais il y a aussi le fait que les enfants usent assez rapidement les vêtements en jouant à l’extérieur avec les",
+        "copains, en s’amusant dans l’herbe ou à l’aire de jeux. Les habits sont très vite sales ou troués.",
+        "Correction Tâche 3",
+        "Les Vêtements de Grandes Marques",
+        "Les vêtements de grandes marques sont populaires chez les enfants et adolescents, qui cherchent à s’exprimer et à s’intégrer.",
+        "Toutefois, bien que ces vêtements permettent de montrer leur personnalité, ils deviennent rapidement trop petits ou usés, car les",
+        "enfants grandissent vite et abîment leurs habits en jouant. Ainsi, leur achat peut ne pas être toujours rentable.",
+        "À mon avis, l’attrait pour les vêtements de grandes marques chez les enfants et les adolescents peut être compréhensible, car ces",
+        "vêtements représentent un moyen d’affirmer son identité et de se sentir accepté. Par exemple, un adolescent qui porte une marque",
+        "populaire peut se sentir inclus dans un groupe social. Cependant, il est important de noter que, étant donné que les enfants",
+        "grandissent rapidement, ces vêtements sont souvent peu rentables. Ils deviennent trop petits ou s’abîment facilement à cause des",
+        "jeux extérieurs. De plus, cela peut créer une pression sociale inutile et des comportements de consommation excessifs. Par",
+        "conséquent, il peut être plus sage de privilégier des vêtements pratiques et durables, plutôt que de suivre constamment les",
+        "tendances.",
+        "Combinaison 28"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "Uniforme Scolaire.",
+        "Document 1 :",
+        "Le port de l’uniforme développe un sentiment d’appartenance à son établissement, et à la communauté des élèves. Il nourrit",
+        "chez le jeune le sens du collectif et engendre souvent la fierté d’appartenir à son établissement. De plus, il réduit la",
+        "discrimination basée sur le style ou sur la classe sociale de l’élève. En effet, l’uniforme permet aux parents d’économiser",
+        "beaucoup d’argent, ce ne sont pas tous les parents griffés ou de marques populaires. La mise en place d’un code vestimentaire",
+        "réduit donc les différences entre les classes sociales.",
+        "Document 2 :",
+        "Le port de l’uniforme étouffe et écrase la personnalité des garçons. Ils ne peuvent pas s’habiller comme ils le veulent, en aucune",
+        "circonstance. De l’autre côté de l’échelle (chez les pros) il y a des gens qui préfèreraient, pour eux-mêmes et leurs enfants, avoir",
+        "la possibilité de s’exprimer à travers l’habillement, en décidant eux-mêmes ce qu’ils porteront chaque jour. Ainsi, avec un",
+        "uniforme, les jeunes qui aiment s’exprimer à travers I ‘habillement, en décidant eux-mêmes ce qu’ils porteront chaque jour.",
+        "Ainsi, avec un uniforme, les jeunes qui aiment s’exprimer à travers la mode, se démarquer de la foule grâce à un accessoire ou un",
+        "vêtement particulier se retrouveront déçus et emprisonnés dans l’uniforme.",
+        "Correction Tâche 3",
+        "L’Uniforme Scolaire",
+        "Le port de l’uniforme scolaire suscite des avis partagés. D’une part, il renforce le sentiment d’appartenance à l’établissement et",
+        "réduit les différences sociales, permettant aux parents d’économiser. D’autre part, il limite l’expression de la personnalité des",
+        "élèves, qui ne peuvent pas choisir leurs vêtements et sont contraints de suivre une norme vestimentaire.",
+        "mon avis, l’uniforme scolaire présente des avantages mais aussi des inconvénients. D’un côté, il aide à réduire les inégalités",
+        "sociales et permet de créer un sentiment d’unité au sein de l’école. Par exemple, les élèves ne sont pas jugés en fonction de leurs",
+        "vêtements ou de leur classe sociale.",
+        "Cela peut aussi alléger la pression liée à la mode. Cependant, l’uniforme empêche les jeunes de s’exprimer à travers leur style",
+        "vestimentaire. De nombreux adolescents aiment personnaliser leurs tenues pour montrer leur personnalité. En limitant cette",
+        "liberté, l’uniforme pourrait nuire à leur épanouissement personnel. À mon sens, un juste équilibre pourrait être trouvé entre",
+        "l’uniformité et la liberté d’expression.",
+        "Combinaison 27"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "Les Caméras De Surveillance A L’école : Pour Ou Contre ? Document 1 :",
+        "Dans l’école où j’enseigne à Montréal, les caméras de surveillance sont omniprésentes. Leur présence permet de dissuader les",
+        "élèves de commettre des actes de violence. Les enseignants, les parents et la majorité des élèves les acceptent volontiers, car ils se",
+        "sentent rassurés quant à la sécurité des enfants et que cela permet aux enseignants de travailler dans de bonnes conditions.",
+        "Toutefois, certains élèves considèrent que cela porte atteinte à leur vie privée.",
+        "Document 2 :",
+        "Je suis opposé à l’installation des caméras de surveillance dans nos écoles à Montréal. Les résultats obtenus dans les pays où ce",
+        "système est utilisé ne sont pas convaincants. Les personnes mal intentionnées peuvent facilement contourner les caméras, qui sont",
+        "très visibles. Les problèmes de discipline dans une école peuvent être résolus en améliorant la communication entre les",
+        "enseignants, l’administration et les élèves. Il est également nécessaire de faire respecter et expliquer les règles de l’école par tous,",
+        "plutôt que de recourir aux caméras.",
+        "Correction Tâche 3",
+        "Les Caméras de Surveillance à l’École : Pour ou Contre ?",
+        "Les caméras de surveillance dans les écoles divisent les opinions. D’un côté, elles sont considérées comme un moyen de",
+        "prévenir la violence et d’assurer la sécurité, ce qui rassure enseignants et parents. De l’autre côté, certaines personnes estiment",
+        "qu’elles empiètent sur la vie privée et que d’autres méthodes, comme une meilleure communication, seraient plus efficaces.",
+        "À mon avis, les caméras de surveillance à l’école peuvent offrir une certaine sécurité, mais elles ne doivent pas être la seule",
+        "solution pour résoudre les problèmes de discipline. Bien qu’elles dissuadent la violence, leur présence peut créer une atmosphère",
+        "de surveillance constante, nuisant à la confiance entre élèves et enseignants. De plus, elles ne résolvent pas les causes profondes",
+        "des comportements perturbateurs. Par exemple, si les élèves ne comprennent pas bien les règles ou s’ils manquent de soutien",
+        "émotionnel, la surveillance ne suffira pas. Il serait plus efficace de renforcer la communication et d’encourager un",
+        "environnement scolaire positif. Les caméras peuvent être un outil parmi d’autres, mais elles ne devraient pas remplacer une",
+        "approche plus humaine et proactive.",
+        "Combinaison 26"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "Location Courte Durée.",
+        "Document 1 :",
+        "La location courte durée offre flexibilité et commodité pour les voyageurs. Elle permet de louer un logement pour une période de",
+        "temps limitée, que ce soit pour des vacances ou un déplacement professionnel. Cela permet aux voyageurs de profiter d’un",
+        "hébergement confortable avec des équipements adaptés à leurs besoins, tout en évitant les engagements à long terme.",
+        "Document 2 :",
+        "La location courte durée peut parfois être coûteuse, en particulier dans les zones touristiques. De plus, la disponibilité peut être",
+        "limitée, surtout pendant les périodes de forte demande. Il est donc important de planifier et de réserver à l’avance pour obtenir",
+        "les meilleurs résultats.",
+        "Correction Tâche 3",
+        "La Location Courte Durée",
+        "La location courte durée est une solution prisée par les voyageurs. Elle offre flexibilité et confort, en permettant de louer un",
+        "logement pour un séjour temporaire. Cependant, elle peut être coûteuse, surtout dans les zones touristiques, et la disponibilité peut",
+        "être limitée, en particulier durant les périodes de forte demande.",
+        "Haut du formulaire Bas du",
+        "formulaire",
+        "À mon avis, la location courte durée présente de nombreux avantages, notamment la flexibilité et le confort. Elle permet de",
+        "s’adapter facilement aux besoins des voyageurs, qu’ils soient en vacances ou en voyage professionnel. Par exemple, louer un",
+        "appartement entièrement équipé dans une ville étrangère peut offrir une meilleure expérience qu’un hôtel standard. Cependant,",
+        "les prix peuvent être élevés, surtout dans les zones très touristiques comme Paris ou New York, où la demande est forte. De plus,",
+        "la disponibilité des logements peut être un problème pendant la haute",
+        "saison. Il est donc essentiel de réserver à l’avance pour éviter les mauvaises surprises. Malgré ces inconvénients, je pense que la",
+        "location courte durée reste une option très pratique pour ceux qui cherchent une alternative aux hôtels traditionnels.",
+        "Combinaison 25"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "la restauration rapide",
+        "Document 1 :",
+        "les restaurants rapides proposent des plats équilibré et varié et ils respectent les normes d’hygiènes et les variétés de produits qui",
+        "sont bons et c’est le client qui compose son menu, don il est responsable.",
+        "Document 2 :",
+        "la restauration rapide est néfaste à la santé, elle cause des problèmes irréversible comme l’obésité, etc.",
+        "Correction Tâche 3",
+        "La restauration rapide : avantages et inconvénients",
+        "La restauration rapide divise les opinions. D’une part, certains restaurants proposent des repas équilibrés, respectant les normes",
+        "d’hygiène, avec un menu que le client compose lui-même. En revanche, cette même restauration est souvent critiquée pour ses",
+        "effets négatifs sur la santé, notamment l’obésité et d’autres problèmes graves à long terme.",
+        "À mon avis, la restauration rapide peut être bénéfique si elle est bien choisie. Il existe des options équilibrées dans certains",
+        "établissements, comme des salades ou des menus à base de produits frais. Cependant, beaucoup d’autres plats sont trop gras,",
+        "sucrés et manquent de diversité nutritionnelle. Par exemple, les hamburgers et les frites, consommés trop souvent, peuvent",
+        "entraîner des problèmes de santé graves comme l’obésité. De plus, l’accès facile et rapide à ces repas incite à une consommation",
+        "excessive. Il est donc essentiel de privilégier une alimentation équilibrée et de ne pas abuser des repas rapides, tout en choisissant",
+        "judicieusement les options disponibles pour préserver sa santé.",
+        "Combinaison 24"
+      ],
+      "tags": []
+    },
+    {
+      "q": "La Gratuité Des Musées : Pour Ou Contre ? Document 1 :",
+      "sample": [
+        "la gratuité des musées peut entraîner une sur fréquentation, ce qui nuit à la qualité de l’expérience des visiteurs. De plus, cela",
+        "puisse réduire les ressources financières des musées, affectant ainsi leur entretien et la préservation des œuvres. Un tarif réduit",
+        "serait une meilleure solution pour rendre la culture accessible tout en soutenant les musées.",
+        "Document 2 :",
+        "La gratuité des musées est une excellente initiative. Cela rend la culture accessible à tous, indépendamment de leur situation",
+        "financière. J’ai pu visiter plusieurs musées gratuitement, ce qui m’a permis d’enrichir mes connaissances sans me soucier du",
+        "coût. Pour moi, la gratuité des musées contribue à l’éducation du public et au partage du patrimoine culturel.",
+        "Correction Tâche 3",
+        "La Gratuité des Musées : Pour ou Contre ?",
+        "La question de la gratuité des musées fait débat. D’un côté, certains considèrent que cela rend la culture accessible à tous,",
+        "enrichissant ainsi l’éducation et le partage du patrimoine. En revanche, d’autres estiment que cela entraîne une sur-fréquentation et",
+        "limite les ressources financières nécessaires pour préserver et entretenir les musées.",
+        "À mon avis, la gratuité des musées est une excellente initiative pour rendre la culture accessible à un large public. Beaucoup de",
+        "personnes, en particulier celles ayant des ressources limitées, pourraient profiter de l’opportunité d’enrichir leurs connaissances",
+        "sans se soucier du coût.",
+        "Cependant, je comprends que cela puisse poser des problèmes logistiques, comme la sur- fréquentation et la réduction des fonds",
+        "nécessaires pour l’entretien des musées. Une solution pourrait être d’offrir la gratuité certains jours de la semaine ou de proposer",
+        "des tarifs réduits pour les jeunes et les étudiants, tout en maintenant un financement adéquat pour préserver les œuvres. Cela",
+        "permettrait de concilier accessibilité et préservation du patrimoine culturel.",
+        "Combinaison 23"
+      ],
+      "tags": []
+    },
+    {
+      "q": "téléphone portable ou par Internet, comme le système de chauffage ou la fermeture des portes. De plus, avec une montre ou un",
+      "sample": [
+        "bracelet connecté, toutes nos activités peuvent être analysées. Un logiciel va mesurer le nombre de nos pas pour nous inciter à",
+        "faire davantage d’exercice. Un domaine où l’on comprend mieux leur utilité est celui de la surveillance de la santé. Certains",
+        "objets agissent comme un carnet de santé, toujours prêts à vous rappeler un rendez-vous chez le médecin ou des médicaments à",
+        "prendre.",
+        "Document 2 :",
+        "Il y aurait 50 milliards d’objets connectés dans le monde : l’alarme, le téléviseur, la caméra de surveillance, les volets, le",
+        "détecteur de fumée. etc. Face à cette évolution, la question de la sécurité se pose. En effet, un pirate informatique peut prendre le",
+        "contrôle d’un objet connecté en quelques minutes. Ou encore, un cambrioleur pourrait vérifier grâce aux caméras de surveillance",
+        "connectées d’une habitation que les occupants sont absents. Il est aussi possible d’entrer dans le système connecté d’une voiture,",
+        "et d’en prendre les commandes à distance.",
+        "Correction Tâche 3",
+        "Les Objets Connectés : Pratiques et Sécuritaires ?",
+        "Les objets connectés sont de plus en plus courants dans notre quotidien. D’un côté, ils facilitent la gestion de nos équipements,",
+        "comme les thermostats ou les objets de santé connectés, offrant confort et suivi. En revanche, ces appareils peuvent être",
+        "vulnérables aux attaques informatiques, permettant à des pirates de prendre le contrôle de systèmes à distance.",
+        "À mon avis, les objets connectés apportent des avantages considérables, notamment dans la gestion de notre quotidien. Par",
+        "exemple, une montre connectée peut suivre notre activité physique et nous encourager à bouger davantage, ce qui est bénéfique",
+        "pour la santé. Cependant, il est important de prendre en compte les risques liés à la sécurité. En effet, les objets connectés peuvent",
+        "être piratés, mettant en danger la vie privée des utilisateurs. Une caméra de surveillance connectée peut, par exemple, être utilisée",
+        "par un cambrioleur pour surveiller nos allées et venues. Ainsi, il est essentiel de trouver un équilibre entre les bénéfices des objets",
+        "connectés et les mesures de sécurité à adopter pour protéger nos informations personnelles.",
+        "Combinaison 22"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Grâce à l’art, la curiosité des citadins est attisée dans l’espace urbain. Que ce soit par une peinture ou un spectacle de rue,",
+      "sample": [
+        "l’atmosphère éphémère ainsi créée offre une interaction entre des artistes peu connus et un public hétéroclite, parfois peu habitué",
+        "à côtoyer cette forme d’art.Les villes d’aujourd’hui n’ont plus la même vocation que celles d’hier. Plus qu’un lieu de résidence,",
+        "la ville se réinvente, s’enrichit de la diversité de sa population, s’agence différemment et s’ouvre sur le monde. Les espaces verts",
+        "se créent et les murs se parent de couleurs grâce au street art. Cela débouche sur des lieux où la qualité de vie est privilégiée,",
+        "tout en respectant la nature et l’environnement.",
+        "Document 2 :",
+        "Mais à une plus large échelle, cela n’est pas aussi évident. Les graffitis peuvent être perçus comme une dégradation de la",
+        "communauté, une pollution visuelle ou une preuve de la rupture sociale.On le considèrent comme du vandalisme qui défigure les",
+        "biens publics. Le débat sur les avantages et les inconvénients des graffitis fait rage parmi les artistes, les législateurs et les",
+        "membres de la communauté.",
+        "Correction Tâche 3",
+        "L’Art Urbain : Pour ou Contre ?",
+        "L’art urbain suscite des avis partagés. D’un côté, il transforme l’espace public, attire l’attention et renforce le lien entre les artistes",
+        "et les habitants, tout en embellissant la ville. Cependant, certains voient les graffitis comme une forme de vandalisme, dégradant",
+        "l’image de la ville et créant une pollution visuelle qui nuit à l’environnement urbain.",
+        "À mon avis, l’art urbain, comme le street art, peut-être une forme d’expression puissante qui reflète la diversité des opinions et",
+        "des cultures urbaines. Il permet de redonner vie à des espaces délaissés et d’engager la communauté dans un dialogue visuel. Par",
+        "exemple, des artistes comme Banksy ont su utiliser des murs comme moyen de communication pour des messages sociaux forts.",
+        "Cependant, il est vrai que certains graffitis peuvent être perçus comme du vandalisme, surtout lorsqu’ils défigurent des bâtiments",
+        "ou des monuments historiques. Je pense qu’il est essentiel de trouver un équilibre entre permettre l’expression artistique et",
+        "préserver l’esthétique de la ville. L’art urbain devrait être encouragé dans des espaces dédiés pour éviter tout conflit avec les",
+        "citoyens.",
+        "Combinaison 21"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Pour des enfants qui n’ont pas de frères et/ou de sœurs, l’animal est un compagnon qui leur évitera la solitude. Grâce à lui, un",
+      "sample": [
+        "enfant prendra confiance en lui et apprendra vite qu’un animal est un être vivant qui a besoin d’attention et de respect. En sa",
+        "présence, l’enfant se sentira en sécurité et pourra agir de manière autonome, sans l’aide de ses parents.",
+        "Document 2 :",
+        "Beaucoup d’enfants demandent, un jour ou l’autre, un animal à leurs parents, le plus souvent un chien ou un chat. Mais même si",
+        "vous avez envie de faire plaisir à votre enfant, il vaut mieux réfléchir sérieusement avant d’acheter un animal domestique.",
+        "L’animal devient un nouveau membre de la famille et représente un engagement sur de nombreuses années. Or, avoir un animal",
+        "coûte souvent très cher, et c’est une grande responsabilité. On ne peut pas le traiter comme un jouet que l’on met à la poubelle",
+        "quand l’enfant s’en désintéresse.",
+        "Correction Tâche 3",
+        "Les Animaux de Compagnie pour les Enfants",
+        "Les animaux de compagnie sont souvent envisagés pour les enfants. D’une part, ils apportent des avantages comme la compagnie",
+        "et l’apprentissage de la responsabilité. D’autre part, il est important de considérer les coûts et l’engagement à long terme. Ainsi,",
+        "offrir un animal demande une réflexion sérieuse, malgré les bénéfices évidents pour l’enfant.",
+        "À mon avis, offrir un animal à un enfant peut être très bénéfique, mais cela demande une préparation sérieuse. Par exemple, un",
+        "enfant qui a un chien ou un chat apprend à être plus responsable, à respecter un être vivant et à développer des liens affectifs.",
+        "Cependant, il faut aussi considérer la charge que cela implique. Un animal coûte de l’argent pour sa nourriture, ses soins",
+        "vétérinaires, et il faut s’assurer que l’enfant comprenne que l’animal n’est pas un jouet. Un exemple concret est celui des",
+        "familles qui adoptent un chien sans se rendre compte du temps nécessaire pour les promenades et l’éducation, ce qui peut",
+        "entraîner des frustrations. Ainsi, il est crucial de bien réfléchir avant de prendre cette décision.",
+        "Combinaison 20"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "Le vélo en ville",
+        "Document 1 :",
+        "Quand on parle de vélo, on pense systématiquement à deux choses: sport et loisir. On oublie souvent que c’est avant tout un",
+        "mode de déplacement personnel et professionnel. En ville, c’est un moyen de transport rapide et déstressant puisqu’il permet",
+        "d’éviter les interminables embouteillages aux heures de pointe. Se rendre au travail tout en faisant du sport, histoire de joindre",
+        "l’utile à l’agréable.",
+        "Document 2 :",
+        "Avec tous les accidents de la route observés annuellement, sortir son vélo pour se déplacer avec en ville peut être très",
+        "dangereux. En effet, avec la densité importante de véhicules, le non-respect du Code de la route et le manque de pistes",
+        "cyclables, pratiquer du vélo en zone urbaine présente de vrais risques d’accident. De plus, faire du vélo de nos jours, c’est",
+        "s’exposer à des gaz d’échappement toxiques et nocifs pour la santé humaine (notamment le monoxyde de carbone…).",
+        "Correction Tâche 3",
+        "Le vélo en ville",
+        "Le vélo en ville est une solution de transport de plus en plus populaire. D’un côté, il permet de se déplacer rapidement et de",
+        "manière agréable en évitant les embouteillages. Cependant, de l’autre, il comporte des dangers en raison des accidents fréquents,",
+        "du manque de pistes cyclables et de la pollution, ce qui en fait un choix risqué pour certains.",
+        "À mon avis, le vélo en ville est une excellente alternative aux transports traditionnels, mais il nécessite davantage",
+        "d’aménagements pour garantir la sécurité des cyclistes. Par exemple, la création de pistes cyclables sécurisées et la réduction de la",
+        "pollution de l’air sont essentielles pour encourager son usage. En ville, beaucoup de gens préfèrent le vélo pour éviter les",
+        "embouteillages et rester actifs. Cependant, le manque d’infrastructures adaptées peut rendre l’expérience dangereuse. Les cyclistes",
+        "sont souvent confrontés à des conducteurs imprudents ou à des routes mal entretenues. Pour que le vélo devienne une option",
+        "réellement viable, il faudrait une meilleure coordination entre les autorités locales et les cyclistes, ainsi qu’une prise de conscience",
+        "générale sur les risques liés à la circulation urbaine.",
+        "Combinaison 19"
+      ],
+      "tags": []
+    },
+    {
+      "q": "l’occasion, des jeux éducatifs. L’enfant gère son apprentissage à son rythme, il creuse les sujets qui le passionnent et ne subit pas",
+      "sample": [
+        "la pression des autres élèves qui peuvent avancer plus au moins vite que lui. Autre avantage de l’instruction en famille, une",
+        "évolution différente. Avec l’école à la maison, pas de notes qui peuvent parfois être décourageantes, mais un contrôle continu",
+        "des connaissances, pas de stress dû aux évaluations et aux devoirs.",
+        "Document 2 :",
+        "Le choix de la scolarisation à domicile représente un véritable défi et donc, quelques inconvénients à prendre en compte avant",
+        "de se lancer. La scolarisation à domicile nécessite beaucoup de temps, une bonne organisation et elle a aussi un coût. Tout le",
+        "matériel, les livres, les manuels, et les sorties sont à la charge des familles, et l’un des deux parents est souvent amené à mettre",
+        "entre parenthèses son emploi. Au total, l’école à domicile coûte généralement plus cher qu’une scolarisation dans le public. De",
+        "plus, l’enfant ne côtoie pas de camarades au quotidien, car l’école à domicile ne permet pas à l’enfant d’entrer en interaction",
+        "avec d’autres enfants comme il le ferait dans un cadre scolaire classique.",
+        "Correction Tâche 3",
+        "L’école à Domicile : Une Option Controversée",
+        "L’école à domicile devient de plus en plus populaire pour certains parents. D’un côté, elle offre une pédagogie adaptée,",
+        "permettant à l’enfant de progresser à son rythme et sans",
+        "pression. Cependant, elle implique un investissement en temps et en argent considérable, et l’isolement social peut être un",
+        "inconvénient majeur, contrairement à une scolarisation traditionnelle.",
+        "L’école à domicile offre une approche personnalisée et permet à l’enfant d’apprendre à son rythme, ce qui peut être bénéfique",
+        "pour certains. Par exemple, un enfant ayant des difficultés spécifiques peut progresser sans pression. Cependant, je pense que ce",
+        "mode de scolarisation présente des défis importants. L’isolement social est un inconvénient majeur, car l’interaction avec",
+        "d’autres enfants est essentielle pour le développement social. De plus, cela exige un engagement total des parents, souvent au",
+        "détriment de leur emploi. Le coût élevé des matériaux et des sorties éducatives peut également être un frein pour de nombreuses",
+        "familles. Pour moi, bien que l’école à domicile soit une bonne option pour quelques enfants, elle n’est pas idéale pour tous.",
+        "Combinaison 18"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "Faire Ses Courses Chez Les Producteurs Locaux Ou Au Supermarché? Document 1 :",
+        "Jean qui vit à la compagne favorise l’achat des produits alimentaires directement à la ferme pour la bonne qualité quitte à payer",
+        "un peu plus cher.",
+        "Document 2 :",
+        "Camille qui vit dans la ville préfère faire ses courses au supermarché pour la variété qu’il propose et pour les prix abordables.",
+        "Correction Tâche 3",
+        "Faire ses courses chez les producteurs locaux ou au supermarché ?",
+        "Faire ses courses peut se faire de différentes manières selon les préférences et le mode de vie. Jean, habitant à la campagne,",
+        "privilégie les produits locaux de la ferme, malgré un coût plus élevé. En revanche, Camille, citadine, choisit le supermarché pour",
+        "sa diversité et ses prix plus abordables.",
+        "À mon avis, faire ses courses chez les producteurs locaux est une excellente option, même si cela coûte un peu plus cher. En",
+        "soutenant l’agriculture locale, on encourage des pratiques plus durables et on bénéficie de produits frais et de meilleure qualité.",
+        "Par exemple, acheter des légumes de saison directement à la ferme est un choix sain pour l’environnement et pour notre santé.",
+        "Cependant, je comprends aussi que le supermarché reste pratique pour beaucoup, surtout en ville. La variété et les prix abordables",
+        "sont des avantages indéniables, mais parfois, les produits y sont moins frais. Finalement, tout dépend des priorités de chacun entre",
+        "qualité, prix et accessibilité.",
+        "Combinaison 17"
+      ],
+      "tags": []
+    },
+    {
+      "q": "autre avantage : ils permettent une ouverture sur le monde pour les personnes en situation de handicap. Certaines options,",
+      "sample": [
+        "comme la possibilité d’augmenter la taille des lettres, facilitent la lecture pour les personnes malvoyantes.",
+        "Document 2 :",
+        "Le livre numérique remplacera-t-il le livre papier ? « Non », répondront la plupart des lecteurs. Le livre papier est un beau",
+        "support. Quel plaisir de le prêter aux gens qu’on aime ou de l’offrir en glissant un petit mot dedans ! Le livre papier a une",
+        "histoire, l’odeur du neuf ou de l’ancien… Il transmet beaucoup d’émotions alors que le livre numérique à un côté un peu",
+        "impersonnel. De plus, les livres numériques demandent de posséder un minimum de connaissances en informatique, ce qui peut",
+        "être une difficulté pour certaines personnes.",
+        "Correction Tâche 3",
+        "Le Livre Papier ou Le Livre Numérique ?",
+        "Depuis plusieurs années, le livre numérique s’impose comme une alternative au livre papier. Chaque format a ses avantages et ses",
+        "inconvénients.",
+        "Le livre numérique est économique et écologique. Il facilite aussi la lecture des personnes en situation de handicap. Cependant,",
+        "le livre papier reste un objet précieux, chargé d’émotions. Il offre une expérience sensorielle unique et ne nécessite aucune",
+        "compétence informatique.",
+        "À mon avis, le choix entre le livre papier et le livre numérique dépend des besoins de chacun. Le livre numérique est pratique : on",
+        "peut transporter une bibliothèque entière sur une tablette. Par exemple, en voyage, il permet de lire plusieurs ouvrages sans",
+        "s’encombrer. Il est aussi plus accessible pour les personnes malvoyantes grâce aux options d’agrandissement du texte.",
+        "Toutefois, je préfère le livre papier. Tourner les pages, sentir l’odeur du papier et annoter un passage marquant offrent un",
+        "plaisir unique. De plus, offrir un livre papier avec une dédicace ajoute une valeur sentimentale que le numérique ne peut",
+        "remplacer. Finalement, même si le numérique est pratique, le livre papier conserve une dimension émotionnelle",
+        "irremplaçable. Combinaison 16"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "L’Utilisation du Plastique, Pour ou Contre Document 1 :",
+        "Franck soutient l’utilisation limitée du plastique, soulignant son importance dans de nombreux secteurs, notamment les secteurs",
+        "médical et alimentaire. Pour lui, le plastique est vital pour la conservation des aliments et la stérilisation des équipements",
+        "médicaux. Il prône une utilisation responsable et le recyclage, mais reconnaît que certains usages du plastique sont",
+        "indispensables pour la société moderne.",
+        "Document 2 :",
+        "Amicha s’oppose fermement à l’utilisation du plastique, mettant en avant son impact environnemental dévastateur. Elle soutient",
+        "que les déchets plastiques polluent les océans et les écosystèmes, causant des dommages irréparables. Amicha milite pour des",
+        "alternatives écologiques et durables, insistant sur l’urgence de renoncer au plastique pour protéger l’environnement et la santé",
+        "publique.",
+        "Correction Tâche 3",
+        "L’Utilisation du Plastique, Pour ou Contre",
+        "L’utilisation du plastique fait débat, entre ses avantages et ses inconvénients. D’un côté, Franck soutient une utilisation contrôlée",
+        "dans les secteurs médicaux et alimentaires, soulignant son utilité pour la conservation et la stérilisation. Cependant, Amicha",
+        "critique cette pratique en raison de la pollution plastique, et milite pour des alternatives écologiques et durables.",
+        "À mon avis, l’utilisation du plastique est un sujet complexe. Il est indéniable que le plastique joue un rôle essentiel dans de",
+        "nombreux domaines, comme la médecine et l’alimentation, où il est indispensable pour la sécurité et la conservation. Toutefois,",
+        "ses effets environnementaux sont alarmants. Les océans sont remplis de déchets plastiques, menaçant la faune et la flore marines.",
+        "Par exemple, les sacs plastiques tuent de nombreux animaux marins qui les ingèrent. Je crois qu’une approche responsable est",
+        "nécessaire, combinant l’utilisation du plastique pour des besoins vitaux tout en investissant massivement dans le recyclage et les",
+        "alternatives écologiques, comme les matériaux biodégradables. Cela permettrait de préserver les avantages tout en réduisant son",
+        "impact environnemental.",
+        "Combinaison 15"
+      ],
+      "tags": []
+    },
+    {
+      "q": "est incontestable, tant sur les individus que sur la culture en général. Elle permet de diffuser des informations, d’offrir des",
+      "sample": [
+        "divertissements variés et de favoriser la diffusion de la culture. La télévision est présente dans de nombreux foyers et constitue",
+        "une source d’information et de divertissement accessibles à tous. Grâce à sa portée et à sa capacité à toucher un large public, la",
+        "télévision joue un rôle important dans la transmission des connaissances et la sensibilisation aux enjeux sociaux.",
+        "Document 2 :",
+        "La télévision peut également présenter certains inconvénients. Les émissions télévisées peuvent parfois véhiculer des",
+        "stéréotypes, des préjugés et des valeurs discutables. De plus, le temps passé devant la télévision peut réduire le temps consacré à",
+        "d’autres activités plus enrichissantes, telles que la lecture, les interactions sociales ou la pratique d’un sport. Il est important de",
+        "faire preuve de discernement et de réguler l’exposition à la télévision, en particulier pour les enfants, afin de préserver un",
+        "équilibre sain entre les différentes formes d’apprentissage et de divertissement.",
+        "Correction Tâche 3",
+        "Le rôle de la télévision dans l’éducation des enfants",
+        "La télévision occupe une place importante dans l’éducation des enfants. D’une part, elle offre des informations utiles et favorise la",
+        "diffusion culturelle. Cependant, elle peut aussi véhiculer des stéréotypes et limiter le temps consacré à des activités plus",
+        "enrichissantes, comme la lecture ou les interactions sociales. Il est essentiel de réguler son usage pour un équilibre sain.",
+        "À mon avis, la télévision peut être un outil éducatif puissant si elle est utilisée de manière raisonnée. Par exemple, certaines",
+        "émissions éducatives comme C’est pas sorcier ou Les Zinzins de l’espace permettent aux enfants d’apprendre tout en se",
+        "divertissant. Cependant, un usage excessif peut nuire à leur développement. Il est important que les parents choisissent des",
+        "programmes adaptés et limitent le temps passé devant l’écran pour encourager d’autres activités comme la lecture ou les jeux",
+        "extérieurs. En outre, les émissions télévisées peuvent parfois véhiculer des messages négatifs, influençant ainsi les valeurs des",
+        "enfants. En somme, la télévision peut être bénéfique, mais elle doit être utilisée avec discernement et en complément d’autres",
+        "formes d’apprentissage.",
+        "Combinaison 14"
+      ],
+      "tags": []
+    },
+    {
+      "q": "fin d’une conférence, d’une réunion ou d’un rendez-vous. Il s’agit d’une véritable solution dédiée aux entreprises ayant une",
+      "sample": [
+        "activité intense et qui requiert la présence continue de leurs employés.",
+        "Document 2 :",
+        "Cette pratique révèle souvent des inconvénients à cause de sa notoriété montante. Certains jours, il arrive que les responsables de",
+        "livraisons peuvent être envahis par un grand nombre de livraisons à faire et cela risque de générer des perturbations liées au stress",
+        "de l’attente. De même pour les employés, une trop longue heure de travail peut causer un état de fatigue si ce dernier ne quittera",
+        "pas son bureau pour le repas. Dans tous les cas, il est recommandé de toujours marquer des temps de pause lors des durs labeurs.",
+        "Correction Tâche 3",
+        "Livraison des Repas au Bureau : Pour ou Contre ?",
+        "La livraison de repas au bureau est une option de plus en plus populaire dans les entreprises. D’un côté, elle permet de gagner du",
+        "temps et d’éviter des déplacements, favorisant ainsi",
+        "l’efficacité. Cependant, cette pratique peut causer des retards dus à une surcharge de travail pour les livreurs et nuire à la santé",
+        "des employés si aucune pause n’est prise.",
+        "À mon avis, la livraison de repas au bureau peut être un atout pour les entreprises où le temps est précieux. Par exemple, dans des",
+        "environnements de travail où les employés enchaînent réunions et tâches importantes, cela permet d’optimiser leur journée sans",
+        "perdre de temps à chercher un restaurant. Cependant, il est essentiel de veiller à ce que cela ne nuise pas à la santé des employés.",
+        "Ne pas faire de pause déjeuner ou se retrouver coincé dans l’attente d’une livraison peut entraîner fatigue et stress. Il serait donc",
+        "judicieux que les entreprises imposent un rythme de travail où ces livraisons ne remplacent pas les moments nécessaires à la",
+        "détente et à la déconnexion.",
+        "Combinaison 13"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "Cuisinier Amateur Ou Cuisinier Professionnel ?",
+        "Document 1 :",
+        "Les amateurs ont fait des recettes réussies, mais ils manquent toujours des compétences et des technique, c’est pourquoi la",
+        "formations et l’expérience sont nécessaires pour être un vrai cuisinier. Document 2 :",
+        "Il parle des cuisiniers qui ont appris le métier de cuisiniers sur internet et qui ont le buzz sur les réseaux sociaux il raconte aussi",
+        "l’histoire d’une amatrice qui est devenue professionnelle et qui a rédigé plusieurs livres sur la cuisine pour les amateurs de cuisine",
+        "à la maison.",
+        "Correction Tâche 3",
+        "Cuisinier Amateur ou Cuisinier Professionnel ?",
+        "Cuisiner est un art qui attire à la fois les passionnés et les professionnels. D’un côté, les amateurs réussissent leurs recettes, mais",
+        "leur manque de formation et de techniques les freine. En revanche, certains cuisiniers, formés sur internet, connaissent un grand",
+        "succès, prouvant qu’il est possible de devenir professionnel sans formation traditionnelle.",
+        "À mon avis, devenir cuisinier professionnel nécessite une combinaison de passion et de formation. Bien qu’un amateur puisse",
+        "réussir de belles recettes à la maison, les compétences techniques sont indispensables pour exceller dans un environnement",
+        "professionnel. Par exemple, un chef formé saura gérer les coûts, les quantités et l’organisation, des aspects cruciaux en cuisine.",
+        "Cependant, l’essor des cuisiniers autodidactes, comme ceux qui apprennent sur internet, montre que la passion et l’innovation",
+        "peuvent aussi mener au succès. Des influenceurs culinaires, bien qu’amateurs au départ, peuvent toucher un large public et réussir",
+        "à devenir des références, comme l’a prouvé certains chefs qui ont transformé leur passion en carrière grâce à des réseaux sociaux.",
+        "Combinaison 12"
+      ],
+      "tags": []
+    },
+    {
+      "q": "dépenses, que ce soit le loyer, les factures ou les frais généraux. De plus, cela favorise les interactions sociales et les échanges",
+      "sample": [
+        "culturels. Vivre avec des colocataires permet",
+        "de rencontrer des individus de différents horizons, de nouer des amitiés et de partager des expériences enrichissantes.",
+        "Document 2 :",
+        "La colocation peut cependant présenter des défis. Les différences de personnalité et de mode de vie entre les colocataires",
+        "peuvent entraîner des tensions. La gestion des responsabilités et des tâches ménagères peut également être source de conflits. De",
+        "plus, la colocation peut limiter l’intimité et l’espace personnel. Il est important d’établir une communication ouverte et",
+        "respectueuse, ainsi que des règles de vie commune, pour favoriser une cohabitation harmonieuse. Correction Tâche 3",
+        "Vivre En Colocation",
+        "La colocation est une option de logement de plus en plus populaire, offrant divers avantages et défis. D’un côté, elle permet de",
+        "réduire les dépenses et de favoriser les échanges",
+        "sociaux. Cependant, elle peut aussi créer des tensions dues aux différences de personnalité et à la gestion des tâches ménagères. Il",
+        "est donc crucial de maintenir une bonne communication.",
+        "À mon avis, la colocation peut être une expérience enrichissante, mais elle demande une bonne dose de patience et de",
+        "compromis. Par exemple, partager un logement permet de découvrir de nouvelles cultures et de créer des liens forts. Cependant,",
+        "il est essentiel d’avoir une communication ouverte pour éviter les conflits, surtout en ce qui concerne les tâches ménagères. J’ai",
+        "personnellement vécu en colocation avec des amis, ce qui a renforcé nos liens, mais cela a aussi révélé des différences de rythme",
+        "de vie. En ayant des règles claires et en respectant l’espace de chacun, il est possible de profiter des avantages de la colocation",
+        "tout en minimisant les tensions. C’est un équilibre à trouver.",
+        "Combinaison 11"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Le travail est au centre de notre vie. Dès l’enfance, on entend souvent la question: «Qu’est-ce que tu veux faire quand tu seras",
+      "sample": [
+        "grand ? ». Le travail devrait être synonyme de réussite et de satisfaction, mais il est trop souvent synonyme de fatigue et",
+        "d’emprisonnement. Aujourd’hui, beaucoup pensent que l’on ne passe pas assez de temps avec sa famille, ses amis. Il est urgent",
+        "de revoir la place occupée par le travail dans notre société. Certains pensent que travailler moins permettrait d’avoir plus de",
+        "temps libre pour mieux vivre.",
+        "Document 2 :",
+        "Certaines personnes ont décidé d’arrêter de travailler pour changer de mode de vie. Pourtant, aujourd’hui, travailler, c’est exister",
+        "La question : «Qu’est-ce que tu fais dans la vie ?» revient souvent lors d’une première rencontre. Elle prouve que l’emploi fait",
+        "partie de notre identité. D’après le spécialiste Jean-Daniel Remond, la vie en entreprise est très importante. Les contacts",
+        "quotidiens, les réseaux, les amitiés, l’impression d’être utile, mais aussi les difficultés, tout cela contribue à construire notre",
+        "personnalité et notre identité.",
+        "Correction Tâche 3",
+        "Le Travail : Favorable ou Défavorable ?",
+        "Le travail joue un rôle central dans nos vies. D’un côté, il peut offrir un sentiment d’accomplissement et de connexion sociale,",
+        "contribuant à la construction de notre",
+        "identité. Cependant, de l’autre, il peut engendrer stress et isolement, limitant le temps passé avec ses proches. Il est donc crucial",
+        "de réévaluer l’équilibre entre travail et vie personnelle.",
+        "À mon avis, le travail peut être à la fois favorable et défavorable, selon la manière dont on l’équilibre avec sa vie personnelle.",
+        "Par exemple, un emploi qui nous passionne et nous permet de créer des liens peut être une véritable source de satisfaction.",
+        "Cependant, un excès de travail, comme le montre la société actuelle, peut entraîner du stress et nous éloigner de nos proches.",
+        "Personnellement, j’ai vécu cette situation où le travail m’a envahi, réduisant le temps que je pouvais consacrer à ma famille.",
+        "C’est pourquoi je pense qu’il est essentiel de trouver un juste milieu, en accordant du temps à soi-même et à ses proches tout en",
+        "se réalisant professionnellement. Un bon équilibre est la clé.",
+        "Combinaison 10"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "Les Relations Amicales Au Travail",
+        "Document 1 :",
+        "Les amitiés entre collègues au travail peuvent être extrêmement bénéfiques. Elles favorisent un climat de travail agréable et une",
+        "ambiance positive au sein de l’équipe. Avoir des amis parmi ses collègues permet de renforcer les liens professionnels et de créer",
+        "un sentiment de camaraderie.",
+        "Cela peut contribuer à une meilleure communication, une collaboration plus étroite et une résolution plus efficace des",
+        "problèmes. De plus, partager des moments de convivialité en dehors du travail, comme des déjeuners ou des activités après le",
+        "bureau peut renforcer les liens et créer une dynamique de groupe solide.",
+        "Document 2 :",
+        "Il est important de trouver un équilibre entre amitié et professionnalisme au travail. Les amitiés excessivement proches peuvent",
+        "parfois créer des tensions ou des conflits lorsque des décisions professionnelles doivent être prises. De plus, les amitiés",
+        "exclusives entre certains collègues peuvent exclure les autres membres de l’équipe, ce qui peut nuire à la cohésion et à la",
+        "collaboration. Il est essentiel de maintenir des limites claires et de veiller à ce que les amitiés ne compromettent pas le",
+        "professionnalisme, la hiérarchie ou la productivité au sein de l’organisation. Correction Tâche 3",
+        "Les Relations Amicales Au Travail",
+        "Les relations amicales au travail peuvent avoir des avantages, mais aussi des inconvénients. D’une part, elles favorisent une",
+        "bonne ambiance et une collaboration renforcée. Cependant, d’autre part, des amitiés trop proches peuvent causer des conflits et",
+        "nuire à la productivité. Il est donc important de maintenir un équilibre entre convivialité et professionnalisme pour préserver un",
+        "environnement de travail harmonieux.",
+        "À mon avis, les relations amicales au travail peuvent être bénéfiques, mais elles doivent être gérées avec prudence. Par exemple,",
+        "avoir des amis parmi ses collègues peut rendre le quotidien plus agréable et faciliter la communication. Cependant, il est",
+        "essentiel de ne pas laisser ces liens affecter la hiérarchie et la prise de décision professionnelle. Une amitié trop exclusive peut",
+        "aussi créer des tensions et des sentiments d’exclusion parmi les autres membres de l’équipe. Pour éviter cela, il est important de",
+        "maintenir des frontières claires et de veiller à ce que les relations amicales n’interfèrent pas avec la productivité ou le respect des",
+        "responsabilités professionnelles. Trouver cet équilibre est la clé pour un environnement de travail harmonieux.",
+        "Combinaison 9"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "Manger à l’extérieur ou chez soi ?",
+        "Document 1 :",
+        "Témoignage d’Aïcha, qui préfère manger à l’extérieur pour partager des moments conviviaux et",
+        "éviter de cuisiner.",
+        "Document 2 :",
+        "Témoignage de Laura, qui préfère cuisiner chez elle pour des raisons financières et de qualité alimentaire.",
+        "Correction Tâche 3",
+        "Manger à l’extérieur ou chez soi ?",
+        "Le choix entre manger à l’extérieur ou chez soi dépend de nombreux critères. Aïcha préfère les repas en extérieur pour leur",
+        "convivialité et la facilité d’éviter la cuisine. En revanche, Laura choisit de cuisiner chez elle, pour des raisons financières et pour",
+        "garantir une meilleure qualité des repas. Ces deux témoignages montrent des préférences opposées.",
+        "À mon avis, manger chez soi est souvent plus avantageux, tant pour la santé que pour le budget. En cuisinant soi-même, on peut",
+        "contrôler la qualité des ingrédients et éviter les excès de sel ou de graisses. Par exemple, préparer une salade maison avec des",
+        "légumes frais est bien plus sain que de commander un repas à emporter. De plus, cuisiner à la maison est moins coûteux à long",
+        "terme.",
+        "Cependant, manger à l’extérieur permet de profiter d’un moment social agréable avec des amis ou en famille, ce qui n’est pas à",
+        "négliger. En fin de compte, cela dépend de l’occasion : un repas convivial à l’extérieur peut être parfait, mais pour un quotidien",
+        "plus sain et économique, la cuisine maison reste idéale.",
+        "Combinaison 8"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Avantages du livre numérique (économie de papier, accessibilité pour les personnes en situation",
+      "sample": [
+        "de handicap, coût réduit).",
+        "Document 2 :",
+        "Défense du livre papier (plaisir de la lecture traditionnelle, valeur sentimentale, accessibilité pour tous).",
+        "Correction Tâche 3",
+        "Livre papier ou livre numérique ?",
+        "Le choix entre livre papier et livre numérique est un sujet souvent débattu. D’un côté, le livre numérique présente des avantages",
+        "comme l’économie de papier, son coût réduit et une meilleure accessibilité pour les personnes handicapées. En revanche, le livre",
+        "papier conserve une valeur sentimentale et offre le plaisir de la lecture traditionnelle, tout en étant accessible à tous.",
+        "À mon avis, les deux formats ont leurs avantages. Le livre numérique est pratique, surtout pour les déplacements, car il permet de",
+        "transporter plusieurs ouvrages sur un seul appareil, tout en étant plus écologique et économique. Par exemple, une liseuse comme",
+        "le Kindle offre une grande autonomie et un confort de lecture, même en plein soleil. Cependant, le livre papier reste",
+        "irremplaçable pour certains moments de plaisir, comme le fait de tourner les pages ou de sentir l’odeur du papier. De plus, un",
+        "livre papier a une valeur sentimentale, il peut être offert ou",
+        "collectionné. Je pense donc qu’il est difficile de choisir l’un plutôt que l’autre. Chacun a sa place selon les circonstances et les",
+        "préférences personnelles.",
+        "Combinaison 7"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "L’utilisation du plastique : pour ou contre ?",
+        "Document 1 :",
+        "Impact environnemental négatif du plastique (pollution des océans, impact sur la faune et la santé",
+        "humaine).",
+        "Document 2 :",
+        "Importance du plastique dans le domaine médical (dispositifs essentiels pour la santé, prévention des infections).",
+        "Correction Tâche 3",
+        "L’utilisation du plastique : pour ou contre ?",
+        "Le plastique suscite de nombreux débats en raison de ses avantages et inconvénients. D’un côté, il a des effets dévastateurs sur",
+        "l’environnement, polluant les océans et menaçant la faune et la santé humaine. Toutefois, de l’autre, il est indispensable dans le",
+        "domaine médical, où il permet la fabrication de dispositifs essentiels à la santé et la prévention des infections.",
+        "Haut du formulaire Bas du",
+        "formulaire",
+        "À mon avis, l’utilisation du plastique devrait être davantage régulée. D’un côté, il est évident qu’il est indispensable dans des",
+        "domaines comme la médecine, où des dispositifs tels que les seringues jetables ou les implants sont vitaux pour la santé.",
+        "Cependant, son impact environnemental est énorme. Par exemple, les déchets plastiques dans les océans ont des conséquences",
+        "dramatiques sur la faune marine, comme les tortues qui confondent les sacs plastiques avec de la nourriture. Une solution pourrait",
+        "être d’encourager l’utilisation de plastiques biodégradables ou de réduire la consommation inutile de plastique dans les produits du",
+        "quotidien. Il est essentiel de trouver un équilibre entre son utilité dans certains secteurs et les risques qu’il présente pour",
+        "l’environnement. Combinaison 6"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "Les cours de langues en ligne : une bonne idée ?",
+        "Document 1 :",
+        "Avantages des cours en ligne (flexibilité, accessibilité, économies).",
+        "Document 2 :",
+        "Limites de l’apprentissage en ligne (nécessité de discipline, accès à Internet, manque d’interaction humaine).",
+        "Correction Tâche 3",
+        "Les cours de langues en ligne : une bonne idée ?",
+        "Les cours de langues en ligne sont de plus en plus populaires, mais présentent des avantages et des inconvénients. D’un côté, ils",
+        "offrent flexibilité, accessibilité et économies. Cependant, de l’autre, ils nécessitent une grande discipline personnelle, un bon",
+        "accès à Internet et manquent d’interaction humaine, ce qui peut rendre l’apprentissage moins interactif et motivant.",
+        "À mon avis, les cours de langues en ligne peuvent être une excellente option, surtout pour ceux qui ont un emploi du temps",
+        "chargé ou vivent loin des écoles de langue. Par exemple, des plateformes comme Duolingo ou Babbel permettent d’apprendre à",
+        "son rythme, ce qui est un vrai atout. Cependant, la discipline nécessaire peut être un obstacle pour certains, car sans suivi direct,",
+        "la motivation peut rapidement diminuer. De plus, l’absence d’interaction physique avec d’autres apprenants ou enseignants",
+        "limite les occasions de pratiquer la conversation, ce qui est essentiel pour maîtriser une langue. En fin de compte, bien que les",
+        "cours en ligne soient pratiques, ils ne remplacent pas totalement les méthodes traditionnelles d’apprentissage, notamment pour",
+        "les aspects sociaux et pratiques de la langue.",
+        "Combinaison 5"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "La Restauration Rapide.",
+        "Document 1 :",
+        "Les restaurants rapides se distinguent par leur engagement à proposer une variété de plats équilibrés, respectant strictement les",
+        "normes d’hygiène. En laissant aux clients la liberté de composer leur propre menu, ces établissements les responsabilisent dans",
+        "leurs choix alimentaires, tout en satisfaisant leurs préférences gustatives.",
+        "Document 2 :",
+        "Les spécialistes affirment que manger régulièrement dans des restaurants de fast-food, qui proposent de la restauration rapide, est",
+        "dangereux pour la santé. La nourriture servie est souvent la même : frites, hamburgers et boissons sucrées. Ces aliments",
+        "contiennent une grande quantité de calories, bien trop pour un seul repas. De plus, la plupart des produits dans ces restaurants sont",
+        "emballés dans du plastique. Par conséquent, manger dans un fast-food augmente la production de déchets plastiques, ce qui est",
+        "nuisible pour l’environnement.",
+        "Correction Tâche 3",
+        "La Restauration Rapide : avantages et inconvénients",
+        "La restauration rapide est un sujet qui suscite des opinions partagées. D’un côté, ces établissements offrent des menus variés et",
+        "équilibrés, en respectant les normes",
+        "d’hygiène. Cependant, les fast-foods sont souvent critiqués pour leur offre calorique excessive et l’impact environnemental de",
+        "leurs emballages plastiques, ce qui soulève des préoccupations sur leur consommation régulière.",
+        "À mon avis, la restauration rapide a ses avantages et ses inconvénients. D’un côté, elle offre une solution rapide et pratique pour",
+        "ceux qui manquent de temps. Par exemple, les jeunes travailleurs ou étudiants peuvent apprécier la diversité des menus proposés",
+        "et la possibilité de personnaliser leur choix. Cependant, les risques pour la santé liés à une consommation excessive de fast-food",
+        "ne doivent pas être sous-estimés. En effet, les aliments comme les hamburgers et les frites sont souvent trop gras et sucrés. De",
+        "plus, l’impact écologique des emballages plastiques est une réalité qui ne peut être ignorée. En conclusion, il est préférable de",
+        "consommer ces repas avec modération et de chercher des alternatives plus équilibrées et respectueuses de l’environnement.",
+        "Combinaison 4"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "L'éducation des enfants",
+        "Document 1 :",
+        "Je vais bientôt avoir 22 ans et j’habite chez mes parents. Malgré ma majorité, mes parents restent autoritaires avec moi. Lorsque",
+        "j’étais mineure et que je sortais avec des amies, je n’avais pas le droit de dormir dehors ni même de dépasser 21h. Aujourd’hui,",
+        "peu de choses ont changé. Certes, j’ai le droit de veiller plus tard, mais ma mère ne cesse de m’appeler sur mon téléphone portable",
+        "jusqu’à ce que je sois de retour chez nous.",
+        "Document 2 :",
+        "Les parents ont parfois peur d’être trop sévères avec leurs enfants. Ils craignent qu’à cause d’un excès d’autorité, leurs enfants ne",
+        "s’épanouissent pas et manquent de personnalité plus tard. Même si, par amour, les parents acceptent tout ce que leurs enfants",
+        "demandent, cela pourrait avoir des",
+        "effets négatifs lorsqu’ils passent à l’âge adulte. En effet, pour vivre en communauté, il est nécessaire de respecter certaines",
+        "règles.",
+        "Correction Tâche 3",
+        "L’éducation des enfants",
+        "L’éducation des enfants varie selon les méthodes des parents. Le premier document décrit une autorité parentale stricte qui",
+        "perdure même à l’âge adulte, avec des contrôles constants. En revanche, le deuxième document met en évidence la crainte des",
+        "parents de devenir trop autoritaires, pensant que cela pourrait nuire à l’épanouissement et à l’indépendance de leurs enfants.",
+        "À mon avis, l’éducation des enfants nécessite un juste milieu entre autorité et liberté. Trop de rigueur, comme dans le premier",
+        "document, peut étouffer l’indépendance des jeunes adultes et créer un sentiment de frustration. Par exemple, un enfant qui n’a",
+        "jamais eu de liberté risque de mal gérer son autonomie plus tard. D’un autre côté, un manque total de règles, comme le suggère le",
+        "deuxième document, peut empêcher un enfant d’apprendre à respecter des limites essentielles dans la vie en société. Il est",
+        "important que les parents trouvent un équilibre en posant des règles claires tout en permettant à leurs enfants de développer leur",
+        "personnalité et d’acquérir des responsabilités.",
+        "Combinaison 3"
+      ],
+      "tags": []
+    },
+    {
+      "q": "La Gratuité Des Musées : Pour Ou Contre ? Document 1 :",
+      "sample": [
+        "La gratuité des musées peut entraîner une surfréquentation, ce qui nuit à la qualité de l’expérience des visiteurs. De plus, cela peut",
+        "réduire les ressources financières des musées, affectant ainsi leur entretien et la préservation des œuvres. Un tarif réduit serait une",
+        "meilleure solution pour rendre la culture accessible tout en soutenant les musées.",
+        "Document 2 :",
+        "La gratuité des musées est une excellente initiative. Cela rend la culture accessible à tous, indépendamment de leur situation",
+        "financière. J’ai pu visiter plusieurs musées gratuitement, ce qui m’a permis d’enrichir mes connaissances sans me soucier du",
+        "coût. Pour moi, la gratuité des musées contribue à l’éducation du public et au partage du patrimoine culturel.",
+        "Correction Tâche 3",
+        "La Gratuité Des Musées : Pour Ou Contre ?",
+        "La question de la gratuité des musées divise. D’un côté, certains pointent les risques de surfréquentation et le manque de",
+        "ressources pour l’entretien des œuvres. En revanche, d’autres soutiennent que cela rend la culture accessible à tous, enrichissant",
+        "ainsi l’éducation et la diffusion du patrimoine. Un tarif réduit pourrait concilier ces deux enjeux.",
+        "À mon avis, la gratuité des musées est une excellente initiative, mais elle présente des défis. Bien qu’elle permette à tous, quel",
+        "que soit leur revenu, de découvrir la culture, elle peut engendrer une affluence excessive, ce qui nuit à l’expérience des visiteurs.",
+        "Par exemple, certains musées parisiens sont souvent bondés, ce qui rend la visite moins agréable. De plus, sans revenus",
+        "suffisants, les musées peuvent avoir des difficultés à entretenir les œuvres. Toutefois, un compromis, comme des journées",
+        "gratuites ponctuelles ou des tarifs réduits pour certains publics, pourrait offrir une solution équilibrée, rendant la culture",
+        "accessible tout en préservant la qualité des visites et la pérennité des institutions culturelles.",
+        "Combinaison 2"
+      ],
+      "tags": []
+    },
+    {
+      "q": "autre avantage : ils permettent une ouverture sur le monde pour les personnes en situation de handicap. Certaines options,",
+      "sample": [
+        "comme la possibilité d’augmenter la taille des lettres, facilitent la lecture pour les personnes malvoyantes.",
+        "Document 2 :",
+        "Le livre numérique remplacera-t-il le livre papier ? « Non », répondront la plupart des lecteurs. Le livre papier est un beau",
+        "support. Quel plaisir de le prêter aux gens qu’on aime ou de l’offrir en glissant un petit mot dedans ! Le livre papier a une",
+        "histoire, l’odeur du neuf ou de l’ancien… Il transmet beaucoup d’émotions alors que le livre numérique à un côté un peu",
+        "impersonnel. De plus, les livres numériques demandent de posséder un minimum de connaissances en informatique, ce qui peut",
+        "être une difficulté pour certaines personnes.",
+        "Correction Tâche 3",
+        "Le Livre Papier ou Le Livre Numérique ?",
+        "Le choix entre livre papier et numérique suscite des avis partagés. D’un côté, le livre numérique séduit par son coût réduit et son",
+        "accessibilité, notamment pour les personnes malvoyantes. En revanche, le livre papier est apprécié pour son côté émotionnel, sa",
+        "texture et son histoire, bien que nécessitant des compétences informatiques pour le numérique.",
+        "Personnellement, je préfère le livre papier. Il offre une expérience unique, qu’il s’agisse de l’odeur d’un livre neuf ou du plaisir de",
+        "tourner les pages. J’aime également offrir des livres en cadeau, accompagnés d’un mot personnel. Cependant, je reconnais les",
+        "avantages du livre numérique,",
+        "surtout pour les déplacements ou les personnes rencontrant des difficultés de lecture. Par exemple, la possibilité d’ajuster la taille",
+        "du texte est un atout pour les malvoyants. De plus, le livre numérique permet de stocker plusieurs livres sur un même appareil, ce",
+        "qui est pratique pour les voyages. En conclusion, chaque format a ses qualités et son utilisation dépend des besoins et des",
+        "préférences de chacun.",
+        "Combinaison 1"
+      ],
+      "tags": []
+    },
+    {
+      "q": "Tâche 3",
+      "sample": [
+        "Les cours de langues en ligne Document 1 :",
+        "Apprendre une langue en ligne grace à Internet, c’est possible et cela donne de bons résultats ! Contrairement aux cours",
+        "classiques, on peut apprendre quand on veut : les cours sont disponibles tout le temps. Cela permet de mieux organiser sa journée.",
+        "On n’a pas non plus besoin de faire des kilomètres pour aller dans une école de langues. On peut apprendre de son salon, de son",
+        "bureau ou même d’un café près de chez soi ! Cela permet aussi de faire des économies.",
+        "Document 2 :",
+        "Cela semble facile d’apprendre une langue en ligne mais ce n’est pas possible pour tout",
+        "le monde. En effet, il faut avoir une bonne connexion à Internet et un outil numérique adapté (ordinateur, smartphone, tablette)",
+        "pour apprendre en ligne. De plus, il faut être très",
+        "autonome pour être capable d’apprendre seul : il est difficile de se mettre au travail chez soi et de rester motivé quand on n’a pas",
+        "l’aide d’un professeur et de collègues. Dans ces conditions, on peut se décourager et abandonner très vite.",
+        "Correction Tâche 3",
+        "Les cours de langues en ligne",
+        "L’apprentissage des langues en ligne présente à la fois des avantages et des inconvénients. D’un côté, il offre une flexibilité",
+        "d’emploi du temps, un accès facile depuis chez soi et des économies. Cependant, il nécessite une bonne connexion Internet, un",
+        "équipement adapté et beaucoup d’autonomie, ce qui peut rendre la motivation difficile pour certains.",
+        "À mon avis, les cours de langues en ligne peuvent être très efficaces si l’on dispose des bonnes conditions. La flexibilité de",
+        "pouvoir apprendre à son propre rythme est un avantage majeur, notamment pour ceux qui ont un emploi du temps chargé. Par",
+        "exemple, je trouve qu’il est pratique de pouvoir pratiquer une langue le soir après une journée de travail. Cependant, il est vrai",
+        "qu’une forte autonomie est nécessaire, et certaines personnes peuvent se décourager sans encadrement.",
+        "Pour ceux qui manquent de discipline, un cours en présentiel pourrait être plus adapté. De plus, les inconvénients techniques,",
+        "comme une mauvaise connexion Internet, peuvent nuire à l’apprentissage. Dans l’ensemble, cela dépend des besoins et des",
+        "préférences de chacun."
+      ],
+      "tags": []
+    }
+  ]
+}
